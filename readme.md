@@ -8,7 +8,7 @@ RiverFlow是一個獨特的嘻哈網站平台，目的為展現和推廣嘻哈�
 
 * 活動售票：提供嘻哈節活動與節目票務服務，使用戶能便捷的參與嘻哈相關活動。
 
-  <img src="https://i.ibb.co/h19PhHY/1021.gif" width=500>
+  <img src="https://i.ibb.co/Y0HJ24s/image.png" width=500>
 
 # 資料夾結構
 
