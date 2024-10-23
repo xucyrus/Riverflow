@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RiverFlow | 訂單資訊</title>
+    <link rel="stylesheet" href="../assets/cartCheckOut.css" />
+    <link rel="stylesheet" href="../assets/reset.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <link rel="stylesheet" href="../assets/basic.css" />
+  </head>
+  <body class="w-bg scrollCust">
+    <!-- 未滿版的容器 -->
+    <div class="cartCheckOut">
+      <header id="navbar">
+        <div class="flex container">
+          <a href="#">
+            <img class="logo" src="../assets/images/riverflow_logo.png" alt="logo" />
+          </a>
+          <div class="flex header-right">
+            <ul class="headerLink flex">
+              <li><a href="index.html">首頁</a></li>
+              <li class="cultureListName dropdown">
+                <a class="dropdownToggle" href="#">嘻哈文化<i class="bi bi-caret-down-fill"></i></a>
+                <div id="dropdownMenu" class="">
+                  <ul class="cultureList flex">
+                    <li><a href="./DJ.html" class="cultureOpt">DJ</a></li>
+                    <li><a href="#" class="cultureOpt">街舞</a></li>
+                    <li><a href="#" class="cultureOpt">饒舌</a></li>
+                    <li><a href="#" class="cultureOpt">塗鴉</a></li>
+                    <li><a href="./skate.html" class="cultureOpt">滑板</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li><a href="news.html">嘻哈專欄</a></li>
+              <li><a href="eventPage1.html">into flow</a></li>
+              <li><a href="./ProductAll.html">商店</a></li>
+            </ul>
+            <div class="functionIcons flex">
+              <a href="#" class="headerIcon">
+                <i class="bi bi-ticket-perforated"></i>
+              </a>
+              <a href="./cart.html" class="headerIcon">
+                <i class="bi bi-cart"></i>
+              </a>
+              <a href="login.html" class="headerIcon">
+                <i class="bi bi-person"></i>
+              </a>
+              <div class="headerIcon mobOnly">
+                <input id="menuBtn" class="menuBtn" type="checkbox" />
+                <label for="menuBtn" class="menuIcon">
+                  <span class="navigation"></span>
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="mobMenu">
+          <ul class="headerLink mob flex">
+            <li><a href="#">首頁</a></li>
+            <li class="cultureListName dropdown dropdown_mob">
+              <a class="dropdownToggle" href="#"
+                >嘻哈文化<i class="bi bi-caret-down-fill bi-caret-down-fill_mob"></i
+              ></a>
+              <div id="dropdownMenu">
+                <ul class="cultureList cultureList_mob flex">
+                  <li><a href="#" class="cultureOpt">DJ</a></li>
+                  <li><a href="#" class="cultureOpt">街舞</a></li>
+                  <li><a href="#" class="cultureOpt">饒舌</a></li>
+                  <li><a href="#" class="cultureOpt">塗鴉</a></li>
+                  <li><a href="#" class="cultureOpt">滑板</a></li>
+                </ul>
+              </div>
+            </li>
+            <li><a href="#">嘻哈專欄</a></li>
+            <li><a href="#">into flow</a></li>
+            <li><a href="#">商店</a></li>
+          </ul>
+        </div>
+      </header>
+      <div class="container">
+        <!-- 左邊畫面content容器 -->
+        <div class="content-left">
+          <div class="order-steps">
+            <div class="order-detail">
+              <a href="#">訂單資訊</a>
+              <i class="fa-solid fa-arrow-right-long"></i>
+            </div>
+            <div class="order-detail">
+              <a href="#" style="color: darkgray">訂單確認 </a>
+              <i style="color: gray" class="fa-solid fa-arrow-right-long"></i>
+            </div>
+            <div class="order-detail">
+              <a href="#" style="color: gray">訂單完成 </a>
+              <i class="fa-solid fa-arrow-right-long" style="visibility: hidden"></i>
+            </div>
+          </div>
+          <!-- 商品顯示資訊 -->
+          <div class="order-info">
+            <h3>訂單資訊</h3>
+            <p>已選購<span id="item-count">樣商品</span></p>
+          </div>
+          <!-- 商品項目 -->
+          <!-- 商品項目 -->
+          <div class="cart-items">
+            <img src="https://cdn.store-assets.com/s/1250387/i/74027074.jpeg?width=1024&format=webp" alt="image" />
+            <div class="cart-item-content">
+              <h4>王以太聯名短袖</h4>
+              <h5>深綠/L</h5>
+            </div>
+            <!-- 加減icon -->
+            <div class="quantity-plus-minus">
+              <a href="#"><i class="fa-solid fa-circle-minus"></i></a>
+              <p class="quantity">5</p>
+              <a href="#"><i class="fa-solid fa-circle-plus"></i></a>
+            </div>
+            <p class="total" data-price="1480">NT$1480</p>
+          </div>
+        </div>
+        <!-- 右方容器 -->
+        <div class="content-right">
+          <!--  右方內容物 -->
+          <div class="payment-method">
+            <h2>選擇付款方式</h2>
+
+            <form id="order-form">
+              <div class="form-group dropdown">
+                <label class="country" for="country">國家</label>
+                <br />
+                <input class="text-border" type="text" id="country" value="台灣" readonly style="cursor: not-allowed" />
+              </div>
+
+              <!-- 運送方式選擇 -->
+              <div class="form-group dropdown">
+                <label for="delivery-method">運送方式</label>
+                <br />
+                <input class="text-border" type="text" id="delivery-method" placeholder="請選擇運送方式" readonly />
+                <span id="delivery-address" class="address-display"></span>
+                <div class="dropdown-content">
+                  <div data-type="store">7-ELEVEN</div>
+                  <div data-type="store">全家</div>
+                  <div data-type="home">宅配</div>
+                </div>
+              </div>
+
+              <!-- 超商地址輸入框 -->
+              <div class="form-group dropdown" id="store-address-group" style="display: none">
+                <label for="store-address">超商地址</label>
+                <br />
+                <input class="text-border" type="text" id="store-address" placeholder="請選擇地址" readonly />
+                <div class="dropdown-content">
+                  <div>台北市信義路123號</div>
+                  <div>新北市中和路456號</div>
+                  <div>台中市大同路789號</div>
+                </div>
+              </div>
+
+              <!-- 宅配地址輸入框 -->
+              <div class="form-group" id="home-address-group" style="display: none">
+                <label for="home-address">宅配地址</label>
+                <br />
+                <input class="text-border" type="text" id="home-address" placeholder="請輸入宅配地址" />
+              </div>
+
+              <!-- 付款方式 -->
+              <div class="form-group dropdown">
+                <label for="payment-method">付款方式</label>
+                <br />
+                <input class="text-border" type="text" id="payment-method" placeholder="請選擇付款方式" readonly />
+                <span id="payment-info" class="payment-display"></span>
+                <div class="dropdown-content">
+                  <div>線上付款</div>
+                  <div>貨到付款</div>
+                </div>
+              </div>
+
+              <!-- 電子發票 -->
+              <div class="invoice-promo-code">
+                <!-- 電子發票欄位 -->
+                <div class="form-group dropdown">
+                  <label for="invoice">電子發票</label>
+                  <br />
+                  <input class="text-border" type="text" id="invoice" placeholder="請選擇發票類型" readonly />
+                  <span id="invoice-info" class="invoice-display"></span>
+                  <div class="dropdown-content">
+                    <div data-type="company">三聯式</div>
+                    <div>捐贈發票</div>
+                    <div data-type="mobile">手機載具</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 公司行號輸入框 -->
+              <div class="form-group" id="company-info-group" style="display: none">
+                <label for="company-info">公司行號</label>
+                <br />
+                <input
+                  class="text-border"
+                  type="text"
+                  id="company-info"
+                  placeholder="請輸入公司行號"
+                  value="12345678"
+                />
+              </div>
+
+              <!-- 手機載具輸入框 -->
+              <div class="form-group" id="mobile-info-group" style="display: none">
+                <label for="mobile-info">手機載具</label>
+                <br />
+                <input class="text-border" type="text" id="mobile-info" placeholder="請輸入手機載具" value="/A123456" />
+              </div>
+
+              <!-- 總金額 -->
+              <div class="total-amount">
+                <p>商品金額: <span id="item-total">$2,536</span></p>
+                <p>運費金額: <span id="shipping-fee">$0</span></p>
+                <p>付款總金額: <span id="final-total">$2,536</span></p>
+              </div>
+
+              <!-- 訂單確認 這邊用a代替 -->
+              <div class="submit">
+                <a href="./cartConfirmation.html" id="submit-order">訂單確認</a>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div class="flex container">
+        <img class="logo" src="../assets/images/riverflow_logo_f.png" alt="logo" />
+        <div class="flex footer-right">
+          <div class="flex linkList">
+            <a href="#" class="footerLink">關於我們</a>
+            <a href="#" class="footerLink">聯絡我們</a>
+            <a href="#" class="footerLink">條款與隱私</a>
+            <a href="#" class="footerLink">FAQ</a>
+          </div>
+          <span class="copyright">Copyright © 2006-2024 RiverFlow</span>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        const shippingFee = 60
+
+        // 右方下拉選單選擇
+        $('.dropdown input').on('click', function () {
+          $(this).parent().toggleClass('active')
+        })
+
+        $('.dropdown-content div').on('click', function () {
+          var value = $(this).text()
+          var $input = $(this).closest('.dropdown').find('input')
+          $input.val(value)
+          $(this).parent().parent().removeClass('active')
+
+          // 檢查是否是超商選擇，顯示地址選擇
+          if ($input.attr('id') === 'delivery-method' && $(this).data('type') === 'store') {
+            $('#store-address-group').show()
+            $('#home-address-group').hide()
+            $('#shipping-fee').text(`$${shippingFee}`)
+            updateFinalTotal()
+          } else if ($input.attr('id') === 'delivery-method' && $(this).data('type') === 'home') {
+            $('#store-address-group').hide()
+            $('#home-address-group').show()
+            $('#shipping-fee').text(`$${shippingFee}`)
+            updateFinalTotal()
+          } else {
+            $('#store-address-group').hide()
+            $('#home-address-group').hide()
+            $('#shipping-fee').text('$60')
+            updateFinalTotal()
+          }
+        })
+
+        // 地址選擇下拉選單
+        $('store-address').on('click', function () {
+          $(this).parent().toggleClass('active')
+        })
+
+        $('#store-address-group .dropdown-content div').on('click', function () {
+          var value = $(this).text()
+          $('#store-address').val(value)
+          $(this).parent().parent().removeClass('active')
+          $('#delivery-address').text('寄到：' + value)
+        })
+
+        // 宅配地址更新
+        $('#home-address').on('blur', function () {
+          var value = $(this).val()
+          $('#delivery-address').text('寄到：' + value)
+        })
+
+        // 付款方式更新
+        $('payment-method').on('click', function () {
+          $(this).parent().toggleClass('active')
+        })
+
+        $('#payment-method')
+          .siblings('.dropdown-content')
+          .find('div')
+          .on('click', function () {
+            var value = $(this).text()
+            var $input = $(this).closest('.dropdown').find('input')
+            $input.val(value)
+            $(this).parent().removeClass('active')
+            $('#payment-info').text('付款方式：' + value)
+          })
+
+        // 信用卡卡號輸入完畢後隱藏輸入框
+        $('#credit-card').on('blur', function () {
+          var value = $(this).val()
+          if (value) {
+            $('#credit-card-group').hide()
+            $('#payment-info').append(`|卡號：${value}`)
+          }
+        })
+
+        // 電子發票類型更新
+        $('invoice').on('click', function () {
+          $(this).parent().toggleClass('active')
+        })
+
+        $('#invoice')
+          .siblings('.dropdown-content')
+          .find('div')
+          .on('click', function () {
+            var value = $(this).text()
+            var $input = $(this).closest('.dropdown').find('input')
+            $input.val(value)
+            $(this).parent().removeClass('active')
+            $('#invoice-info').text('發票類型：' + value)
+
+            // 檢查是否是公司行號或手機載具選擇，顯示對應的輸入框
+            if ($(this).data('type') === 'company') {
+              $('#company-info-group').show()
+              $('#mobile-info-group').hide()
+            } else if ($(this).data('type') === 'mobile') {
+              $('#company-info-group').hide()
+              $('#mobile-info-group').show()
+            } else {
+              $('#company-info-group').hide()
+              $('#mobile-info-group').hide()
+            }
+          })
+
+        // 公司行號輸入完畢後隱藏輸入框
+        $('#company-info').on('blur', function () {
+          var value = $(this).val()
+          if (value) {
+            $('#company-info-group').hide()
+            $('#invoice-info').append(`|公司行號：${value}`)
+          }
+        })
+
+        // 手機載具輸入完畢後隱藏輸入框
+        $('#mobile-info').on('blur', function () {
+          var value = $(this).val()
+          if (value) {
+            $('#mobile-info-group').hide()
+            $('#invoice-info').append(`${value}`)
+          }
+        })
+
+        // 更新最終總金額
+        function updateFinalTotal() {
+          const itemTotal = parseFloat($('#item-total').text().replace('$', ''))
+          const shippingFee = parseFloat($('#shipping-fee').text().replace('$', ''))
+          const finalTotal = itemTotal + shippingFee
+          $('#final-total').text(`$${finalTotal}`)
+        }
+
+        // 加減按鈕
+        $('.quantity-plus-minus a').on('click', function (event) {
+          event.preventDefault()
+          const $button = $(this)
+          // 保存到 $quantity 變量中
+          const $quantity = $button.siblings('.quantity')
+          // 換為整數
+          let quantity = parseInt($quantity.text())
+
+          // 按鈕加減號
+          if ($button.find('i').hasClass('fa-circle-plus')) {
+            quantity += 1
+          } else if ($button.find('i').hasClass('fa-circle-minus') && quantity > 1) {
+            quantity -= 1
+          }
+          // 更新數量
+          $quantity.text(quantity)
+          updateTotal($button.closest('.cart-items'), quantity)
+          updateTotals()
+        })
+
+        // 更新購物車的總價格
+        function updateTotal($cartItem, quantity) {
+          // 單價
+          const price = parseInt($cartItem.find('.total').data('price'))
+          // 這邊總價格顯示
+          $cartItem.find('.total').text(`NT$${price * quantity}`)
+        }
+
+        // 更新購物車項目跟金額
+        function updateTotals() {
+          let totalItems = 0
+          let totalPrice = 0
+          let totalKinds = 0
+
+          // 所有購物車項目
+          $('.cart-items').each(function () {
+            const quantity = parseInt($(this).find('.quantity').text()) // 獲取每個項目的數量
+            const price = parseInt($(this).find('.total').text().replace('NT$', '')) // 獲取每個項目的價格
+
+            totalItems += quantity
+            totalPrice += price
+            // 計算商品種類數量
+            totalKinds += 1
+          })
+          // 更新總數量顯示
+          $('#item-count').text(`${totalItems}樣商品`)
+          // 右邊第一個商品金額
+          $('#item-total').text(`$${totalPrice}`)
+          // 更新最終總金額
+          updateFinalTotal()
+        }
+
+        // 頁面加載時即初始化總金額和數量
+        $('.cart-items').each(function () {
+          const $cartItem = $(this)
+          const quantity = parseInt($cartItem.find('.quantity').text(), 10)
+          updateTotal($cartItem, quantity)
+        })
+        // 初始更新所有項目的總數量和總價格
+        updateTotals()
+      })
+    </script>
+  </body>
+</html>

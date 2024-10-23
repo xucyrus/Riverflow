@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../src/assets/basic.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="../../src/assets/event/eventPage3-1.css">
+    <style>
+
+    </style>
+</head>
+
+<body class="w-bg scrollCust">
+    <div class="wrap container">
+        <div class="header"><img src="../../src/assets/images/indexImg/nav.jpg" alt=""></div>
+
+        <!-- 活動明細 -->
+        <div class="eventName">
+            <div class="eventImg">
+                <img src="../assets/images/events/event-yitai.jpg"
+                    alt="">
+            </div>
+            <div class="eventTitle">
+                <h1>星空下的電音狂歡 (DJ戶外派對)</h1>
+                <p>日期：8/3</p>
+                <p>時間： 20:00</p>
+                <p>場次地點：大佳河濱公園 台北市中山區濱江街5號</p>
+            </div>
+        </div>
+
+        <!-- 中間的線 -->
+        <div class="middleLine">
+            <p></p>
+        </div>
+
+        <div class="order">
+            <div class="ticketOrder">
+                <div class="ticketOrder1"><span>1</span></div>
+                <div><span>選擇票區</span></div>
+                <p></p>
+            </div>
+
+            <div class="ticketOrder">
+                <div><span>2</span></div>
+                <div><span>確認明細</span></div>
+                <p></p>
+            </div>
+
+            <div class="ticketOrder">
+                <div><span>3</span></div>
+                <div><span>確認資料</span></div>
+                <p></p>
+            </div>
+        </div>
+
+        <!-- 選擇票種數量 -->
+        <div class="ticketChoose">
+            <div class="ticketText">
+                <h3>選擇票種</h3>
+            </div>
+            <div class="ticketMan">
+                <div>
+                    <span>全票</span>
+                    <span>剩餘</span>
+                    <span>20</span>
+                </div>
+                <div>
+                    <p>NT.300</p>
+                </div>
+                <div class="ticketNumber">
+                    <button class="decrement" data-target="#quantity1"><i class="fa-solid fa-circle-minus"></i></button>
+                    <p id="quantity1">0</p>
+                    <button class="increment" data-target="#quantity1"><i class="fa-solid fa-circle-plus"></i></button>
+                </div>
+            </div>
+            <div class="ticketMiddle">
+                <p></p>
+            </div>
+            <div class="ticketSpec">
+                <div>
+                    <p>身心障礙票</p>
+                </div>
+                <div>
+                    <p>NT.200</p>
+                </div>
+                <div class="ticketNumber">
+                    <button class="decrement" data-target="#quantity2"><i class="fa-solid fa-circle-minus"></i></button>
+                    <p id="quantity2">0</p>
+                    <button class="increment" data-target="#quantity2"><i class="fa-solid fa-circle-plus"></i></button>
+                </div>
+            </div>
+        </div>
+        <!-- 下一步按鍵 -->
+        <div class="ticketBtn">
+            <a href="#" id="nextBtn">下一步</a>
+        </div>
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            // 數量增加
+            $('.increment').on("click", function () {
+                var target = $(this).data('target');
+                var quantityValue = parseInt($(target).text());
+                if (quantityValue < 4) {
+                    $(target).text(quantityValue + 1);
+                }
+
+                buttonState();
+
+
+
+            })
+
+            //數量減少
+            $('.decrement').on("click", function () {
+                var target = $(this).data('target');
+                var quantityValue = parseInt($(target).text());
+                if (quantityValue > 0) {
+                    $(target).text(quantityValue - 1);
+                }
+
+                buttonState();
+            })
+
+            // 要有數量才能按下一步
+
+
+            function buttonState() {
+
+                // 宣告全部票數累積
+                var totalQuantity = 0;
+                $('[id^="quantity"]').each(function () {
+                    totalQuantity += parseInt($(this).text()) || 0;
+                    // ||0 安全措施，怕返回的不是數值
+                });
+
+                var $button = $('#nextBtn');
+                if (totalQuantity === 0) {
+                    $($button).addClass('link-disabled');
+                } else {
+                    $($button).removeClass('link-disabled');
+                }
+            }
+            buttonState();
+
+        })
+    </script>
+</body>
+
+</html>

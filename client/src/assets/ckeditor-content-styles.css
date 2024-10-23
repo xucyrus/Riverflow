@@ -1,0 +1,80 @@
+/* CKEditor 內容樣式 */
+.ck-content {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    max-width: 100%;
+    word-wrap: break-word;
+  }
+  
+  .ck-content h1, .ck-content h2, .ck-content h3, .ck-content h4, .ck-content h5, .ck-content h6 {
+    margin: 1em 0 0.5em;
+    font-weight: bold;
+    
+  }
+  
+  .ck-content p {
+    margin: 0 0 1em;
+    
+  }
+  
+  .ck-content figure {
+    margin: 1em 0;
+    text-align: center;
+  }
+  
+  .ck-content figure img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .ck-content .image {
+    display: table;
+    clear: both;
+    text-align: center;
+    margin: 1em auto;
+  }
+  
+  .ck-content .image img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .ck-content .image-style-align-left {
+    float: left;
+    margin-right: 1em;
+  }
+  
+  .ck-content .image-style-align-right {
+    float: right;
+    margin-left: 1em;
+  }
+  
+  .ck-content .image_resized {
+    max-width: 100%;
+    display: block;
+    box-sizing: border-box;
+  }
+  
+  .ck-content .image_resized img {
+    width: 100%;
+  }
+  
+  .ck-content .image > figcaption {
+    display: table-caption;
+    caption-side: bottom;
+    word-break: break-word;
+    
+    background-color: #f7f7f7;
+    padding: .6em;
+    font-size: .75em;
+    outline-offset: -1px;
+  }
+  
+  /* 清除浮動 */
+  .ck-content::after {
+    content: "";
+    display: table;
+    clear: both;
+  }

@@ -1,0 +1,166 @@
+/* @import url(basic.css); */
+
+/*---------------------------------------------*/
+/*              關於我們頁面 Start              */
+/*---------------------------------------------*/
+.aboutPage section.container {
+    display: block;
+    max-width: 1200px;
+}
+/*大標*/
+.aboutPage .gtitle {
+    font-size: 64px;
+    margin: 50px 0;
+    text-align: center;
+    position: relative;
+}
+.aboutPage .gtitle span {
+    text-shadow: 0 4px 4px rgba(0,0,0,.5);
+    position: relative;
+    z-index: 2;
+}
+.aboutPage .gtitle::before {
+    content: '';
+    background-image: url(../assets/images/about_titleBG.png);
+    background-repeat: no-repeat;
+    display: block;
+    height: 139px;
+    width: 330px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+/*介紹區塊*/
+.memberIntro {
+    margin: 40px 0 60px;
+    justify-content: space-around;
+    position: relative;
+}
+.memberIntro.picRight {
+    flex-direction: row-reverse;
+}
+.memImgBlk {
+    position: relative;
+    width: 45%;
+}
+.memImgBlk img {
+    border-radius: 10px;
+}
+.memLabel {
+    background-color: var(--main);
+    color: var(--bk2);
+    display: inline-block;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 10px 5px;
+    transform: rotate(350deg);
+    box-shadow: 0 4px 4px 0 rgba(0,0,0,.25);
+    position: absolute;
+    top: 30%;
+    left: -80px;
+}
+.memLabel.purple {
+    background-color: var(--side);
+    color: #fff;
+    top: calc(30% + 45px);
+    left: -50px;
+}
+.memInfoBlk {
+    padding: 10px;
+    width: 45%;
+}
+.memNameInfo {
+    align-items: baseline;
+}
+.memName {
+    font-size: 28px;
+    line-height: 100%;
+    margin-right: 20px;
+    /* width: 50%; */
+}
+.memLink {
+    display: inline-block;
+}
+.memLink a {
+    font-size: 24px;
+    margin-right: 5px;
+}
+.memInfoBlk p {
+    margin-top: 30px;
+}
+
+
+/*標籤位置調整*/
+.memLabel.label2 {
+    left: unset;
+    right: -40px;
+    top: 30%;
+    transform: rotate(12deg);
+}
+.memLabel.label2.purple {
+    top: calc(30% - 60px);
+}
+
+/*裝飾*/
+#aboutMem01 .memImgBlk::before {
+    content: url('../assets/images/decor01.png');
+    display: block;
+    position: absolute;
+    bottom: -10%;
+    right: -40px;
+}
+#aboutMem02 .memImgBlk::before {
+    content: url('../assets/images/decor02.png');
+    display: block;
+    position: absolute;
+    bottom: -10%;
+    left: -40px;
+}
+
+/*RWD*/
+@media screen and (max-width: 1350px) {
+    .aboutPage section.container {
+        max-width: 80%;
+    }
+}
+@media screen and (max-width: 768px) {
+    .aboutPage .gtitle {
+        font-size: 50px;
+        margin: 40px 0;
+        text-align: center;
+        position: relative;
+    }
+    .aboutPage .gtitle::before {
+        background-size: contain;
+        height: 100px;
+        width: 230px;
+    }
+
+    .memImgBlk, .memInfoBlk {
+        width: 100%;
+    }
+
+    .memLabel, .memLabel.label2 {
+        margin: 20px 3px;
+        position: static;
+        transform: rotate(0deg);
+    }
+
+    #aboutMem01 .memImgBlk::before {
+        bottom: 0;
+        right: -40px;
+    }
+    #aboutMem02 .memImgBlk::before {
+        bottom: 25px;
+        right: -40px;
+    }
+
+    .aboutPage footer .container {
+        max-width: 100%;
+    }
+}
+/*---------------------------------------------*/
+/*              關於我們頁面 End                */
+/*---------------------------------------------*/

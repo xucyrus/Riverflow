@@ -1,0 +1,488 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&family=Noto+Sans+Telugu:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sedgwick+Ave+Display&display=swap');
+
+body {
+  --bk1: #1d1d1d;
+  --bk2: #333;
+  --gr1: #e9e9e9;
+  --gr2: #7a7a7a;
+  --main: #baf13a;
+  --main2: #98d900;
+  --side: #a839ff;
+  --side2: #D7A4FF;
+
+  background: var(--bk1);
+  box-sizing: border-box;
+  color: #fff;
+  /* font-family: 'Noto Sans Telugu', 'Noto Sans TC', sans-serif; */
+  font-family: 'Noto Sans TC', sans-serif;
+  font-weight: 400;
+  line-height: 100%;
+  margin: 0;
+}
+
+a {
+  color: var(--main);
+  text-decoration: none;
+}
+p {
+  line-height: 160%;
+}
+img {
+  width: 100%;
+}
+
+/*----- header -----*/
+header {
+  background-color: var(--bk1);
+  padding: 10px 0;
+  position: relative;
+  width: 100%;
+  z-index: 99;
+}
+header .container {
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  max-width: 90%;
+  margin: 0 auto;
+}
+header .headerLink {
+  border: 1px solid var(--main);
+  border-radius: 30px;
+  flex-wrap: nowrap;
+  margin: 0 5px 0 0;
+  padding: 0;
+}
+header .headerLink a {
+  color: #e9e9e9;
+  display: inline-block;
+  padding: 10px 20px;
+}
+header .headerLink a:hover, header .headerLink .active {
+  background-color: var(--main);
+  border-radius: 30px;
+  color: var(--bk1);
+}
+header li {
+  display: inline-block;
+  padding: 0;
+}
+header .headerLink>li, header .headerLink label {
+  display: inline-block;
+  line-height: 100%;
+  margin-right: 15px;
+}
+header .cultureListName {
+  position: relative;
+}
+header .headerLink>li:last-child {
+  margin-right: 0;
+}
+.dropdownToggle {
+  cursor: pointer;
+}
+header .cultureList.flex {
+  /* display: none; */
+  background: var(--bk2);
+  border-radius: 10px;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  height: 0;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  top: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: height .3s ease-in-out;
+  width: 110px;
+}
+header .cultureList i {
+  margin-right: 5px;
+}
+.bi-caret-down-fill {
+  margin-left: 5px;
+}
+.bi-caret-down-fill::before {
+  transition: transform .3s ease-in-out;
+}
+.bi-caret-down-fill.rotate::before,
+.bi-caret-down-fill_mob.rotate::before {
+  transform: rotate(180deg);
+}
+header .cultureList.expand {
+  display: flex;
+  height: 260px;
+  /* padding: 10px; */
+}
+header .cultureList .cultureOpt {
+  color: var(--main2);
+  display: flex;
+  align-items: center;
+  margin: 5px 0;
+  padding: 7px 15px;
+}
+
+header.sticky-navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/*嘻哈五元素Icons*/
+.cultureList li .cultureOpt::before {
+  content: '';
+  background-position: center center;
+  background-repeat: no-repeat;
+  display: inline-block;
+  margin-right: 10px;
+  width: 24px;
+  height: 24px;
+}
+.cultureList li:nth-of-type(1) .cultureOpt::before {
+  background-image: url('../assets/images/cultureIcon01.png');
+}
+.cultureList li:nth-of-type(2) .cultureOpt::before {
+  background-image: url('../assets/images/cultureIcon02.png');
+}
+.cultureList li:nth-of-type(3) .cultureOpt::before {
+  background-image: url('../assets/images/cultureIcon03.png');
+}
+.cultureList li:nth-of-type(4) .cultureOpt::before {
+  background-image: url('../assets/images/cultureIcon04.png');
+}
+.cultureList li:nth-of-type(5) .cultureOpt::before {
+  background-image: url('../assets/images/cultureIcon05.png');
+}
+.cultureList li:hover .cultureOpt::before {
+  filter: saturate(0) brightness(0.2);
+}
+
+.headerIcon {
+  color: var(--main);
+  cursor: pointer;
+  font-size: 20px;
+  margin: 0 10px;
+}
+i.bi-ticket-perforated::before {
+  transform: rotate(45deg);
+}
+.menuBtn {
+  display: none;
+}
+.menuIcon {
+  cursor: pointer;
+  display: block;
+  float: right;
+  position: relative;
+  user-select: none;
+}
+.navigation {
+  background-color: var(--main);
+  border-radius: 5px;
+  display: block;
+  height: 2px;
+  position: relative;
+  transition: background .2s ease-out;
+  width: 18px;
+}
+.navigation::before,
+.navigation::after {
+  background-color: var(--main);
+  border-radius: 5px;
+  content: '';
+  display: block;
+  height: 1.5px;
+  position: absolute;
+  transition: all .3s ease-in-out;
+  width: 100%;
+}
+.navigation::before {
+  top: 6px;
+}
+.navigation::after {
+  top: -6px;
+}
+.menuBtn:checked ~ .menuIcon .navigation {
+  background-color: transparent;
+}
+.menuBtn:checked ~ .menuIcon .navigation:before {
+  transform: rotate(-45deg);
+  top: 0;
+}
+.menuBtn:checked ~ .menuIcon .navigation:after {
+  transform: rotate(45deg);
+  top: 0;
+}
+
+/*手機版選單*/
+.headerLink.mob {
+  align-items: flex-start;
+  background-color: var(--bk2);
+  border: 0;
+  border-radius: 5px;
+  color: #000;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0;
+  max-height: 0;
+  overflow: hidden;
+  /* padding: 10px 20px; */
+  position: absolute;
+  right: 0;
+  top: 72px;
+  width: 90%;
+  z-index: 20;
+}
+.headerLink.mob.expand {
+  /* border: 1px solid var(--main); */
+  max-height: fit-content;
+  transition: max-height .3s ease-in-out;
+  padding: 10px 20px;
+}
+.headerLink.mob>li {
+  margin-right: 0;
+}
+
+
+@media screen and (max-width: 900px) {
+  header .container {
+    max-width: 100%;
+    padding: 0 20px;
+  }
+  header .headerLink a {
+    padding: 10px 15px;
+  }
+}
+@media screen and (min-width: 768px) {
+  header .headerLink {
+    max-height: 36px;
+  }
+}
+@media screen and (max-width: 768px) {
+  header .headerLink {
+    display: none;
+  }
+  .headerLink.mob {
+    display: flex;
+    flex-direction: column;
+  }
+
+  header .cultureList_mob.flex {
+    /* height: auto; */
+    padding-left: 30px;
+    position: static;
+    transform: none;
+    width: auto;
+  }
+  header .cultureList .cultureOpt {
+    color: var(--gr1);
+  }
+}
+
+
+
+/*----- Footer -----*/
+footer {
+    background-color: var(--bk1);
+    margin-top: 40px;
+    padding: 60px 0;
+    position: relative;
+}
+footer::before {
+    content: '';
+    background-image: url('../assets/images/footer_deco.png');
+    background-repeat: no-repeat;
+    display: block;
+    width: 242px;
+    height: 28px;
+    position: absolute;
+    right: 0;
+    top: -14px;
+}
+footer .container {
+  justify-content: space-between;
+  margin-top: 0;
+}
+footer .logo {
+  max-width: 160px;
+}
+footer .footer-right {
+    align-items: flex-end;
+    flex-direction: column;
+}
+footer .footerLink {
+    color: #e9e9e9;
+    /* line-height: 160%; */
+    padding: 6px 10px;
+}
+footer .footerLink:hover {
+    color: var(--main)
+}
+footer .copyright {
+    color: #D9D9D9;
+    font-size: 14px;
+    margin-top: 20px;
+}
+@media screen and (max-width: 768px) {
+    footer .flex.container {
+        flex-direction: column;
+        justify-content: center;
+    }
+    footer .footer-right {
+        align-items: center;
+        margin-top: 40px;
+    }
+    footer .footerLink {
+        padding: 10px;
+    }
+}
+
+
+/*logo*/
+.logo {
+    max-width: 108px;
+}
+
+/*手機版限定*/
+.mobOnly {
+    display: none;
+}
+@media screen and (max-width: 768px) {
+  .mobOnly {
+    display: block;
+  }
+}
+
+/*input*/
+.input-text {
+  border: 0.75px solid var(--main);
+  border-radius: 10px;
+  color: var(--main);
+  display: inline-flex;
+  align-items: center;
+  padding: 5px 15px;
+}
+.input-text:has(input:focus-visible) {
+  box-shadow: 0px 0px 4px 0px var(--main);
+}
+label {
+  line-height: initial;
+}
+input:focus, input:focus-visible, select {
+  outline: none;
+}
+input[type="text"] {
+  background: transparent;
+  border: 0;
+  color: var(--main);
+  font-size: 16px;
+  line-height: 160%;
+  margin-left: 10px;
+}
+
+
+select {
+  background-color: transparent;
+  border: 0.75px solid var(--main);
+  border-radius: 10px;;
+  color: var(--main);
+  padding: 5px 15px;
+}
+option {
+  background-color: var(--bk1) !important;
+  color: var(--main);
+}
+option:checked, option:hover {
+  background-color: var(--main) !important;
+  color: var(--bk1);
+}
+
+
+/*btn&input:submit*/
+.btn, input[type="submit"] {
+  /* appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none; */
+  background-color: var(--main);
+  border: 0;
+  border-radius: 10px;
+  color: var(--bk1);
+  cursor: pointer;
+  display: block;
+  padding: 10px;
+  text-align: center;
+}
+.btn:hover, input[type="submit"]:hover {
+  background-color: var(--main2);
+}
+
+
+/*有背景 可以加在body上*/
+.w-bg {
+    background: var(--bk1);
+    background-image: url('../assets/images/background.png');
+    background-blend-mode: soft-light;
+    background-position: center center;
+    background-repeat: repeat-y;
+    background-size: 100% 80%;
+}
+@media screen and (max-width: 768px) {
+  .w-bg {
+    background-repeat: unset;
+    background-size: 100%;
+  }
+}
+
+/*未滿版*/
+.container {
+    max-width: 90%;
+    margin: auto;
+    padding: 0 20px;
+}
+/*滿版*/
+.container-f {
+    /* padding: 0 20px; */
+    width: 100%;
+}
+@media screen and (max-width: 768px) {
+    .container {
+        max-width: 100%;
+    }
+}
+
+/*flex*/
+.flex {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.inline-flex {
+    display: inline-flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+
+/*塗鴉風title ENGonly*/
+.gtitle {
+    font-family: "Sedgwick Ave Display", cursive;
+    font-weight: 400;
+    font-size: 36px;
+    font-style: normal;
+    line-height: 160%;
+}
+
+/*scrollBar調整*/
+.scrollCust::-webkit-scrollbar {
+  width: 5px;
+}
+.scrollCust::-webkit-scrollbar-track {
+  background-color: var(--bk1);
+}
+.scrollCust::-webkit-scrollbar-thumb {
+  background-color: var(--main);
+  border-radius: 5px;
+}

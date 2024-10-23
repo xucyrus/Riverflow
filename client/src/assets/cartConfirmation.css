@@ -1,0 +1,186 @@
+@charset "UTF-8";
+@import url("basic.css");
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+/* 變量設置 */
+.cartConfirmation-container .container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+.cartConfirmation-container .container .content-left {
+  width: 60%;
+  margin-top: 5rem;
+}
+.cartConfirmation-container .container .content-left .order-steps {
+  border-bottom: 2px solid #baf13a;
+  padding-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 3rem;
+}
+.cartConfirmation-container .container .content-left .order-steps a {
+  color: white;
+  padding-right: 2rem;
+  font-size: 1.6rem;
+}
+.cartConfirmation-container .container .content-left .order-steps .fa-solid {
+  font-size: 25px;
+}
+.cartConfirmation-container .container .content-left .order-info {
+  line-height: 30px;
+}
+.cartConfirmation-container .container .content-left .order-info h3 {
+  font-size: 20px;
+}
+.cartConfirmation-container .container .content-left .customer-info {
+  margin-top: 10px;
+}
+.cartConfirmation-container .container .content-left .customer-info label {
+  margin-top: 200px;
+}
+.cartConfirmation-container .container .content-left .customer-info input {
+  color: #fff;
+  width: 100%;
+  border: 2px solid #baf13a;
+  background-color: #333;
+  border-radius: 10px;
+  padding: 5px;
+  margin: 10px 0px;
+}
+.cartConfirmation-container .container .content-left .customer-info #order-note {
+  padding-bottom: 9rem;
+}
+.cartConfirmation-container .container .content-left .customer-info #orderRemark {
+  padding-bottom: 11rem;
+}
+.cartConfirmation-container .container .content-right {
+  width: 35%;
+  border: 1px solid #baf13a;
+  border-radius: 10px;
+  padding: 0px 40px;
+  margin-left: 50px;
+  margin-top: 20px;
+  background-color: #333;
+}
+.cartConfirmation-container .container .content-right .payment-method {
+  margin-top: 40px;
+}
+.cartConfirmation-container .container .content-right .payment-method h2 {
+  font-size: 2rem;
+}
+.cartConfirmation-container .container .content-right .form-group {
+  padding-top: 1rem;
+  margin-top: 5px;
+}
+.cartConfirmation-container .container .content-right .dropdown {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+.cartConfirmation-container .container .content-right .dropdown input {
+  width: 100%;
+  padding: 3px;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+.cartConfirmation-container .container .content-right .dropdown .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #333;
+  z-index: 1;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  width: 100%;
+}
+.cartConfirmation-container .container .content-right .dropdown .dropdown-content div {
+  padding: 10px;
+  cursor: pointer;
+}
+.cartConfirmation-container .container .content-right .dropdown .dropdown-content div:hover {
+  background-color: #1d1d1d;
+}
+.cartConfirmation-container .container .content-right .dropdown.active .dropdown-content {
+  display: block;
+}
+.cartConfirmation-container .container .content-right .text-border {
+  color: #fff;
+  border: 2px solid #fff;
+  width: 96%;
+  border-radius: 5px;
+  margin: 0px;
+  margin-top: 2px;
+  padding: 5px;
+}
+.cartConfirmation-container .container .content-right .invoice-promo-code {
+  width: 100%;
+  display: flex;
+  gap: 30px;
+}
+.cartConfirmation-container .container .content-right .total-amount {
+  margin-top: 2rem;
+  border-top: 2px solid #fff;
+  padding-top: 20px;
+}
+.cartConfirmation-container .container .content-right .total-amount p {
+  line-height: 30px;
+}
+.cartConfirmation-container .container .content-right .total-amount p span {
+  float: right;
+}
+.cartConfirmation-container .container .content-right .submit {
+  border: 1px solid #fff;
+  border-radius: 4px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.cartConfirmation-container .container .content-right .submit button {
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  display: block;
+  width: 100%;
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 1.5;
+}
+.cartConfirmation-container .container .content-right .submit button:hover {
+  background-color: #fff;
+  color: #98d900;
+  font-weight: bold;
+  transition: 2s;
+}
+
+@media (max-width: 430px) {
+  .cartConfirmation-container .container {
+    display: flex;
+    flex-direction: column;
+  }
+  .cartConfirmation-container .container .content-left {
+    width: 100%;
+  }
+  .cartCheckOut .container .content-left {
+    width: 100%;
+  }
+  .cartConfirmation-container .container .content-left .order-steps a {
+    font-size: 1rem;
+    padding-right: 0rem;
+  }
+  .cartConfirmation-container .container .content-left .order-steps .fa-solid {
+    display: none;
+  }
+  .cartConfirmation-container .container .content-right {
+    width: 80%;
+    margin-left: 0px;
+    margin-top: 0px;
+  }
+}
+.cartCheckOut .container .content-left .cart-items {
+  display: none;
+}
+
+.cartCheckOut .container .content-left .order-info {
+  display: none;
+}/*# sourceMappingURL=cartConfirmation.css.map */

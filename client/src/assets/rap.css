@@ -1,0 +1,220 @@
+@import url("https://fonts.googleapis.com/css2?family=Just+Another+Hand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Noto+Sans+TC:wght@300&family=Silkscreen:wght@400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  background: var(--bk1);
+  z-index: 99;
+}
+
+.rap {
+  width: 100%;
+  height: auto;
+  padding-top: 25px;
+}
+.rap .gtitle {
+  z-index: 3;
+  position: relative;
+}
+.rap .gtitle h1 {
+  font-size: 64px;
+  text-align: center;
+  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.5);
+  position: relative;
+  z-index: 2;
+}
+.rap .gtitle::before {
+  content: "";
+  background-image: url(../assets/images/about_titleBG.png);
+  background-repeat: no-repeat;
+  display: block;
+  height: 139px;
+  width: 330px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: -1;
+}
+.rap p {
+  padding: 50px 20vw;
+  letter-spacing: 5px;
+  line-height: 35px;
+  text-align: center;
+  font-weight: 500;
+  color: var(--main);
+}
+.rap .rap-container {
+  background: var(--bk1);
+  width: 100%;
+  height: auto;
+  display: flex;
+  padding: 100px 10vw;
+  box-sizing: border-box;
+}
+.rap .rap-container .beatmaker-box {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.rap .rap-container .beatmaker-box .beatmaker {
+  width: 350px;
+  height: 550px;
+  background: var(--bk2);
+  border-radius: 10px;
+  border-bottom: 4px solid rgba(54, 54, 54, 0.1607843137);
+  box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.3);
+}
+.rap .rap-container .beatmaker-box .beatmaker .screen {
+  width: 280px;
+  height: 80px;
+  border-radius: 10px;
+  padding: 15px;
+  margin: 20px auto;
+  background: var(--bk1);
+  display: flex;
+  align-items: end;
+}
+.rap .rap-container .beatmaker-box .beatmaker .screen span {
+  font-family: "Silkscreen", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 30px;
+  color: rgb(177, 177, 177);
+}
+.rap .rap-container .beatmaker-box .beatmaker .keyboard {
+  width: 300px;
+  margin: 20px auto 0px;
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.rap .rap-container .beatmaker-box .beatmaker .keyboard .keyboard-btn {
+  width: 100px;
+  height: 100px;
+  padding: 5px;
+  box-sizing: border-box;
+}
+.rap .rap-container .beatmaker-box .beatmaker .keyboard .keyboard-btn button {
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-bottom: 4px solid rgba(54, 54, 54, 0.1607843137);
+  border-radius: 10px;
+  background: radial-gradient(circle farthest-side, #ffffff, #bcbcbb);
+  box-shadow: 0px 5px 10px #a839ff;
+  transition: all 0.3s;
+  color: var(--bk2);
+  font-family: "Silkscreen", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+  font-size: 14px;
+  letter-spacing: -2px;
+}
+.rap .rap-container .beatmaker-box .beatmaker .keyboard .keyboard-btn button:hover {
+  box-shadow: 0px 15px 25px -5px #baf13a;
+  transform: scale(1.01);
+}
+.rap .rap-container .beatmaker-box .beatmaker .keyboard .keyboard-btn button:active {
+  background: radial-gradient(circle farthest-side, #baf13a, #95d402);
+  box-shadow: 0px 4px 8px #baf13a;
+  transform: scale(0.98);
+}
+.rap .rap-container .beatmaker-box .beatmaker .keyboard .keyboard-btn button.active {
+  background: radial-gradient(circle farthest-side, #d1fb70, #89c400);
+  box-shadow: 0px 4px 8px #baf13a;
+}
+.rap .rap-container .beatmaker-box .beatmaker .stopbtn {
+  width: 300px;
+  height: 50px;
+  margin: 20px auto;
+}
+.rap .rap-container .beatmaker-box .beatmaker .stopbtn button {
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-bottom: 4px solid rgba(54, 54, 54, 0.1607843137);
+  border-radius: 10px;
+  background: radial-gradient(circle farthest-side, #ffffff, #bcbcbb);
+  box-shadow: 0px 5px 10px #a839ff;
+  transition: all 0.3s;
+  color: var(--bk2);
+  font-family: "Silkscreen", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+  font-size: 18px;
+  letter-spacing: -2px;
+}
+.rap .rap-container .beatmaker-box .beatmaker .stopbtn button:hover {
+  box-shadow: 0px 15px 20px -5px #a839ff;
+  transform: scale(1.01);
+}
+.rap .rap-container .beatmaker-box .beatmaker .stopbtn button:active {
+  background: radial-gradient(circle farthest-side, #cb88ff, #a839ff);
+  box-shadow: 0px 4px 8px #a839ff;
+  transform: scale(0.98);
+}
+.rap .rap-container .wrap {
+  width: 100%;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+}
+.rap .rap-container .wrap .tabcontent {
+  padding: 20px 50px;
+  display: none;
+}
+.rap .rap-container .wrap .tabcontent h1 {
+  margin-bottom: 20px;
+  font-family: "Silkscreen", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 50px;
+  line-height: normal;
+  text-align: center;
+  color: var(--side);
+  text-shadow: 0px 5px 20px #a839ff;
+  animation: shadow 2s infinite;
+}
+@keyframes shadow {
+  50% {
+    text-shadow: none;
+  }
+}
+.rap .rap-container .wrap .tabcontent p {
+  padding: 0;
+  color: white;
+}
+
+@media screen and (max-width: 1000px) {
+  .rap p {
+    padding: 50px 10vw;
+  }
+  .rap .rap-container {
+    flex-direction: column;
+    padding: 50px 5vw;
+  }
+  .rap .rap-container .beatmaker-box .beatmaker .screen {
+    width: 250px !important;
+  }
+  .rap .rap-container .beatmaker-box .beatmaker .keyboard {
+    justify-content: center;
+  }
+  .rap .rap-container .beatmaker-box .beatmaker .keyboard .keyboard-btn {
+    width: 95px !important;
+    height: 95px !important;
+  }
+  .rap .rap-container .beatmaker-box .beatmaker .stopbtn {
+    width: 280px !important;
+  }
+}/*# sourceMappingURL=rap.css.map */

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="../../assets/adminPage.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.13.3/jquery-ui.js"></script>
+    <title>新增優惠</title>
+</head>
+
+<body>
+    <div class="admin-page">
+        <div class="sideBar">
+            <div class="greeting flex">
+                <div><span>管理帳號</span>，你好！</div>
+                <button class="btn">登出</button>
+            </div>
+            <div class="sideMenu">
+                <ul>
+                    <li class="sideMenuOpt">
+                        <label for="" class="menuTitle flex">
+                            <i class="fa-solid fa-bag-shopping"></i>商品管理
+                        </label>
+                        <ul class="secMenu">
+                            <li>
+                                <a href="prdList.html" class="menuPage">商品列表</a>
+                            </li>
+                            <li>
+                                <a href="prdOrder.html" class="menuPage">商品訂單</a>
+                            </li>
+                            <li>
+                                <a href="discount.html" class="menuPage thisPage">優惠活動</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="sideMenuOpt">
+                        <label for="" class="menuTitle flex">
+                            <i class="fa-solid fa-newspaper"></i></i>專欄管理
+                        </label>
+                        <ul class="secMenu">
+                            <li>
+                                <a href="blogList.html" class="menuPage">文章列表</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="sideMenuOpt">
+                        <label for="" class="menuTitle flex">
+                            <i class="fa-solid fa-calendar-days"></i>活動管理
+                        </label>
+                        <ul class="secMenu">
+                            <li>
+                                <a href="eventList.html" class="menuPage">活動列表</a>
+                            </li>
+                            <li>
+                                <a href="eventOrder.html" class="menuPage">活動訂單</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="main">
+            <div class="pageTitle">
+                新增優惠
+            </div>
+            <div class="tabs">
+                <ul class="tabBtnList">
+                    <li><a href="#infoDiscount" id="defaultOpen" class="tabBtn active">優惠資訊</a></li>
+                </ul>
+
+                <!-- tabContent 商品資訊-->
+                <div id="infoDiscount" class="tabContent">
+                    <div class="infoItem">
+                        <label for="discountName" class="editTitle">優惠名稱：</label>
+                        <input id="discountName" type="text" required>
+                        <span class="required">※此欄位為必填</span>
+                    </div>
+                    <div class="infoItem itemflexList">
+                        <div>
+                            <label for="discountStart" class="editTitle">優惠開始時間：</label>
+                            <input id="discountStart" type="datetime-local" required>
+                        </div>
+                        <div>
+                            <label for="discountEnd" class="editTitle">優惠結束時間：</label>
+                            <input id="discountEnd" type="datetime-local" required>
+                        </div>
+                    </div>
+                    
+                    <div class="itemList">
+                        <div class="infoItem">
+                            <span class="editTitle">適用商品：</span>
+                            <button class="btn prdSeletor">篩選商品</button>
+                        </div>
+                        <div class="descInfo">
+                           
+                        </div>
+                    </div>
+                    <div class="infoItem">
+                        <label for="discount" class="editTitle">優惠方式：</label>
+                        <input id="discount" class="discountWay" type="number" placeholder="輸入0～1之間的數字" required>
+                        <span class="required">※此欄位為必填</span>
+                    </div>
+                </div>
+            </div>
+            <div class="btnList flex">
+                <button class="btn" onclick="history.back()"><i class="fa-solid fa-angle-left"></i> 返回</button>
+                <button class="btn" type="submit"><i class="fa-solid fa-floppy-disk"></i> 儲存</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        $('.tabs').tabs();
+        $('.tabBtn').on('click', function () {
+            // console.log(this)
+            $('.tabBtn').removeClass('active')
+            $(this).addClass('active')
+        })
+
+        // 圖片上傳
+        $('#prdPic').on('change', function() {
+            // console.log($(this).prop('files'))
+            $('#fileChosen').text($(this).prop('files')[0].name)
+        })
+
+        // 規格測試
+        $('.specTitle').on('input', function() {
+            // console.log($(this).val())
+            $('#specName1').text($(this).val())
+        })
+        
+    </script>
+</body>
+
+</html>

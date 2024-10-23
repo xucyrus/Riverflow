@@ -1,0 +1,92 @@
+///////////////
+//  資訊頁面  //
+///////////////
+
+1. 主頁
+localhost/riverflow/
+
+2. 介紹頁面
+localhost/riverflow/dj
+localhost/riverflow/streetdance
+localhost/riverflow/rap
+localhost/riverflow/graffiti
+localhost/riverflow/skate
+
+3. 關於我們
+localhost/riverflow/aboutus
+
+4. 嘻哈專欄
+localhost/riverflow/news?tab=3
+* 後端僅需一個router
+
+///////////////
+//  週邊商品  //
+///////////////
+
+1. 商品頁面
+localhost/riverflow/products
+
+2. 商品詳細頁
+localhost/riverflow/products/:productId
+
+3. 購物車
+localhost/riverflow/products/cart
+
+4. 訂單確認
+localhost/riverflow/products/order-confirmation
+
+5. 結帳
+localhost/riverflow/products/checkout
+
+6. 結帳完成
+localhost/riverflow/products/order-completion
+
+///////////////
+//  活動售票  //
+///////////////
+
+1. 活動頁面
+localhost/riverflow/events
+
+2. 活動詳細頁面
+localhost/riverflow/events/:eventId
+
+3. 活動訂票頁面
+localhost/riverflow/events/:eventId/tickets
+
+///////////////
+//  會員相關  //
+///////////////
+
+1. 註冊頁面
+localhost/riverflow/user/register
+
+2. 登入頁面
+localhost/riverflow/user/login
+
+3. 忘記密碼
+localhost/riverflow/user/resetPassword
+
+4. 重設密碼
+localhost/riverflow/user/resetPassword/hash
+
+5. 會員中心
+localhost/riverflow/user/
+
+6. 會員資料編輯?
+localhost/riverflow/user/edit
+
+7. 會員訂單查詢
+localhost/riverflow/user/order
+
+8. 會員訂單詳細查詢
+localhost/riverflow/user/order/:orderId
+
+9. 我的最愛商品
+localhost/riverflow/user/order/favorites
+
+10. 會員票券查詢
+localhost/riverflow/user/events
+
+11. 會員票券詳細查詢
+localhost/riverflow/user/events/:eventId

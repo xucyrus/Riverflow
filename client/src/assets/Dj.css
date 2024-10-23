@@ -1,0 +1,312 @@
+@charset "UTF-8";
+@import url(basic.css);
+body,
+html {
+  margin: 0;
+  padding: 0;
+}
+
+.DJ-wrap {
+  width: 100%;
+  /* 導覽列 */
+  /*------> banner<------ */
+  /* 跑馬燈海報區域位置調整 */
+  /* 播放機 */
+  /* 播放機的那一條 */
+  /* 處理唱片轉動 */
+  /* 唱片圖片 */
+  /* -----介紹內容----- */
+  /* 確保圖片和文字在同一個區塊中 */
+  /* 底下介紹 */
+  /* 這邊拿來調整position sticky效果 */
+}
+.DJ-wrap .header-nav {
+  background-color: #1d1d1d;
+  width: 100%;
+  box-shadow: 1px 2px 10px rgb(0, 0, 0);
+  z-index: 10;
+}
+.DJ-wrap .header-nav img {
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+.DJ-wrap .banner {
+  margin-top: 0;
+  height: 100vh;
+  position: relative;
+  z-index: -1000;
+  overflow: hidden;
+  /* 跑馬燈文字調整 */
+  /* 跑馬燈文字的间距调整 */
+  /* 跑馬燈錯位調整 */
+}
+.DJ-wrap .banner .marquee {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  transform: translateY(-50%);
+}
+.DJ-wrap .banner .marquee p {
+  margin: 10px;
+  font-family: "Kanit", sans-serif;
+  font-weight: 800;
+  font-style: italic;
+  font-size: 230px;
+  color: var(--main2);
+  line-height: 190px;
+  white-space: nowrap;
+}
+.DJ-wrap .banner .marquee span {
+  padding-right: 2rem;
+  margin: 0 10px;
+}
+.DJ-wrap .banner .marquee p:nth-of-type(1) {
+  transform: translateX(0);
+}
+.DJ-wrap .banner .marquee p:nth-of-type(2) {
+  transform: translateX(-20%);
+}
+.DJ-wrap .banner .marquee p:nth-of-type(3) {
+  transform: translateX(10%);
+}
+.DJ-wrap .banner .marquee p:nth-of-type(4) {
+  transform: translateX(-15%);
+}
+.DJ-wrap #Record {
+  position: absolute;
+  width: 45%;
+  left: 28%;
+  top: 20%;
+}
+.DJ-wrap #RecordBar {
+  position: absolute;
+  width: 19%;
+  top: 30%;
+  left: 52%;
+}
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.DJ-wrap #DjImg {
+  margin: 0px;
+  width: 19%;
+  position: absolute;
+  top: 33%;
+  left: 43.5%;
+  animation: rotate 5s linear infinite;
+  cursor: pointer;
+}
+.DJ-wrap .content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 40px; /* 調整 padding 值以確保圖片和文字間距合理 */
+  box-sizing: border-box;
+}
+.DJ-wrap .content:nth-of-type(2) img {
+  max-width: 100%;
+}
+.DJ-wrap .content:nth-of-type(3) img {
+  max-width: 100%;
+  position: absolute;
+  top: 10px;
+}
+.DJ-wrap .content:nth-of-type(4) img {
+  max-width: 100%;
+  position: absolute;
+  top: 10px;
+}
+.DJ-wrap .content:nth-of-type(5) img {
+  max-width: 60%;
+  position: absolute;
+  top: 30px;
+}
+.DJ-wrap .content:nth-of-type(6) img {
+  max-width: 80%;
+  position: absolute;
+  top: 30px;
+}
+.DJ-wrap .content:nth-of-type(7) img {
+  max-width: 65%;
+  position: absolute;
+  top: 30px;
+}
+.DJ-wrap .content-text {
+  position: absolute;
+  top: 60%;
+  padding: 20px;
+  line-height: 6rem;
+}
+.DJ-wrap .content h2 {
+  font-size: 4rem;
+  margin: 0;
+  color: #baf13a;
+  font-weight: bold;
+}
+.DJ-wrap .content p {
+  font-size: 1.3rem;
+  line-height: 2rem;
+  margin: 0;
+}
+.DJ-wrap .bottom-content {
+  margin-bottom: 100px;
+}
+.DJ-wrap .bottom-content img {
+  margin-bottom: 5rem;
+  width: 100%;
+  height: 50vh;
+  opacity: 0.5;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+.DJ-wrap .bottom-text {
+  color: white;
+  z-index: 10;
+  padding: 0px 50px;
+  text-align: center;
+}
+.DJ-wrap .bottom-content h2 {
+  margin: 0px;
+  font-size: 4rem;
+  color: #baf13a;
+}
+.DJ-wrap .bottom-content p {
+  margin: 0 auto;
+  width: 80ch;
+  font-size: 1.3rem;
+  margin-top: 50px;
+  line-height: 35px;
+}
+.DJ-wrap body {
+  width: 100%;
+  overflow-x: hidden;
+}
+.DJ-wrap .content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.DJ-wrap .content--sticky {
+  width: 100vw;
+  position: sticky;
+  --offset: 0px;
+  top: var(--offset);
+  height: calc(100vh - var(--offset));
+}
+.DJ-wrap .content--grid:has(.content__inner) {
+  display: block;
+  padding: 0;
+}
+.DJ-wrap .content--card .content__title {
+  font-size: clamp(1.5rem, 4vw, 3.5rem);
+}
+.DJ-wrap .content--card .content__title i {
+  display: block;
+}
+.DJ-wrap .content--half {
+  display: flex;
+  flex-direction: column;
+  gap: 3vh;
+  text-align: center;
+}
+.DJ-wrap .content--half:nth-child(odd) {
+  margin-left: auto;
+}
+.DJ-wrap .content__text {
+  margin: 0;
+  max-width: 500px;
+  grid-area: content-text;
+  text-align: center;
+  backface-visibility: hidden;
+}
+.DJ-wrap .content__text--narrow {
+  max-width: 300px;
+}
+.DJ-wrap .content--outro {
+  padding-top: 50vh;
+  padding-bottom: 30vh;
+}
+.DJ-wrap .bg-1 {
+  background-color: #1d1d1d;
+}
+.DJ-wrap .bg-2 {
+  background: #1d1d1d;
+}
+.DJ-wrap .bg-3 {
+  background: #1d1d1d;
+}
+.DJ-wrap .bg-4 {
+  background: #1d1d1d;
+}
+.DJ-wrap .bg-5 {
+  background: #1d1d1d;
+}
+.DJ-wrap .bg-6 {
+  background: #1d1d1d;
+}
+@media screen and (min-width: 63em) {
+  .DJ-wrap body {
+    --page-padding: 2rem 3rem;
+  }
+  .DJ-wrap .frame--header {
+    height: 100vh;
+    align-content: space-between;
+  }
+  .DJ-wrap .frame__heading {
+    margin-top: 0;
+  }
+  .DJ-wrap .frame__heading h2 {
+    white-space: nowrap;
+  }
+  .DJ-wrap .frame__heading p {
+    margin: 0 0 0 auto;
+  }
+  .DJ-wrap .content--grid .content__title {
+    align-self: end;
+  }
+  .DJ-wrap .frame__demos {
+    position: fixed;
+    bottom: 2rem;
+  }
+  .DJ-wrap .content--half {
+    width: 50%;
+  }
+}
+
+@media (max-width: 430px) {
+  .DJ-wrap #Record {
+    width: 90%;
+    left: 5%;
+    top: 30%;
+  }
+  .DJ-wrap #RecordBar {
+    width: 50%;
+    top: 32.7%;
+  }
+  .DJ-wrap #DjImg {
+    width: 40%;
+    left: 35%;
+    top: 37%;
+  }
+  .DJ-wrap .content-text {
+    top: 30%;
+  }
+  .DJ-wrap .bottom-content h2 {
+    font-size: 3rem;
+  }
+  .DJ-wrap .bottom-content p {
+    font-size: 1rem;
+    width: 30vh;
+    line-height: 25px;
+  }
+}
+/*# sourceMappingURL=Dj.css.map */

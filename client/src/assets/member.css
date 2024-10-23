@@ -1,0 +1,1041 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Just+Another+Hand&display=swap");
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+/*------- 個人資料--------- */
+.Member {
+  width: 100%;
+  box-sizing: border-box;
+  gap: 20px;
+  padding: 5vh 10vw 50px 10vw;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  text-wrap: nowrap;
+}
+.Member h3 {
+  color: var(--main);
+  margin-bottom: 20px;
+}
+.Member .nav-box {
+  height: 350px;
+  border-radius: 10px;
+  background: var(--bk2);
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+}
+.Member .nav-box .member {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.Member .nav-box .member .member-img {
+  width: 88px;
+  height: 88px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  overflow: hidden;
+  position: relative;
+}
+.Member .nav-box .member .member-img .img {
+  opacity: 0.5;
+}
+.Member .nav-box .member .member-img .prettier-input {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.Member .nav-box .member .member-img .prettier-input input {
+  display: none;
+}
+.Member .nav-box .member .member-img .prettier-input div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 88px;
+  text-align: center;
+  padding: 5px 0px 10px;
+  font-size: 15px;
+  font-weight: 600;
+  text-shadow: var(--bk2) 1px 0 15px;
+  letter-spacing: 2px;
+  background-color: hsla(78, 69%, 43%, 0.5);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.33);
+  color: white;
+  cursor: pointer;
+}
+.Member .nav-box .member .member-img .prettier-input:hover div {
+  background-color: hsla(0, 0%, 35%, 0.8);
+}
+.Member .nav-box .member .profile {
+  padding: 10px;
+}
+.Member .nav-box .member .profile a {
+  color: var(--side2);
+}
+.Member .nav-box .nav {
+  margin-top: 20px;
+}
+.Member .nav-box .nav li {
+  list-style-type: none;
+  font-size: 18px;
+  padding: 10px 15px;
+  font-weight: 200;
+}
+.Member .nav-box .nav li a {
+  color: var(--main2);
+  text-decoration: none;
+  cursor: pointer;
+}
+.Member .nav-box .nav li i {
+  margin-right: 20px;
+}
+.Member .nav-box .nav li:hover a {
+  color: var(--main);
+}
+.Member .nav-box .btn {
+  margin-top: 50px;
+  width: 100%;
+  font-size: 16px;
+  letter-spacing: 1px;
+  font-weight: 500;
+}
+.Member .profile-box {
+  max-width: 900px;
+  flex: 1;
+  border-radius: 10px;
+  background: var(--bk2);
+  padding: 40px;
+}
+.Member .profile-box .member-wrap .item {
+  border-bottom: 0.5px solid var(--gr2);
+}
+.Member .profile-box .member-wrap span {
+  display: block;
+  padding: 5px 0px;
+  color: #eee;
+  font-weight: 200;
+}
+.Member .profile-box .member-wrap .tips {
+  padding: 10px 0px;
+  color: var(--side2);
+  font-size: 15px;
+  text-align: start;
+}
+.Member .profile-box .input-card {
+  padding: 15px 0;
+}
+.Member .profile-box .input-card input[type=text] {
+  margin-left: 0;
+}
+.Member .profile-box .input-card:has(input:focus-visible) {
+  border-bottom: 1px solid var(--main);
+}
+.Member .profile-box .input-card div {
+  padding: 5px 0px;
+  color: var(--gr1);
+}
+.Member .profile-box .input-card label {
+  color: var(--main);
+}
+.Member .profile-box input {
+  width: 100%;
+  background: transparent;
+  border: 0;
+  color: var(--main);
+  font-size: 16px;
+  line-height: 160%;
+}
+.Member .profile-box .input-date {
+  width: 30%;
+  padding: 15px 0;
+}
+.Member .profile-box .input-date:has(input:focus-visible) {
+  border-bottom: 1px solid var(--main);
+}
+.Member .profile-box .input-date label {
+  color: var(--main);
+}
+.Member .profile-box input[type=date]::-webkit-calendar-picker-indicator {
+  background-color: var(--main);
+  padding: 5px;
+  border-radius: 5px;
+}
+.Member .profile-box select {
+  margin-top: 10px;
+  padding: 10px;
+}
+.Member .profile-box .btn-box {
+  display: flex;
+  justify-content: flex-end;
+  padding: 40px 0;
+  gap: 20px;
+}
+.Member .profile-box .btn-box input[type=button] {
+  background-color: var(--main);
+  border: 0;
+  border-radius: 10px;
+  color: var(--bk1);
+  cursor: pointer;
+  display: block;
+  padding: 10px;
+  text-align: center;
+}
+.Member .profile-box .btn-box input[type=button]:hover {
+  background-color: var(--main2);
+}
+.Member .profile-box.active {
+  display: block;
+}
+
+/*------- 訂單查詢--------- */
+.OrderList {
+  width: 100%;
+  min-height: 750px;
+  box-sizing: border-box;
+  gap: 20px;
+  padding: 5vh 10vw 50px 10vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.OrderList h3 {
+  color: var(--main);
+  margin-bottom: 20px;
+}
+.OrderList .nav-box {
+  height: 350px;
+  border-radius: 10px;
+  background: var(--bk2);
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+}
+.OrderList .nav-box .member {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.OrderList .nav-box .member .member-img {
+  width: 88px;
+  height: 88px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.OrderList .nav-box .member .profile {
+  padding: 10px;
+}
+.OrderList .nav-box .member .profile a {
+  color: var(--side2);
+  cursor: pointer;
+}
+.OrderList .nav-box .nav {
+  margin-top: 20px;
+}
+.OrderList .nav-box .nav li {
+  list-style-type: none;
+  font-size: 18px;
+  padding: 10px 15px;
+  font-weight: 200;
+}
+.OrderList .nav-box .nav li a {
+  color: var(--main2);
+  text-decoration: none;
+}
+.OrderList .nav-box .nav li i {
+  margin-right: 20px;
+}
+.OrderList .nav-box .nav li:hover a {
+  color: var(--main);
+}
+.OrderList .nav-box .btn {
+  margin-top: 50px;
+  width: 100%;
+  font-size: 16px;
+  letter-spacing: 1px;
+  font-weight: 500;
+}
+.OrderList .order-box {
+  max-width: 900px;
+  flex: 1;
+  border-radius: 10px;
+  background: var(--bk2);
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  /* Style the tab content (and add height:100% for full page content) */
+}
+.OrderList .order-box .btn-box {
+  width: 100%;
+  display: flex;
+  align-items: stretch;
+  border-bottom: 0.5px solid var(--gr2);
+}
+.OrderList .order-box .btn-box .tablink {
+  background-color: var(--bk2);
+  color: var(--gr1);
+  border: none;
+  border-bottom: 3px solid var(--bk2);
+  padding: 10px 0px;
+  margin-right: 30px;
+  font-size: 16px;
+  cursor: pointer;
+}
+.OrderList .order-box .btn-box .tablink:hover {
+  background-color: none;
+  border-bottom: 3px solid var(--main);
+}
+.OrderList .order-box .tabcontent {
+  display: none;
+  padding: 20px 0px;
+  height: 100%;
+}
+.OrderList .order-box .tabcontent .member-order {
+  padding: 20px;
+  border: 0.5px solid var(--main);
+  border-radius: 20px;
+  margin: 20px 0px;
+  color: var(--main);
+}
+.OrderList .order-box .tabcontent .member-order .member-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+.OrderList .order-box .tabcontent .member-order .member-wrap span {
+  font-size: 16px;
+  font-weight: 200;
+  letter-spacing: 1px;
+}
+.OrderList .order-box .tabcontent .member-order .member-wrap .orderbtn {
+  border: none;
+  background: transparent;
+  border: 0.5px solid var(--main);
+  border-radius: 5px;
+  padding: 5px 10px;
+  color: var(--main);
+  font-size: 16px;
+  font-weight: 200;
+  letter-spacing: 1px;
+}
+.OrderList .order-box .tabcontent .member-order .member-wrap .orderbtn:hover {
+  background: var(--main);
+  color: var(--bk1);
+  font-weight: 400;
+}
+.OrderList .order-box .tabcontent .member-order table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+.OrderList .order-box .tabcontent .member-order table thead {
+  background-color: var(--bk2);
+}
+.OrderList .order-box .tabcontent .member-order th,
+.OrderList .order-box .tabcontent .member-order td {
+  font-size: 16px;
+  font-weight: 200;
+  text-align: center;
+  padding: 10px;
+}
+.OrderList .order-box .tabcontent .member-order th {
+  border-bottom: 0.5px solid var(--main);
+}
+.OrderList .order-box .tabcontent .member-order th:nth-of-type(1),
+.OrderList .order-box .tabcontent .member-order td:nth-of-type(1) {
+  text-align: justify;
+}
+.OrderList .order-box .tabcontent .member-order th:nth-of-type(4),
+.OrderList .order-box .tabcontent .member-order td:nth-of-type(4) {
+  text-align: right;
+}
+.OrderList .order-box .tabcontent .btn {
+  width: 100%;
+  font-size: 16px;
+  letter-spacing: 1px;
+  font-weight: 500;
+}
+
+/*------- 訂單明細--------- */
+.Order {
+  width: 100%;
+  min-height: 750px;
+  box-sizing: border-box;
+  gap: 20px;
+  padding: 5vh 10vw 50px 10vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.Order h3 {
+  color: var(--main);
+  margin-bottom: 20px;
+}
+.Order .nav-box {
+  height: 350px;
+  border-radius: 10px;
+  background: var(--bk2);
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+}
+.Order .nav-box .member {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.Order .nav-box .member .member-img {
+  width: 88px;
+  height: 88px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.Order .nav-box .member .profile {
+  padding: 10px;
+}
+.Order .nav-box .member .profile a {
+  color: var(--side2);
+  cursor: pointer;
+}
+.Order .nav-box .nav {
+  margin-top: 20px;
+}
+.Order .nav-box .nav li {
+  list-style-type: none;
+  font-size: 18px;
+  padding: 10px 15px;
+  font-weight: 200;
+}
+.Order .nav-box .nav li a {
+  color: var(--main2);
+  text-decoration: none;
+}
+.Order .nav-box .nav li i {
+  margin-right: 20px;
+}
+.Order .nav-box .nav li:hover a {
+  color: var(--main);
+}
+.Order .nav-box .btn {
+  margin-top: 50px;
+  width: 100%;
+  font-size: 16px;
+  letter-spacing: 1px;
+  font-weight: 500;
+}
+.Order .order-box {
+  max-width: 900px;
+  flex: 1;
+  border-radius: 10px;
+  background: var(--bk2);
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  /* Style the tab content (and add height:100% for full page content) */
+}
+.Order .order-box .btn-box {
+  width: 100%;
+  display: flex;
+  align-items: stretch;
+  border-bottom: 0.5px solid var(--gr2);
+}
+.Order .order-box .btn-box .tablink {
+  background-color: var(--bk2);
+  color: var(--gr1);
+  border: none;
+  border-bottom: 3px solid var(--bk2);
+  padding: 10px 0px;
+  margin-right: 30px;
+  font-size: 16px;
+  cursor: pointer;
+}
+.Order .order-box .btn-box .tablink:hover {
+  background-color: none;
+  border-bottom: 3px solid var(--main);
+}
+.Order .order-box .tabcontent {
+  display: none;
+  padding: 20px 0px;
+  height: 100%;
+}
+.Order .order-box .tabcontent .member-order {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  padding: 20px;
+  border: 0.5px solid var(--main);
+  border-radius: 20px;
+  margin: 20px 0px;
+}
+.Order .order-box .tabcontent .member-order .member-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+.Order .order-box .tabcontent .member-order .member-wrap span {
+  font-size: 16px;
+  font-weight: 200;
+  letter-spacing: 1px;
+  color: var(--main);
+}
+.Order .order-box .tabcontent .member-order .member-wrap .orderbtn {
+  border: none;
+  background: transparent;
+  border: 0.5px solid var(--main);
+  border-radius: 5px;
+  padding: 5px 10px;
+  color: var(--main);
+  font-size: 16px;
+  font-weight: 200;
+  letter-spacing: 1px;
+}
+.Order .order-box .tabcontent .member-order .member-wrap .orderbtn:hover {
+  background: var(--main);
+  color: var(--bk1);
+  font-weight: 400;
+}
+.Order .order-box .tabcontent .member-order table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+  color: var(--main);
+}
+.Order .order-box .tabcontent .member-order table thead {
+  background-color: var(--bk2);
+}
+.Order .order-box .tabcontent .member-order table th,
+.Order .order-box .tabcontent .member-order table td {
+  font-size: 16px;
+  font-weight: 200;
+  text-align: center;
+  padding: 10px;
+}
+.Order .order-box .tabcontent .member-order table th {
+  border-bottom: 0.5px solid var(--main);
+}
+.Order .order-box .tabcontent .member-order table th:nth-of-type(1),
+.Order .order-box .tabcontent .member-order table td:nth-of-type(1) {
+  text-align: justify;
+}
+.Order .order-box .tabcontent .member-order table th:nth-of-type(4),
+.Order .order-box .tabcontent .member-order table td:nth-of-type(4) {
+  text-align: right;
+}
+.Order .order-box .tabcontent .member-order .accordion {
+  width: 100%;
+  color: var(--main);
+  font-size: 16px;
+  font-weight: 300;
+  transition: 0.5s;
+}
+.Order .order-box .tabcontent .member-order .accordion .container {
+  max-width: 100% !important;
+  position: relative;
+  margin: 10px 0px;
+  padding: 0px;
+}
+.Order .order-box .tabcontent .member-order .accordion .container .label {
+  position: relative;
+  padding: 15px 10px;
+  font-size: 16px;
+  color: var(--main);
+  border-bottom: 0.5px solid var(--main);
+  cursor: pointer;
+}
+.Order .order-box .tabcontent .member-order .accordion .container .label::before {
+  content: "+";
+  color: var(--main);
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  font-size: 18px;
+  transform: translateY(-50%);
+}
+.Order .order-box .tabcontent .member-order .accordion .container.active .member-content {
+  height: 150px;
+}
+.Order .order-box .tabcontent .member-order .accordion .container.active .label::before {
+  content: "-";
+  font-size: 30px;
+}
+.Order .order-box .tabcontent .member-order .accordion .container .member-content {
+  height: 0;
+  position: relative;
+  margin: 20px 0px;
+  padding: 0px 10px;
+  font-size: 16px;
+  text-align: justify;
+  overflow: hidden;
+  transition: 0.5s;
+}
+.Order .order-box .tabcontent .member-order .accordion .container .member-content span {
+  display: block;
+  padding: 3px 0px;
+}
+.Order .order-box .tabcontent .btn {
+  width: 100%;
+  font-size: 16px;
+  letter-spacing: 1px;
+  font-weight: 500;
+}
+
+/*------- 活動票券--------- */
+.Tickets {
+  width: 100%;
+  min-height: 750px;
+  box-sizing: border-box;
+  gap: 20px;
+  padding: 5vh 10vw 50px 10vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.Tickets h3 {
+  color: var(--main);
+  margin-bottom: 20px;
+}
+.Tickets .nav-box {
+  height: 350px;
+  border-radius: 10px;
+  background: var(--bk2);
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+}
+.Tickets .nav-box .member {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.Tickets .nav-box .member .member-img {
+  width: 88px;
+  height: 88px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.Tickets .nav-box .member .profile {
+  padding: 10px;
+}
+.Tickets .nav-box .member .profile a {
+  color: var(--side2);
+  cursor: pointer;
+}
+.Tickets .nav-box .nav {
+  margin-top: 20px;
+}
+.Tickets .nav-box .nav li {
+  list-style-type: none;
+  font-size: 18px;
+  padding: 10px 15px;
+  font-weight: 200;
+}
+.Tickets .nav-box .nav li a {
+  color: var(--main2);
+  text-decoration: none;
+  cursor: pointer;
+}
+.Tickets .nav-box .nav li i {
+  margin-right: 20px;
+}
+.Tickets .nav-box .nav li:hover a {
+  color: var(--main);
+}
+.Tickets .nav-box .btn {
+  margin-top: 50px;
+  width: 100%;
+  font-size: 16px;
+  letter-spacing: 1px;
+  font-weight: 500;
+}
+.Tickets .order-box {
+  max-width: 900px;
+  flex: 1;
+  border-radius: 10px;
+  background: var(--bk2);
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  /* Style the tab content (and add height:100% for full page content) */
+}
+.Tickets .order-box .btn-box {
+  width: 100%;
+  display: flex;
+  align-items: stretch;
+  border-bottom: 0.5px solid var(--gr2);
+}
+.Tickets .order-box .btn-box .tablink {
+  background-color: var(--bk2);
+  color: var(--gr1);
+  border: none;
+  border-bottom: 3px solid var(--bk2);
+  padding: 10px 0px;
+  margin-right: 30px;
+  font-size: 16px;
+  cursor: pointer;
+}
+.Tickets .order-box .btn-box .tablink:hover {
+  background-color: none;
+  border-bottom: 3px solid var(--main);
+}
+.Tickets .order-box .tabcontent {
+  display: none;
+  padding: 20px 0px;
+  height: 100%;
+}
+.Tickets .order-box .tabcontent .member-order {
+  padding: 20px;
+  border: 0.5px solid var(--main);
+  border-radius: 20px;
+  margin: 20px 0px;
+  color: var(--main);
+}
+.Tickets .order-box .tabcontent .member-order .member-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+.Tickets .order-box .tabcontent .member-order .member-wrap span {
+  font-size: 16px;
+  font-weight: 200;
+  letter-spacing: 1px;
+}
+.Tickets .order-box .tabcontent .member-order .member-wrap .orderbtn {
+  border: none;
+  background: transparent;
+  border: 0.5px solid var(--main);
+  border-radius: 5px;
+  padding: 5px 10px;
+  color: var(--main);
+  font-size: 16px;
+  font-weight: 200;
+  letter-spacing: 1px;
+}
+.Tickets .order-box .tabcontent .member-order .member-wrap .orderbtn:hover {
+  background: var(--main);
+  color: var(--bk1);
+  font-weight: 400;
+}
+.Tickets .order-box .tabcontent .member-order table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+.Tickets .order-box .tabcontent .member-order table thead {
+  background-color: var(--bk2);
+}
+.Tickets .order-box .tabcontent .member-order th,
+.Tickets .order-box .tabcontent .member-order td {
+  font-size: 16px;
+  font-weight: 200;
+  line-height: 25px;
+  text-align: center;
+  padding: 10px;
+}
+.Tickets .order-box .tabcontent .member-order th {
+  border-bottom: 0.5px solid var(--main);
+}
+.Tickets .order-box .tabcontent .member-order th:nth-of-type(1),
+.Tickets .order-box .tabcontent .member-order td:nth-of-type(1) {
+  text-align: justify;
+  word-wrap: break-word;
+}
+.Tickets .order-box .tabcontent .member-order th:nth-of-type(2),
+.Tickets .order-box .tabcontent .member-order td:nth-of-type(2) {
+  text-align: justify;
+}
+.Tickets .order-box .tabcontent .member-order th:nth-of-type(6),
+.Tickets .order-box .tabcontent .member-order td:nth-of-type(6) {
+  text-align: right;
+}
+.Tickets .order-box .tabcontent .btn {
+  width: 100%;
+  font-size: 16px;
+  letter-spacing: 1px;
+  font-weight: 500;
+}
+
+/*------- 我的最愛--------- */
+.Collection {
+  width: 100%;
+  min-height: 750px;
+  box-sizing: border-box;
+  gap: 20px;
+  padding: 5vh 10vw 50px 10vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.Collection .multiline-ellipsis {
+  white-space: wrap;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+.Collection h3 {
+  color: var(--main);
+  margin-bottom: 20px;
+}
+.Collection .nav-box {
+  height: 350px;
+  border-radius: 10px;
+  background: var(--bk2);
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+}
+.Collection .nav-box .member {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.Collection .nav-box .member .member-img {
+  width: 88px;
+  height: 88px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.Collection .nav-box .member .profile {
+  padding: 10px;
+}
+.Collection .nav-box .member .profile a {
+  color: var(--side2);
+}
+.Collection .nav-box .nav {
+  margin-top: 20px;
+}
+.Collection .nav-box .nav li {
+  list-style-type: none;
+  font-size: 18px;
+  padding: 10px 15px;
+  font-weight: 200;
+}
+.Collection .nav-box .nav li a {
+  color: var(--main2);
+  text-decoration: none;
+  cursor: pointer;
+}
+.Collection .nav-box .nav li i {
+  margin-right: 20px;
+}
+.Collection .nav-box .nav li:hover a {
+  color: var(--main);
+}
+.Collection .nav-box .btn {
+  margin-top: 50px;
+  width: 100%;
+  font-size: 16px;
+  letter-spacing: 1px;
+  font-weight: 500;
+}
+.Collection .order-box {
+  max-width: 900px;
+  flex: 1;
+  border-radius: 10px;
+  background: var(--bk2);
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  /* Style the tab content (and add height:100% for full page content) */
+}
+.Collection .order-box .btn-box {
+  width: 100%;
+  display: flex;
+  align-items: stretch;
+  border-bottom: 0.5px solid var(--gr2);
+}
+.Collection .order-box .btn-box .tablink {
+  background-color: var(--bk2);
+  color: var(--gr1);
+  border: none;
+  border-bottom: 3px solid var(--bk2);
+  padding: 10px 0px;
+  margin-right: 30px;
+  font-size: 16px;
+  cursor: pointer;
+}
+.Collection .order-box .btn-box .tablink:hover {
+  background-color: none;
+  border-bottom: 3px solid var(--main);
+}
+.Collection .order-box .tabcontent {
+  display: none;
+  padding: 20px 0px;
+  height: 100%;
+}
+.Collection .order-box .tabcontent .member-order {
+  border: 0.5px solid var(--main);
+  border-radius: 20px;
+  padding: 20px;
+  margin: 20px 0px;
+  color: var(--main);
+  position: relative;
+  display: flex;
+}
+.Collection .order-box .tabcontent .member-order .Img-box {
+  flex: 1;
+  padding: 10px;
+}
+.Collection .order-box .tabcontent .member-order .Img-box img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 200px;
+  height: 200px;
+  border-radius: 5px;
+}
+.Collection .order-box .tabcontent .member-order .container {
+  flex: 2;
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+}
+.Collection .order-box .tabcontent .member-order .container .member-wrap:nth-of-type(2) {
+  padding-right: 50px;
+  color: var(--main2);
+}
+.Collection .order-box .tabcontent .member-order .container .member-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.Collection .order-box .tabcontent .member-order .container .member-wrap h3 {
+  line-height: normal;
+  padding-top: 30px;
+  padding-right: 50px;
+}
+.Collection .order-box .tabcontent .member-order .container .member-wrap p {
+  text-align: justify;
+}
+.Collection .order-box .tabcontent .member-order .container .member-wrap .closebtn {
+  height: auto;
+  border: none;
+  background: transparent;
+  border: 0.5px solid var(--main);
+  border-radius: 5px;
+  color: var(--main);
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 30px;
+  letter-spacing: 1px;
+  text-align: center;
+  padding: 0px 5px;
+}
+.Collection .order-box .tabcontent .member-order .container .member-wrap .closebtn:hover {
+  background: var(--main);
+  color: var(--bk1);
+  font-weight: 400;
+}
+.Collection .order-box .tabcontent .member-order .container .member-wrap .orderbtn {
+  border: none;
+  background: transparent;
+  border: 0.5px solid var(--main);
+  border-radius: 5px;
+  padding: 5px 10px;
+  color: var(--main);
+  font-size: 16px;
+  font-weight: 200;
+  letter-spacing: 1px;
+}
+.Collection .order-box .tabcontent .member-order .container .member-wrap .orderbtn:hover,
+.Collection .order-box .tabcontent .member-order .container .member-wrap .closebtn:hover {
+  background: var(--main);
+  color: var(--bk1);
+  font-weight: 400;
+}
+.Collection .order-box .tabcontent .btn {
+  width: 100%;
+  font-size: 16px;
+  letter-spacing: 1px;
+  font-weight: 500;
+}
+
+@media screen and (min-width: 1440px) {
+  .nav-box {
+    width: 300px;
+  }
+  .profile-box {
+    max-width: 900px;
+  }
+  .order-box {
+    max-width: 900px;
+  }
+}
+@media screen and (max-width: 768px) {
+  section {
+    flex-direction: column;
+    flex-wrap: nowrap !important;
+    align-items: center;
+    justify-content: center;
+  }
+  .nav-box {
+    width: 375px;
+  }
+  .profile-box {
+    width: 375px;
+  }
+  .order-box {
+    width: 500px;
+  }
+  .order-box .tabcontent .member-order thead {
+    display: none;
+  }
+  .order-box .tabcontent .member-order tbody {
+    border-top: 1px solid var(--main);
+  }
+  .order-box .tabcontent .member-order td {
+    display: block;
+    padding: 0.3rem 0.5rem;
+    text-align: left !important;
+  }
+  .order-box .tabcontent .member-order td:before {
+    content: attr(data-title);
+    display: inline-block;
+    width: auto;
+    text-align: left;
+  }
+  .btn-box {
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 375px) {
+  .nav-box {
+    width: 200px;
+  }
+  .nav-box .member-wrap .member {
+    gap: 0;
+  }
+  .profile-box {
+    width: 200px;
+  }
+  .profile-box .member-wrap .input-date {
+    width: 100%;
+  }
+  .order-box {
+    width: 300px;
+  }
+  .order-box .btn-box {
+    flex-direction: column;
+  }
+  .order-box .btn-box .btn {
+    width: 100% !important;
+  }
+  .order-box .btn-box .tablink {
+    margin-right: 0px !important;
+  }
+  .order-box .tabcontent .member-order .member-wrap {
+    flex-direction: column;
+    align-items: start !important;
+  }
+  .order-box .tabcontent .member-order .member-wrap span {
+    display: block;
+    margin: 10px 0px;
+  }
+}/*# sourceMappingURL=member.css.map */

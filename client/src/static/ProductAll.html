@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RiverFlow商城</title>
+    <link rel="stylesheet" href="../assets/reset.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <link rel="stylesheet" href="../assets/basic.css" />
+    <link rel="stylesheet" href="../assets/ProductAll.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  </head>
+  <body class="scrollCust">
+    <header id="navbar">
+      <div class="flex container">
+        <a href="#">
+          <img class="logo" src="../assets/images/riverflow_logo.png" alt="logo" />
+        </a>
+        <div class="flex header-right">
+          <ul class="headerLink flex">
+            <li><a href="index.html">首頁</a></li>
+            <li class="cultureListName dropdown">
+              <a class="dropdownToggle" href="#">嘻哈文化<i class="bi bi-caret-down-fill"></i></a>
+              <div id="dropdownMenu" class="">
+                <ul class="cultureList flex">
+                  <li><a href="./DJ.html" class="cultureOpt">DJ</a></li>
+                  <li><a href="#" class="cultureOpt">街舞</a></li>
+                  <li><a href="#" class="cultureOpt">饒舌</a></li>
+                  <li><a href="#" class="cultureOpt">塗鴉</a></li>
+                  <li><a href="./skate.html" class="cultureOpt">滑板</a></li>
+                </ul>
+              </div>
+            </li>
+            <li><a href="news.html">嘻哈專欄</a></li>
+            <li><a href="eventPage1.html">into flow</a></li>
+            <li><a href="#">商店</a></li>
+          </ul>
+          <div class="functionIcons flex">
+            <a href="#" class="headerIcon">
+              <i class="bi bi-ticket-perforated"></i>
+            </a>
+            <a href="./cart.html" class="headerIcon">
+              <i class="bi bi-cart"></i>
+            </a>
+            <a href="login.html" class="headerIcon">
+              <i class="bi bi-person"></i>
+            </a>
+            <div class="headerIcon mobOnly">
+              <input id="menuBtn" class="menuBtn" type="checkbox" />
+              <label for="menuBtn" class="menuIcon">
+                <span class="navigation"></span>
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="mobMenu">
+        <ul class="headerLink mob flex">
+          <li><a href="#">首頁</a></li>
+          <li class="cultureListName dropdown dropdown_mob">
+            <a class="dropdownToggle" href="#">嘻哈文化<i class="bi bi-caret-down-fill bi-caret-down-fill_mob"></i></a>
+            <div id="dropdownMenu">
+              <ul class="cultureList cultureList_mob flex">
+                <li><a href="#" class="cultureOpt">DJ</a></li>
+                <li><a href="#" class="cultureOpt">街舞</a></li>
+                <li><a href="#" class="cultureOpt">饒舌</a></li>
+                <li><a href="#" class="cultureOpt">塗鴉</a></li>
+                <li><a href="#" class="cultureOpt">滑板</a></li>
+              </ul>
+            </div>
+          </li>
+          <li><a href="#">嘻哈專欄</a></li>
+          <li><a href="#">into flow</a></li>
+          <li><a href="#">商店</a></li>
+        </ul>
+      </div>
+    </header>
+    <section class="wrap-f">
+      <div class="container-f reset">
+        <!-- 輪播圖-banner -->
+        <div class="swiper">
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <section class="swiper-slide">
+              <img
+                src="https://vibrancefestival-live-83932ec24f1845258-f0d579e.divio-media.com/images/PXL_20210325_221726325.fddd6140.fill-900x420.jpg"
+                alt="塗鴉"
+              />
+              <div class="swiper-text">
+                <h1>絕對塗鴉行</h1>
+                <p>
+                  絕對塗鴉行
+                  是專為塗鴉藝術家、街頭藝術愛好者和創意達人打造的專業噴漆用品商店。無論你是初學者還是資深塗鴉藝術家，這裡都有你需要的一切。從高品質的噴漆罐到各式塗鴉工具，我們提供最全面的產品選擇，助你創造出色的藝術作品。
+                </p>
+              </div>
+            </section>
+            <section class="swiper-slide">
+              <img
+              src="https://cdn.shopify.com/s/files/1/0530/0695/8744/t/22/assets/skate-shops-1683383358868.jpg?v=1683383359
+              alt="skate" />
+              <div class="swiper-text">
+                <h1>自由滑行</h1>
+                <p>
+                  自由滑行
+                  是滑板愛好者的天堂，無論你是初學者還是資深滑板玩家，這裡都能滿足你的需求。我們致力於提供最優質的滑板、配件及裝備，助你在滑行中展現最佳狀態。來到自由滑行，享受滑板帶來的無限快樂與自由！
+                </p>
+              </div>
+            </section>
+            <section class="swiper-slide">
+              <img src="https://web.cheers.com.tw/event/2019fwf/assets/img/article/009.jpg" alt="DJ" />
+              <div class="swiper-text">
+                <h1>唱片騎師</h1>
+                <p>
+                  DJ，即唱片騎師，是派對和音樂節的靈魂。他們掌握著音樂的節奏，創造獨特的聽覺體驗，點燃現場的每一個角落。無論是在夜店、音樂節還是私人派對，DJ通過精湛的混音技術和敏銳的音樂品味，將不同風格的音樂無縫結合，製造出令人沉醉的音樂流。
+                </p>
+              </div>
+            </section>
+            <section class="swiper-slide">
+              <img
+              src="https://media.gq.com.tw/photos/5dbcbd532551d400086a9647/master/w_1600%2Cc_limit/2015052266764869.jpg
+              alt="RAP" />
+              <div class="swiper-text">
+                <h1>Beans & Beats Records</h1>
+                <p>
+                  身為嘻哈音樂廠牌的顏社，當然無法忘記音樂初衷，在實體唱片逐漸沒落情況下，還放膽在咖啡店樓下成立一間唱片行「Beans
+                  & Beats Records」，以嘻哈音樂為主，要讓這間唱片行成為台北市的Hip hop音樂聚落。
+                </p>
+              </div>
+            </section>
+            <section class="swiper-slide">
+              <img
+                src="https://d1j71ui15yt4f9.cloudfront.net/wp-content/uploads/2023/07/18203055/71004a-20230718141533714-0.jpg"
+                alt="Street Dance"
+              />
+              <div class="swiper-text">
+                <h1>街舞</h1>
+                <p>
+                  街舞是一種充滿能量和創意的舞蹈形式，起源於嘻哈文化。街舞舞者通過動感的動作和音樂，表達自己的情感和個性。街舞包括多種風格，如Breaking、Popping、Locking等，每一種風格都有其獨特的魅力和技巧。街舞不僅是一種表演藝術，更是一種文化象徵，代表了年輕人的自由和活力。
+                </p>
+              </div>
+            </section>
+          </div>
+          <!-- 輪播圖底下進度條 -->
+          <div class="swiper-scrollbar"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 製作未滿版區域 -->
+    <section class="wrap">
+      <div class="container reset">
+        <!-- 左方搜尋篩選欄 -->
+        <aside class="shop-filter">
+          <div class="filter-text">
+            <h3>商品搜尋欄</h3>
+            <input type="text" id="searchInput" placeholder="請輸入商品名稱" />
+          </div>
+          <ul id="categoryFilter">
+            <li class="shop-filter-item">
+              <a href="#" class="selected" data-filter="all">全部類別</a>
+            </li>
+            <br />
+            <li class="shop-filter-item"><a href="#" data-filter="DJ">DJ | Disc Jockey </a></li>
+            <li class="shop-filter-item"><a href="#" data-filter="街舞">街舞 | Street Dance</a></li>
+            <br />
+            <li class="shop-filter-item"><a href="#" data-filter="饒舌">饒舌 | Rap</a></li>
+            <br />
+            <li class="shop-filter-item"><a href="#" data-filter="塗鴉">塗鴉 | Graffiti</a></li>
+            <br />
+            <li class="shop-filter-item"><a href="#" data-filter="滑板">滑板 | Skate</a></li>
+            <br />
+            <li class="shop-filter-item"><a href="#" data-filter="新品">新品 | New</a></li>
+            <br />
+            <li class="shop-filter-item"><a href="#" data-filter="優惠">優惠 | On Sale</a></li>
+          </ul>
+        </aside>
+
+        <!-- 響應式左方搜尋篩選欄專用768px開始 -->
+        <aside class="RWD-shop-filter">
+          <ul id="categoryFilter">
+            <li class="shop-filter-item">
+              <a href="#" class="selected" data-filter="all">全部</a>
+            </li>
+            <br />
+            <li class="shop-filter-item"><a href="#" data-filter="DJ">刷碟 Disc Jockey (DJ)</a></li>
+            <li class="shop-filter-item"><a href="#" data-filter="街舞">街舞 Street Dance</a></li>
+            <br />
+            <li class="shop-filter-item"><a href="#" data-filter="饒舌">饒舌 Rap</a></li>
+            <br />
+            <li class="shop-filter-item"><a href="#" data-filter="塗鴉">塗鴉 Graffiti</a></li>
+            <br />
+            <li class="shop-filter-item"><a href="#" data-filter="滑板">滑板 Skate</a></li>
+            <br />
+          </ul>
+        </aside>
+        <!-- 右方商品列表 -->
+        <main class="product-list">
+          <!--這邊會被我刪掉用axios串api動態生成  -->
+
+          <!-- 新品 -->
+          <div class="product-item" data-category="饒舌 新品">
+            <div class="product-img">
+              <img src="../assets/images/shop/截圖 2024-08-07 下午3.28.11.png" alt="饒舌編號1" />
+              <!-- 收到我的最愛 -->
+              <a href="#" class="favorite"><i class="fa-regular fa-heart"></i></a>
+            </div>
+            <!-- 卡片下方標籤 -->
+            <div class="labels">
+              <span class="label rap">饒舌</span>
+              <span class="label new">新品</span>
+            </div>
+            <div class="product-info">
+              <h4>王以太聯名短袖T恤</h4>
+              <div class="product-text">
+                <p>NT$1480</p>
+                <a href="./ProductDetail.html" class="look-btn">查看商品</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- 新品 -->
+          <div class="product-item" data-category="滑板 新品">
+            <div class="product-img">
+              <img
+                src="https://images.goodsmile.info/cgm/images/product/20220502/12665/98719/large/d870c31d5f264155ac6e3e359b7d34bc.jpg"
+                alt="滑板編號1"
+              />
+              <!-- 收到我的最愛 -->
+              <a href="#" class="favorite"><i class="fa-regular fa-heart"></i></a>
+            </div>
+            <!-- 卡片下方標籤 -->
+            <div class="labels">
+              <span class="label skate">滑板</span>
+              <span class="label new">新品</span>
+            </div>
+            <div class="product-info">
+              <h4>美式拼貼滑板</h4>
+              <div class="product-text">
+                <p>NT$3683</p>
+                <a href="./ProductDetail.html" class="look-btn">查看商品</a>
+              </div>
+            </div>
+          </div>
+          <!-- 有折扣的 -->
+          <div class="product-item" data-category="DJ 優惠">
+            <div class="product-img">
+              <img src="https://cdn2.ettoday.net/images/7509/e7509491.jpg" alt="DJ編號1" />
+              <!-- 收到我的最愛 -->
+              <a href="#" class="favorite"><i class="fa-regular fa-heart"></i></a>
+            </div>
+
+            <div class="labels">
+              <span class="label DJ">刷碟</span>
+              <span class="label sale">優惠</span>
+            </div>
+            <div class="product-info">
+              <h4>DJ Soda夜店狂歡</h4>
+              <div class="product-text">
+                <p style="text-decoration: line-through">NT$1899</p>
+                <span class="discount-price">NT$1599</span>
+                <a href="product_detail.html?id=2" class="look-btn">查看商品</a>
+              </div>
+            </div>
+          </div>
+          <!-- 一般的什麼都沒有 -->
+          <div class="product-item" data-category="塗鴉">
+            <div class="product-img">
+              <img src="https://i.pinimg.com/564x/a6/e7/eb/a6e7ebd5010ca995d3ae6eba145ad6e6.jpg" alt="噴漆編號1" />
+              <!-- 收到我的最愛 -->
+              <a href="#" class="favorite"><i class="fa-regular fa-heart"></i></a>
+            </div>
+
+            <div class="labels">
+              <span class="label normal">塗鴉</span>
+            </div>
+            <div class="product-info">
+              <h4>Lexel噴漆</h4>
+              <div class="product-text">
+                <p>NT$363</p>
+                <a href="product_detail.html?id=3" class="look-btn">查看商品</a>
+              </div>
+            </div>
+          </div>
+          <!-- 放王以太聯名 -->
+          <div class="product-item" data-category="饒舌 新品">
+            <div class="product-img">
+              <img
+                src="https://cdn.store-assets.com/s/1250387/i/65057861.jpeg?width=1024&format=webp"
+                alt="饒舌編號2"
+              />
+              <!-- 收到我的最愛 -->
+              <a href="#" class="favorite"><i class="fa-regular fa-heart"></i></a>
+            </div>
+
+            <div class="labels">
+              <span class="label normal">饒舌</span>
+              <span class="label new">新品</span>
+            </div>
+            <div class="product-info">
+              <h4>王以太聯名夾棉外套</h4>
+              <div class="product-text">
+                <p>NT$2580</p>
+                <a href="product_detail.html?id=3" class="look-btn">查看商品</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-item" data-category="噴漆 塗鴉 新品">
+            <div class="product-img">
+              <img src="https://i.pinimg.com/564x/2f/e0/b4/2fe0b40030f71606eed42d826fa850cd.jpg" alt="噴漆編號4" />
+              <!-- 收到我的最愛 -->
+              <a href="#" class="favorite"><i class="fa-regular fa-heart"></i></a>
+            </div>
+
+            <div class="labels">
+              <span class="label normal">塗鴉</span>
+              <span class="label new">新品</span>
+            </div>
+            <div class="product-info">
+              <h4>雷神噴漆</h4>
+              <div class="product-text">
+                <p>NT$599</p>
+                <a href="product_detail.html?id=4" class="look-btn">查看商品</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- 一般的什麼都沒有 王以太專輯-->
+          <div class="product-item" data-category="饒舌">
+            <div class="product-img">
+              <img src="../../public/images/products/product7_1.jpeg" alt="噴漆編號1" />
+              <!-- 收到我的最愛 -->
+              <a href="#" class="favorite"><i class="fa-regular fa-heart"></i></a>
+            </div>
+
+            <div class="labels">
+              <span class="label normal">饒舌</span>
+            </div>
+            <div class="product-info">
+              <h4>王以太 演說家 幸存者 專輯</h4>
+              <div class="product-text">
+                <p>NT$880</p>
+                <a href="product_detail.html?id=3" class="look-btn">查看商品</a>
+              </div>
+            </div>
+          </div>
+          <!-- rapper -->
+          <div class="product-item" data-category="饒舌 ">
+            <div class="product-img">
+              <img src="https://i.pinimg.com/564x/e0/c5/eb/e0c5eb508528548a8ee104fe60579f77.jpg" alt="饒舌編號2" />
+              <!-- 收到我的最愛 -->
+              <a href="#" class="favorite"><i class="fa-regular fa-heart"></i></a>
+            </div>
+
+            <div class="labels">
+              <span class="label rap">饒舌</span>
+            </div>
+            <div class="product-info">
+              <h4>RapperLai</h4>
+              <div class="product-text">
+                <p>NT$1399</p>
+                <a href="product_detail.html?id=5" class="look-btn">查看商品</a>
+              </div>
+            </div>
+          </div>
+          <!-- 街舞 sold-out-card售完加入這個類別會無法點擊  -->
+          <div class="product-item sold-out-card" data-category="街舞">
+            <div class="product-img">
+              <img src="https://i.pinimg.com/564x/7e/75/24/7e75244c7427c041237f60c1e18308a6.jpg" alt="街舞編號1" />
+              <!-- 收到我的最愛 -->
+              <a href="#" class="favorite"><i class="fa-regular fa-heart"></i></a>
+              <div class="sold-out">SOLD OUT</div>
+            </div>
+
+            <div class="labels">
+              <span class="label normal">街舞</span>
+            </div>
+            <div class="product-info">
+              <h4>台大街舞Battle盃</h4>
+              <div class="product-text">
+                <p>NT$200</p>
+                <a href="product_detail.html?id=6" class="look-btn">查看商品</a>
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
+    </section>
+    <footer>
+      <div class="flex container">
+        <img class="logo" src="../assets/images/riverflow_logo_f.png" alt="logo" />
+        <div class="flex footer-right">
+          <div class="flex linkList">
+            <a href="#" class="footerLink">關於我們</a>
+            <a href="#" class="footerLink">聯絡我們</a>
+            <a href="#" class="footerLink">條款與隱私</a>
+            <a href="#" class="footerLink">FAQ</a>
+          </div>
+          <span class="copyright">Copyright © 2006-2024 RiverFlow</span>
+        </div>
+      </div>
+    </footer>
+    <br /><br /><br /><br /><br />
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        // 初始化 Swiper
+        const swiper = new Swiper('.swiper', {
+          autoplay: {
+            delay: 4000,
+            loop: true
+          },
+          pagination: {
+            el: '.swiper-pagination'
+          },
+          scrollbar: {
+            el: '.swiper-scrollbar'
+          }
+        })
+
+        // ----- 我的最愛標籤 -----
+        $('.favorite').on('click', function (event) {
+          event.preventDefault()
+          $(this).find('i').toggleClass('selected')
+          // 在這更新數據庫
+        })
+
+        //----- 商品篩選 -----
+        $('#searchInput').on('keyup', function () {
+          // 文字也轉小寫去做搜尋
+          var value = $(this).val().toLowerCase()
+          // 所有商品篩選
+          $('.product-item').filter(function () {
+            // 輸入框的值來顯示或著隱藏
+            $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+          })
+        })
+
+        // -----這邊會跟著上面的class類別 category 內的名字-----
+        $('#categoryFilter a').on('click', function (e) {
+          e.preventDefault()
+          var category = $(this).data('filter')
+          // 選擇全部就會全部顯示
+          if (category == 'all') {
+            $('.product-item').show()
+          } else {
+            // 這邊隱藏所有商品
+            $('.product-item').hide()
+            // 顯示符合條件商品
+            $('.product-item[data-category*="' + category + '"]').show()
+          }
+        })
+
+        //----- 左邊篩選點選有顏色 -----
+        $('.shop-filter-item').on('click', function () {
+          $('.shop-filter-item a').removeClass('selected')
+          $(this).find('a').addClass('selected')
+        })
+      })
+    </script>
+  </body>
+</html>

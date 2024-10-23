@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="../../src/assets/basic.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link rel="stylesheet" href="../../src/assets/event/eventPage3-2.css">
+  <style>
+
+  </style>
+</head>
+
+<body class="w-bg scrollCust">
+  <div class="framWrap container">
+    <div class="header"><img src="../../src/assets/images/indexImg/nav.jpg" alt=""></div>
+    
+
+    <!-- 活動明細 -->
+    <div class="eventName">
+      <div class="eventImg">
+        <img
+          src="../assets/images/events/event-yitai.jpg"
+          alt="" />
+      </div>
+      <div class="eventTitle">
+        <h1>王以太 《Love Me Later》 台北站</h1>
+        <p>日期：2024-09-14</p>
+        <p>時間： 19:30</p>
+        <p>場次地點：Legacy Max 台北市信義區松壽路11號6樓</p>
+      </div>
+    </div>
+
+    <!-- 中間的線 -->
+    <div class="middleLine">
+      <p></p>
+    </div>
+    <!-- 購買順序 -->
+    <div class="order">
+      <div class="ticketOrder">
+        <div class="ticketOrder1"><span>1</span></div>
+        <div><span>選擇票區</span></div>
+        <p></p>
+      </div>
+
+      <div class="ticketOrder">
+        <div><span>2</span></div>
+        <div><span>確認明細</span></div>
+        <p></p>
+      </div>
+
+      <div class="ticketOrder">
+        <div><span>3</span></div>
+        <div><span>確認資料</span></div>
+        <p></p>
+      </div>
+    </div>
+
+
+    <!-- 選擇票種數量 -->
+    <div class="ticketChoose">
+      <div class="ticketText">
+        <h3>票區一覽</h3>
+      </div>
+      <!-- 選擇票種 -->
+      <div class="ticketSeat">
+        <div class="seatImage">
+          <img src="../../src/assets/images/ticketSeat.png" alt="" />
+        </div>
+        <div class="seat">
+          <!-- 一樓搖滾區 -->
+          <div class="firstFloor">
+            <div class="seatName">
+              <div>
+                <span>1F搖滾區</span>
+                <div>
+                  <span>剩餘</span>
+                  <span id="remaining">20</span>
+                </div>
+              </div>
+              <div>
+                <span>NT$2900</span>
+              </div>
+            </div>
+            <!-- 加減數量 -->
+            <div class="ticketName">
+              <div class="ticketCotent">
+                <div>
+                  <span>一般票</span>
+                </div>
+                <div class="ticketBtn">
+                  <button class="decrement" data-target="#quantity" data-remaining="#remaining"><i
+                      class="fa-solid fa-circle-minus"></i></button>
+                  <span id="quantity">0</span>
+                  <button class="increment" data-target="#quantity" data-remaining="#remaining"><i
+                      class="fa-solid fa-circle-plus"></i></button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- 二樓座席區 -->
+          <div class="secondFloor">
+            <div class="seatName">
+              <div>
+                <span>2F座席區</span>
+                <div>
+                  <span>剩餘</span>
+                  <span id="remaining1">20</span>
+                </div>
+              </div>
+              <div>
+                <span>NT$2300</span>
+              </div>
+            </div>
+            <!-- 加減數量 -->
+            <div class="ticketName">
+              <div class="ticketCotent">
+                <div>
+                  <span>一般票</span>
+                </div>
+                <div class="ticketBtn">
+                  <button class="decrement" data-target="#quantity1" data-remaining="#remaining1"><i
+                      class="fa-solid fa-circle-minus"></i></button>
+                  <span id="quantity1">0</span>
+                  <button class="increment" data-target="#quantity1" data-remaining="#remaining1"><i
+                      class="fa-solid fa-circle-plus"></i></button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- 二樓站席區 -->
+          <div class="thirdFloor">
+            <div class="seatName">
+              <div>
+                <span>2F站席區</span>
+                <div>
+                  <span>剩餘</span>
+                  <span id="remaining2">20</span>
+                </div>
+              </div>
+              <div>
+                <span>NT$2300</span>
+              </div>
+            </div>
+            <!-- 加減數量 -->
+            <div class="ticketName">
+              <div class="ticketCotent">
+                <div>
+                  <span>一般票</span>
+                </div>
+                <div class="ticketBtn">
+                  <button class="decrement" data-target="#quantity2" data-remaining="#remaining2"><i
+                      class="fa-solid fa-circle-minus"></i></button>
+                  <span id="quantity2">0</span>
+                  <button class="increment" data-target="#quantity2" data-remaining="#remaining2"><i
+                      class="fa-solid fa-circle-plus"></i></button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- 一樓身障區 -->
+          <div class="forthFloor">
+            <div class="seatName">
+              <div>
+                <span>1F身障區</span>
+                <div>
+                  <span>剩餘</span>
+                  <span id="remaining3">20</span>
+                </div>
+              </div>
+              <div>
+                <span>NT$1190</span>
+              </div>
+            </div>
+            <!-- 加減數量 -->
+            <div class="ticketName">
+              <div class="ticketCotent">
+                <div>
+                  <span>一般票</span>
+                </div>
+                <div class="ticketBtn">
+                  <button class="decrement" data-target="#quantity3" data-remaining="#remaining3"><i
+                      class="fa-solid fa-circle-minus"></i></button>
+                  <span id="quantity3">0</span>
+                  <button class="increment" data-target="#quantity3" data-remaining="#remaining3"><i
+                      class="fa-solid fa-circle-plus"></i></button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 下一步按鍵 -->
+    <div class="nextBtn">
+      <a href="./eventPage4.html" id="nextBtn">下一步</a>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $('.seatName').on("click", function () {
+        // 設定折疊效果
+        $(this).next('.ticketName').slideToggle();
+        // 設定折疊打開後關閉其他折疊視窗
+        $('.ticketName').not($(this).next()).slideUp();
+      })
+      //這邊是數量按鍵增加
+      $('.increment').on('click', function () {
+        //綁定數量在剩餘數量
+        var remaining = $(this).data('remaining');
+        var remainingValue = parseInt($(remaining).text());
+        //綁定在按鍵中間的span(目前購買張數)
+        var target = $(this).data('target');
+        var quantityValue = parseInt($(target).text());
+        if (remainingValue > 0 && quantityValue < 4) {
+          $(target).text(quantityValue + 1);
+          $(remaining).text(remainingValue - 1);
+        }
+        buttonState();
+      })
+      //數量按鍵減少
+      $('.decrement').on('click', function () {
+        var remaining = $(this).data('remaining');
+        var remainingValue = parseInt($(remaining).text());
+        var target = $(this).data('target');
+        var quantityValue = parseInt($(target).text());
+        if (quantityValue > 0) {
+          $(target).text(quantityValue - 1);
+          $(remaining).text(remainingValue + 1);
+        }
+        buttonState();
+      })
+
+      // 如果購買當下票券，其他的票券數量歸零
+      $('.increment, .decrement').click(function () {
+        var remaining = $(this).data('remaining');
+        var remainingValue = parseInt($(remaining).text());
+        var target = $(this).data('target');
+        var quantityValue = parseInt($(target).text());
+        if (remainingValue > 0) {
+          $('.ticketBtn span[id^="quantity"]').not(target).each(function () {
+            var $otherQuantity = $(this);
+            var $otherRemaining = $('#' + $otherQuantity.siblings('button.increment').data('remaining').substr(1));
+            var otherCurrentValue = parseInt($otherQuantity.text());
+
+            if (otherCurrentValue > 0) {
+              $otherRemaining.text(parseInt($otherRemaining.text()) + otherCurrentValue);
+              $otherQuantity.text('0');
+            }
+          });
+        }
+        buttonState();
+      })
+      // 要有數量才能下一步
+      function buttonState() {
+
+        // 宣告全部票數累積
+        var totalQuantity = 0;
+        $('[id^="quantity"]').each(function () {
+          totalQuantity += parseInt($(this).text()) || 0;
+          // ||0 安全措施，怕返回的不是數值
+        });
+
+        var $button = $('#nextBtn');
+        if (totalQuantity === 0) {
+          $($button).addClass('link-disabled');
+        } else {
+          $($button).removeClass('link-disabled');
+        }
+      }
+      buttonState();
+
+      //如果有特定class屬性，取消連結的默認行為
+      $('#nextBtn').on('click', function (e) {
+        if ($(this).hasClass('link-disabled')) {
+          e.preventDefault();
+        }
+      });
+    })
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,255 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+
+
+/* 輪播圖 */
+.carousel {
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+}
+
+.swiper {
+    width: 90%;
+    height: auto;
+    padding-bottom: 1rem;
+}
+
+.swiper-slide {
+    border-radius: 10px;
+}
+
+.swiper-slide img {
+    border: 0.75px solid var(--main);
+    border-radius: 10px;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 2.5/1.1;
+    object-fit: cover;
+}
+
+.swiper .swiper-button-prev,
+.swiper .swiper-button-next {
+    color: var(--main);
+}
+
+/* 輪播圖 */
+
+/* 活動篩選導覽 */
+.event {
+    /* border: 0.75px solid var(--main); */
+    display: flex;
+
+}
+
+.eventFilter {
+    flex: 1;
+    border: 0.75px solid var(--main);
+    border-radius: 10px;
+    padding: 2rem 3rem 2.8rem 2rem;
+    margin-right: 2rem;
+    height: 28rem;
+    font-size: 1rem;
+    /* width: 30%; */
+}
+
+.eventFilter >div input {
+    border-bottom: 0.75px solid var(--main);
+    /* margin-bottom: 1.8rem; */
+    box-sizing: border-box;
+    width: 100%;
+    padding-left: 0.6rem;
+
+
+}
+
+.eventFilter div {
+    padding: 1.5rem 0rem;
+    box-sizing: border-box;
+}
+
+
+
+.eventFilter a {
+    padding: 10px 20px; 
+    border-radius: 2rem;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.eventFilter a:hover {
+    background-color: var(--main);
+    color: var(--bk1);
+    border: 0;
+}
+.eventFilter a.active {
+    background-color: var(--main);
+    color: var(--bk1);
+}
+
+
+/* 活動卡片列表 */
+/* 活動卡片列表 */
+.eventList {
+    flex: 4;
+    background-color: var(--bk2);
+    /* border: 0.75px solid var(--main); */
+    border-radius: 10px;
+    padding: 2rem 0rem;
+    /* justify-items: center; */
+}
+
+.eventProduct {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 0.5rem;
+    padding-left: 2rem;
+}
+
+/* 卡片 */
+.eventCard {
+    background-color: var(--gr1);
+    color: var(--bk1);
+    border: 0.75px solid var(--gr1);
+    border-radius: 10px;
+    width: 28%;
+    margin: 1rem;
+    /* height: 33vh; */
+    height:300px;
+}
+
+.eventCard img {
+    border-radius: 10px;
+    width: 100%;
+    /* height: 53%; */
+    margin-bottom: 1.3rem;
+    aspect-ratio: 2/1.2;
+}
+
+.eventCard p {
+    padding-left: 1rem;
+    padding-right: 0.5rem;
+    width: 100%;
+    box-sizing: border-box;
+    padding-bottom: 0.8rem;
+}
+
+.eventCard a {
+    color: black;
+}
+
+/* 卡片列表按鍵 */
+.eventListBtn {
+    text-align: center;
+    margin-top: 0.8rem;
+}
+
+.eventListBtn button {
+    background-color: var(--main);
+    border: 0;
+    border-radius: 10px;
+    padding: 0.7rem 7rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.eventListBtn button:hover {
+    background-color: var(--main2);
+}
+
+@media screen and (min-width: 1440px) {
+    .wrap {
+      max-width: 1300px;
+      height: auto;
+    }
+  }
+
+@media screen and (max-width: 1200px) {
+    .eventCard{
+        width: 40%;
+    }
+}
+/* .wrap {
+        max-width: 1100px;
+        height: auto;
+    } */
+@media screen and (max-width: 1030px) {
+    .eventFilter a{
+        font-size: 0.8rem;
+    }
+    .eventFilter div {
+        padding: 1.3rem 0rem;
+    }
+    .eventFilter {
+        height: 26rem;
+    }
+}
+@media screen and (max-width: 885px){
+    .eventProduct{
+        justify-content: center;
+    }
+    
+    .eventFilter{
+        margin: auto;
+    }
+
+    .eventCard{
+        width: 60%;
+    }
+    .eventListBtn button{
+        padding: 0.7rem 4rem;
+    }
+    .event{
+        display: block;
+    }
+    .eventList{
+        width: 80%;
+        margin: auto;
+        margin-top:2rem ;
+    }
+
+    /*  */
+    .eventFilter {
+        width: 300px;
+        margin:  auto;
+        height: 10rem;
+        
+    }
+    .eventFilter div {
+        padding-bottom: 3rem;
+    }
+    .titleSelect {
+        background-color: var(--bk2);
+        border: 0.75px solid var(--main);
+        border-radius: 10px;
+        overflow: hidden;
+        transition:  0.5s ease-out;
+        max-height: 0px; /* 調整這個值以適應您的第一個選項的高度 */
+        position: absolute;
+        z-index: 2;
+    }
+    .titleSelect:hover {
+        max-height: 50vh; 
+        /* 調整這個值以確保所有選項都能顯示 */
+    }
+    .titleSelect > div {
+        padding: 0rem 7rem 2rem 1rem;
+    }
+    
+    .titleSelect a {
+        text-decoration: none;
+        display: block;
+        font-size: 1rem;
+    }
+    .eventFilter a {
+        padding: 0.5rem 1rem 0.5rem 1rem; 
+    }
+}
+@media screen and (max-width: 500px){
+    .wrap {
+        min-width: 480px;
+        height: auto;
+      }
+}

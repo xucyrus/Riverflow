@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../assets/style.css">
+    <link rel="stylesheet" href="../assets/basic.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.13.3/jquery-ui.js"></script>
+    <title>關於我們</title>
+</head>
+
+<body class="w-bg aboutPage scrollCust">
+    <header>
+        <div class="flex container ">
+            <a href="#">
+                <img class="logo" src="../assets/images/riverflow_logo.png" alt="logo">
+            </a>
+            <div class="flex header-right">
+                <ul class="headerLink flex">
+                    <li><a href="#">首頁</a></li>
+                    <li class="cultureListName dropdown">
+                        <a class="dropdownToggle" href="#">嘻哈文化<i class="bi bi-caret-down-fill"></i></a>                        
+                        <div id="dropdownMenu" class="">
+                            <ul class="cultureList flex">
+                                <li><a href="#" class="cultureOpt">DJ</a></li>
+                                <li><a href="#" class="cultureOpt">街舞</a></li>
+                                <li><a href="#" class="cultureOpt">饒舌</a></li>
+                                <li><a href="#" class="cultureOpt">塗鴉</a></li>
+                                <li><a href="#" class="cultureOpt">滑板</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="#">嘻哈專欄</a></li>
+                    <li><a href="#">into flow</a></li>
+                    <li><a href="#">商店</a></li>
+                </ul>
+                <div class="functionIcons flex">
+                    <a href="#" class="headerIcon">
+                        <i class="bi bi-ticket-perforated"></i>
+                    </a>
+                    <a href="#" class="headerIcon">
+                        <i class="bi bi-cart"></i>
+                    </a>
+                    <a href="#" class="headerIcon">
+                        <i class="bi bi-person"></i>
+                    </a>
+                    <div class="headerIcon mobOnly">
+                        <input id="menuBtn" class="menuBtn" type="checkbox">
+                        <label for="menuBtn" class="menuIcon">
+                            <span class="navigation"></span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mobMenu">
+            <ul class="headerLink mob flex">
+                <li><a href="#">首頁</a></li>
+                <li class="cultureListName dropdown dropdown_mob">
+                    <a class="dropdownToggle" href="#">嘻哈文化<i class="bi bi-caret-down-fill bi-caret-down-fill_mob"></i></a>
+                    <div id="dropdownMenu">
+                        <ul class="cultureList cultureList_mob flex">
+                            <li><a href="#" class="cultureOpt">DJ</a></li>
+                            <li><a href="#" class="cultureOpt">街舞</a></li>
+                            <li><a href="#" class="cultureOpt">饒舌</a></li>
+                            <li><a href="#" class="cultureOpt">塗鴉</a></li>
+                            <li><a href="#" class="cultureOpt">滑板</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="#">嘻哈專欄</a></li>
+                <li><a href="#">into flow</a></li>
+                <li><a href="#">商店</a></li>
+            </ul>
+        </div>
+    </header>
+    <section>
+        <div class="aboutBanner">
+            <img src="../assets/images/aboutBanner.jpg" alt="" />
+        </div>
+    </section>
+    <section class="container">
+        <div class="gtitle"><span>Members</span></div>
+        <div id="aboutMem01" class="memberIntro flex">
+            <div class="memImgBlk">
+                <img src="../assets/images/memberPic_01.png" alt="" />
+                <div class="memLabel">Team Leader</div>
+                <div class="memLabel purple">Cat Lover :）</div>
+            </div>
+            <div class="memInfoBlk">
+                <div class="memNameInfo flex">
+                    <div class="memName">名　字</div>
+                    <div class="memLink flex">
+                        <a href="#"><i class="fa-brands fa-square-behance"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+                <p>簡短的自我介紹約50字?簡短的自我介紹約50字?簡短的自我介紹約50字?簡短的自我介紹約50字?</p>
+            </div>
+        </div>
+        <div id="aboutMem02" class="memberIntro flex picRight">
+            <div class="memImgBlk">
+                <img src="../assets/images/memberPic_01.png" alt="" />
+                <div class="memLabel purple label2">UI/UX Designer</div>
+                <div class="memLabel label2">Gamer</div>
+            </div>
+            <div class="memInfoBlk">
+                <div class="memNameInfo flex">
+                    <div class="memName">名　字</div>
+                    <div class="memLink flex">
+                        <a href="#"><i class="fa-brands fa-square-behance"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+                <p>簡短的自我介紹約50字?簡短的自我介紹約50字?簡短的自我介紹約50字?簡短的自我介紹約50字?簡短的自我介紹約50字?</p>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="flex container">
+            <img class="logo" src="../assets/images/riverflow_logo_f.png" alt="logo" />
+            <div class="flex footer-right">
+                <div class="flex linkList">
+                    <a href="#" class="footerLink">關於我們</a>
+                    <a href="#" class="footerLink">聯絡我們</a>
+                    <a href="#" class="footerLink">條款與隱私</a>
+                    <a href="#" class="footerLink">FAQ</a>
+                </div>
+                <span class="copyright">Copyright © 2006-2024 RiverFlow</span>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        let dropdown = document.querySelector('.dropdown')
+        dropdown.addEventListener('click', dropDown)
+
+        let dropdownMob = document.querySelector('.dropdown_mob')
+        dropdownMob.addEventListener('click', dropDownMob)
+
+        let menuIcon = document.querySelector('.menuIcon')
+        menuIcon.addEventListener('click', menuExpand)
+
+        function dropDown() {
+            let arrow = document.querySelector('.bi-caret-down-fill')
+            // console.log(arrow)
+            let dropMenu = document.querySelector('.cultureList')
+            dropMenu.classList.toggle('expand')
+            arrow.classList.toggle('rotate')
+        }
+
+        function dropDownMob() {
+            let arrow = document.querySelector('.bi-caret-down-fill_mob')
+            let dropMenu = document.querySelector('.cultureList_mob')
+            dropMenu.classList.toggle('expand')
+            arrow.classList.toggle('rotate')
+        }
+
+        function menuExpand() {
+            let menu = document.querySelector('.headerLink.mob')
+            menu.classList.toggle('expand')
+        }
+    </script>
+</body>
+
+</html>

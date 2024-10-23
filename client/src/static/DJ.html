@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RiverFlow</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <script src="https://unpkg.com/swup@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- 引入 jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- 馬跑燈 -->
+    <script src="../assets/images/skate/jquery.marquee.min.js"></script>
+    <!-- 引入 頁面全部CSS -->
+    <link rel="stylesheet" href="../assets/Dj.css" />
+    <link rel="stylesheet" href="../assets/basic.css" />
+  </head>
+  <body class="scrollCust">
+    <div class="DJ-wrap">
+      <img id="Record" src="../assets/images/DJ/Record Player Vector.png" alt="Player" />
+
+      <img id="DjImg" src="../assets/images/DJ/DJ.png" alt="DJ" />
+      <img id="RecordBar" src="../assets/images/DJ/Record Player Community.png" alt="Record" />
+      <!-- 導覽列 -->
+      <div class="header-nav">
+        <header id="navbar">
+          <div class="flex container">
+            <a href="#">
+              <img class="logo" src="../assets/images/riverflow_logo.png" alt="logo" />
+            </a>
+            <div class="flex header-right">
+              <ul class="headerLink flex">
+                <li><a href="index.html">首頁</a></li>
+                <li class="cultureListName dropdown">
+                  <a class="dropdownToggle" href="#">嘻哈文化<i class="bi bi-caret-down-fill"></i></a>
+                  <div id="dropdownMenu" class="">
+                    <ul class="cultureList flex">
+                      <li><a href="./DJ.html" class="cultureOpt">DJ</a></li>
+                      <li><a href="#" class="cultureOpt">街舞</a></li>
+                      <li><a href="#" class="cultureOpt">饒舌</a></li>
+                      <li><a href="#" class="cultureOpt">塗鴉</a></li>
+                      <li><a href="./skate.html" class="cultureOpt">滑板</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li><a href="news.html">嘻哈專欄</a></li>
+                <li><a href="eventPage1.html">into flow</a></li>
+                <li><a href="./ProductAll.html">商店</a></li>
+              </ul>
+              <div class="functionIcons flex">
+                <a href="#" class="headerIcon">
+                  <i class="bi bi-ticket-perforated"></i>
+                </a>
+                <a href="./cart.html" class="headerIcon">
+                  <i class="bi bi-cart"></i>
+                </a>
+                <a href="login.html" class="headerIcon">
+                  <i class="bi bi-person"></i>
+                </a>
+                <div class="headerIcon mobOnly">
+                  <input id="menuBtn" class="menuBtn" type="checkbox" />
+                  <label for="menuBtn" class="menuIcon">
+                    <span class="navigation"></span>
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="mobMenu">
+            <ul class="headerLink mob flex">
+              <li><a href="#">首頁</a></li>
+              <li class="cultureListName dropdown dropdown_mob">
+                <a class="dropdownToggle" href="#">嘻哈文化<i class="bi bi-caret-down-fill bi-caret-down-fill_mob"></i></a>
+                <div id="dropdownMenu">
+                  <ul class="cultureList cultureList_mob flex">
+                    <li><a href="#" class="cultureOpt">DJ</a></li>
+                    <li><a href="#" class="cultureOpt">街舞</a></li>
+                    <li><a href="#" class="cultureOpt">饒舌</a></li>
+                    <li><a href="#" class="cultureOpt">塗鴉</a></li>
+                    <li><a href="#" class="cultureOpt">滑板</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li><a href="#">嘻哈專欄</a></li>
+              <li><a href="#">into flow</a></li>
+              <li><a href="#">商店</a></li>
+            </ul>
+          </div>
+        </header>
+      </div>
+      <!-- 海報文字介紹 -->
+      <section class="banner">
+        <div class="marquee">
+          <p><span>DISC</span> <span>JOCKEY</span></p>
+          <p><span>DISC</span> <span>JOCKEY</span></p>
+          <p><span>DISC</span> <span>JOCKEY</span></p>
+          <p><span>DISC</span> <span>JOCKEY</span></p>
+        </div>
+      </section>
+
+      <!-- DJ介紹 -->
+      <div class="DJ-container">
+        <!-- 時間內容 -->
+        <div class="timeline"></div>
+        <!--DJ-1935s-1-介紹 -->
+        <div class="content content--sticky content--half bg-1">
+          <img src="../assets/images/DJ/1935 修過.png" alt="image 1" />
+          <div class="content-text"></div>
+          <h2>1935s</h2>
+          <p>
+            馬丁·布洛克 被認為是創造「DJ」(disc jockey) 這個詞的人，1935年，他在WNEW電台開始了「Make Believe
+            Ballroom」節目播放唱片，並假裝自己在一個舞廳中廣播，這種創新方式迅速流行，影響了後來的電台DJ。
+          </p>
+        </div>
+        <!--DJ-1935s-2-機器介紹 -->
+        <div class="content content--sticky content--half bg-2">
+          <img src="../assets/images/DJ/1935 twophoto.png" alt="image 2" />
+          <div class="content-text">
+            <h2>1940s</h2>
+            <p>早期的DJ主要在電台和場館中播放唱片，點唱機的發明讓更多人可以在公共場所聽到音樂。</p>
+          </div>
+        </div>
+        <!-- DJ-1950s-3-介紹 -->
+        <div class="content content--sticky content--half bg-3">
+          <img src="../assets/images/DJ/1950s.png" alt="image 3" />
+          <div class="content-text">
+            <h2>1950s</h2>
+            <p>
+              在1950年代，艾倫·弗里德在克里夫蘭和紐約市的電台中推廣搖滾樂，被稱為「搖滾之父」。他的節目和現場演出吸引了大量年輕聽眾。
+            </p>
+          </div>
+        </div>
+        <div class="content content--sticky content--half bg-4">
+          <img src="../assets/images/DJ/1960DJ.png" alt="image 4" />
+          <div class="content-text">
+            <h2>1960s</h2>
+            <p>
+              DJ在夜總會和舞廳中變得越來越受歡迎，成為了舞會和社交活動的核心。這時期的DJ開始影響音樂的播放方式，成為社交活動的重要組成部分。
+            </p>
+          </div>
+        </div>
+        <!-- DJ-5-1970s-介紹 -->
+        <div class="content content--sticky content--half bg-5">
+          <img src="../assets/images/DJ/1970 DJ.png" alt="image 5" />
+          <div class="content-text">
+            <h2>1970s</h2>
+            <p>
+              嘻哈音樂的誕生Herc在紐約布朗克斯舉辦派對，使用兩台唱機交替播放音樂，創造了嘻哈音樂的基礎。他的創新技術如「breakbeat」成為嘻哈音樂的核心元素。
+            </p>
+          </div>
+        </div>
+        <!-- Dj-6-介紹- -->
+        <div class="content content--sticky content--half bg-6">
+          <img class="" src="../assets/images/DJ/1980s.png" />
+          <div class="content-text">
+            <h2>1980s</h2>
+            <p>
+              電子音樂的興起:芝加哥的House音樂和底特律的Techno音樂逐漸流行，電子音樂和DJ文化開始席捲全球。這些音樂風格重塑了夜生活和舞池文化。
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="bottom-content">
+        <img src="../assets/images/DJ/DJ2000.webp " alt="img2000" />
+        <div class="bottom-text">
+          <h2>2000s-2024s</h2>
+          <p>
+            DJ音樂風格經歷了顯著的變化和演變。電子舞曲（EDM）的崛起成為主流，融合了浩室（House）、浩室舞曲（Trance）、電音（Electro）和電子流行（Electropop）等多種電子音樂流派，以高能量的節奏和震撼的合成器聲音吸引了大量年輕聽眾。浩室音樂變得更加多樣化，出現了Deep
+            House、Progressive House、Future
+            House等子類型，並且涌現出許多新興的DJ和製作人。流行音樂和電子音樂的界限變得越來越模糊，許多流行歌手與DJ合作，創作出了大量熱門單曲，例如Calvin
+            Harris與Rihanna合作的《We Found Love》，David
+            Guetta與Sia合作的《Titanium》。重低音和陷阱音樂（Trap）的流行，特別是在2000年代後期和2010年代早期迅速崛起，這些風格以重低音和複雜的鼓點著稱，成為了音樂節和夜店的熱門曲風。
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // 跑馬燈
+      $('.marquee').marquee({
+        // 設置為 false 如果你想使用 jQuery 的動畫方法
+        allowCss3Support: true,
+        // CSS3 緩動函數
+        css3easing: 'linear',
+        // 需要 jQuery 緩動插件
+        easing: 'linear',
+        // 動畫開始前的等待時間（毫秒）
+        delayBeforeStart: -10000,
+        // 'left'（向左）、'right'（向右）、'up'（向上）或 'down'（向下）
+        direction: 'left',
+        // 是否應該複製內容以顯示連續滾動效果
+        duplicated: true,
+        // 動畫的持續時間（毫秒）
+        duration: 100,
+        // 文字之間的間距（像素）
+
+        // 在每個循環結束時暫停滾動
+        pauseOnCycle: false,
+        // 滑鼠懸停時暫停滾動
+        pauseOnHover: false,
+        // 跑馬燈初始位置位於將要移動的邊框旁邊
+        startVisible: true,
+
+        speed: 110
+      })
+    </script>
+  </body>
+</html>

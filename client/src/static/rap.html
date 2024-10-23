@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../assets/rap.css">
+    <link rel="stylesheet" href="../assets/basic.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <style>
+        #navbar{
+            position: fixed;
+            top: 0;
+        }
+    </style>
+</head>
+
+<body class="w-bg scrollCust">
+    <header id="navbar">
+        <div class="flex container ">
+            <a href="#">
+                <img class="logo" src="../assets/images/riverflow_logo.png" alt="logo">
+            </a>
+            <div class="flex header-right">
+                <ul class="headerLink flex">
+                    <li><a href="index.html">首頁</a></li>
+                    <li class="cultureListName dropdown">
+                        <a class="dropdownToggle" href="#">嘻哈文化<i class="bi bi-caret-down-fill"></i></a>                        
+                        <div id="dropdownMenu" class="">
+                            <ul class="cultureList flex">
+                                <li><a href="#" class="cultureOpt">DJ</a></li>
+                                <li><a href="#" class="cultureOpt">街舞</a></li>
+                                <li><a href="#" class="cultureOpt">饒舌</a></li>
+                                <li><a href="#" class="cultureOpt">塗鴉</a></li>
+                                <li><a href="#" class="cultureOpt">滑板</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="news.html">嘻哈專欄</a></li>
+                    <li><a href="#">into flow</a></li>
+                    <li><a href="#">商店</a></li>
+                </ul>
+                <div class="functionIcons flex">
+                    <a href="memberTickets.html" class="headerIcon">
+                        <i class="bi bi-ticket-perforated"></i>
+                    </a>
+                    <a href="#" class="headerIcon">
+                        <i class="bi bi-cart"></i>
+                    </a>
+                    <a href="login.html" class="headerIcon">
+                        <i class="bi bi-person"></i>
+                    </a>
+                    <div class="headerIcon mobOnly">
+                        <input id="menuBtn" class="menuBtn" type="checkbox">
+                        <label for="menuBtn" class="menuIcon">
+                            <span class="navigation"></span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mobMenu">
+            <ul class="headerLink mob flex">
+                <li><a href="#">首頁</a></li>
+                <li class="cultureListName dropdown dropdown_mob">
+                    <a class="dropdownToggle" href="#">嘻哈文化<i class="bi bi-caret-down-fill bi-caret-down-fill_mob"></i></a>
+                    <div id="dropdownMenu">
+                        <ul class="cultureList cultureList_mob flex">
+                            <li><a href="#" class="cultureOpt">DJ</a></li>
+                            <li><a href="#" class="cultureOpt">街舞</a></li>
+                            <li><a href="#" class="cultureOpt">饒舌</a></li>
+                            <li><a href="#" class="cultureOpt">塗鴉</a></li>
+                            <li><a href="#" class="cultureOpt">滑板</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="#">嘻哈專欄</a></li>
+                <li><a href="#">into flow</a></li>
+                <li><a href="#">商店</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <section class="rap">
+        <div class="gtitle">
+            <h1>Rap Music</h1>
+        </div>
+        <!-- <p>
+            「嘻哈音樂」也譯「饒舌音樂」（Hip-hop Music、hip-hop、rap music）是一種跟著伴奏、帶著韻律吟誦即饒舌的音樂風格。所用的伴奏多產生於音樂取樣的方式。
+            嘻哈音樂及嘻哈文化首先在1970年代美國貧民區的青年中出現，其中大多數是紐約的美國黑人。嘻哈文化包含饒舌、DJ、塗鴉、街舞及節奏口技(Beatbox)五大要素。而嘻哈音樂至今已經衍伸出各種流派與風格，也成了當今音樂市場的主流。
+        </p> -->
+
+        <div class="rap-container">
+            <div class="beatmaker-box">
+                <div class="beatmaker">
+                    <div class="screen">
+                        <span id="beatname">Boombap</span>
+                    </div>
+                    <div class="keyboard">
+                        <div class="keyboard-btn">
+                            <button class="tablinks" data-audio="../assets/rapmusic/boombap.mp3"
+                                onclick="openBeat(event, 'Boombap')">Boombap</button>
+                        </div>
+                        <div class="keyboard-btn">
+                            <button class="tablinks" data-audio="../assets/rapmusic/jazz.mp3"
+                                onclick="openBeat(event, 'Jazz')">Jazz</button>
+                        </div>
+                        <div class="keyboard-btn">
+                            <button class="tablinks" data-audio="../assets/rapmusic/GFunk.mp3"onclick="openBeat(event, 'GFunk')">G-Funk</button>
+                        </div>
+                        <div class="keyboard-btn">
+                            <button class="tablinks" data-audio="../assets/rapmusic/Trap.mp3" onclick="openBeat(event, 'Trap')">Trap</button>
+                        </div>
+                        <div class="keyboard-btn">
+                            <button class="tablinks" data-audio="../assets/rapmusic/Drill.mp3" onclick="openBeat(event, 'Drill')">Drill</button>
+                        </div>
+                        <div class="keyboard-btn">
+                            <button class="tablinks" data-audio="../assets/rapmusic/Emo.mp3" onclick="openBeat(event, 'Emo')">Emo</button>
+                        </div>
+                        <div class="keyboard-btn">
+                            <button class="tablinks" data-audio="../assets/rapmusic/Mumble.mp3" onclick="openBeat(event, 'Mumble')">Mumble</button>
+                        </div>
+                        <div class="keyboard-btn">
+                            <button class="tablinks" data-audio="../assets/rapmusic/Hardcore.mp3"  onclick="openBeat(event, 'Hardcore')">Hardcore</button>
+                        </div>
+                        <div class="keyboard-btn">
+                            <button class="tablinks" data-audio="../assets/rapmusic/Alternative.mp3" onclick="openBeat(event, 'Alternative')">Alternative</button>
+                        </div>
+
+                    </div>
+
+                    <div class="stopbtn">
+                        <button id="stopbtn">STOP</button>
+                    </div>
+                    <audio id="audio"></audio>
+                </div>
+
+            </div>
+
+            <div class="wrap">
+                <div id="Boombap" class="tabcontent">
+                    <h1 class="animate__animated animate__fadeInUp">Boombap</h1>
+                    <p class="animate__animated animate__fadeInUp">
+                        BoomBap講究用最少的伴奏器材來製作最多有韻律的節奏。整首基本節奏，然後強調大鼓， 所以聽起來就是（Boom-Bap Boom-Boom
+                        Bap）很規律，歌詞也多是關於自己人生的自傳類故事或者批判社會類型的。
+                    </p>
+                </div>
+                <div id="Jazz" class="tabcontent">
+                    <h1 class="animate__animated animate__fadeInUp">Jazz</h1>
+                    <p class="animate__animated animate__fadeInUp">
+                        通常他的伴奏都取樣(sample)來自Jazz，裡面的旋律比較繚繞，有一種挑逗的感覺，通常不是一個循環，在幾個小節之後會有變化。
+                    </p>
+                </div>
+                <div id="GFunk" class="tabcontent">
+                    <h1 class="animate__animated animate__fadeInUp">G-Funk</h1>
+                    <p class="animate__animated animate__fadeInUp">
+                        是一種融合了匪幫饒舌（Gangsta Rap）與放克的曲風，伴奏取樣Funk音樂，抒情女聲、厚重bass line、合成器等等元素，內容大多把妹、吸毒、殺人、搶劫之類的。
+                    </p>
+                </div>
+                <div id="Trap" class="tabcontent">
+                    <h1 class="animate__animated animate__fadeInUp">Trap</h1>
+                    <p class="animate__animated animate__fadeInUp">
+                        「Trap」一詞起源於美國南部的亞特蘭大，過去指的是進行毒品交易的地方，那裡的饒舌歌手是最早在音樂中使用這個詞的人。嚴格來說Trap是一種分支的音樂風格(Trap
+                        Music)，Beat中很常用到TR
+                        808的鼓組、緊密的hi-hat，加上電子合成器與管弦樂的聲響，營造出一個整體陰暗、誘惑、迷幻的氛圍。歌詞主要以錢、車、毒品、武器、泡妞、炫耀，派對等主題為核心。
+
+                        正因為Trap是一種音樂風格、編曲風格又或是說一種音樂元素，所以在很多New school音樂裡常常可以聽到Trap的影子。
+                    </p>
+                </div>
+                <div id="Drill" class="tabcontent">
+                    <h1 class="animate__animated animate__fadeInUp">Drill</h1>
+                    <p class="animate__animated animate__fadeInUp">
+                        既然身為 Trap 的分支，Drill music 既在編曲承襲陷阱特色，又更加強調黑暗氛圍——大多採樣 邪典鋼琴殘響 做為主基調，凸顯凶狠的街頭與史詩感；由合成器縈繞沉重鼓點、細碎
+                        Hi-hat（爵士鼓組中的腳踏鈸）散佈在曲中各處，不時加入鈴聲、軍鼓點綴，最後放入 808 鼓機獨有的低頻音色 (如 Slide 等) 加以填充完成；而鑽頭音樂底下分佈甚廣的 Chicago
+                        Drill、UK Drill 和 Brooklyn Drill 間會有所不同，在後面內文中也將一併聊到。
+                    </p>
+                </div>
+                <div id="Emo" class="tabcontent">
+                    <h1 class="animate__animated animate__fadeInUp">Emo</h1>
+                    <p class="animate__animated animate__fadeInUp">
+                        音樂題材圍繞著藥物、憂鬱、死亡等較沈重的題材，以緩慢的吟唱加上層層堆疊的柔和旋律，創造出無法自拔的傷感氛圍，歌曲裡也經常性地出現歇斯底里式的吶喊。
+                    </p>
+                </div>
+                <div id="Mumble" class="tabcontent">
+                    <h1 class="animate__animated animate__fadeInUp">Mumble</h1>
+                    <p class="animate__animated animate__fadeInUp">
+                        指含糊不清的說唱方式，模糊不清的Flow風格和無意義的歌詞，把人聲直接當成一種樂器，完全捨棄複雜的詞，幾個簡單的詞一直重複。
+                    </p>
+                </div>
+                <div id="Hardcore" class="tabcontent">
+                    <h1 class="animate__animated animate__fadeInUp">Hardcore</h1>
+                    <p class="animate__animated animate__fadeInUp">
+                        直譯成中文就是硬核說唱，具有極強的破壞力和煽動力，它的特徵常是憤怒、侵略和對抗，主要凸顯技術的說唱，用高難度的Flow、刁鑽的技巧、或超高速的吐字量，製造一種強硬的壓迫感。
+                    </p>
+                </div>
+                <div id="Alternative" class="tabcontent">
+                    <h1 class="animate__animated animate__fadeInUp">Alternative</h1>
+                    <p class="animate__animated animate__fadeInUp">
+                        另類嘻哈 (又被稱作另類說唱)
+                        ，對其定義眾說紛紜，說唱音樂有其固有形式，而另類嘻哈則不遵從這些傳統形式，其流派模糊，包含鄉土爵士樂、流行音樂/搖滾樂、爵士樂、靈魂樂和雷鬼音樂。反正無法歸類的都會先被算這種。
+                    </p>
+                </div>
+
+            </div>
+
+
+
+
+
+
+        </div>
+
+        <!-- <p>
+            現在音樂曲風的界線越來越模糊，
+            有很多無法被歸類是哪種風格的曲風都陸續出現，因為大家都喜歡自己喜歡的音樂，所以也常常會發生兩派擁護者在爭執到底哪一方的音樂才是正統，世代的交替似乎總是這樣，當屬於新一輩的「東西」在年輕群體間擴散時，觀念截然不同的老一輩經常在第一時間給岀批評或是大力抨擊。如果所有人只想活在某個過去年代的榮景中，那麼整個世界絕對不可能往前邁進；但反過來說，如果只一昧追求最新的、最前面的事物，而對於過往皆不屑一顧，則容易喪失了文化底蘊。從以往的Old
+            School 演變成 New School，兩者雖有不小的差異，但是精采程度不相上下。
+        </p> -->
+
+
+
+    </section>
+
+
+    <script>
+        const buttons = document.querySelectorAll('.tablinks');
+        const audio = document.getElementById('audio');
+        // const apple = document.getElementById('apple');
+
+        buttons.forEach(button => {
+            button.addEventListener('click', function () {
+                audio.src = this.getAttribute('data-audio');
+                audio.play();
+            });
+        });
+
+        const stopbtn = document.getElementById('stopbtn');
+        stopbtn.onclick = function () {
+            audio.pause();
+            audio.currentTime = 0; // 將播放進度設置為開始位置
+        };
+
+
+        function openBeat(evt, BeatName) {
+
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+
+            }
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(BeatName).style.display = "block";
+            evt.currentTarget.className += " active";
+
+            beatname.innerText = BeatName
+
+        }
+
+        // Get the element with id="defaultOpen" and click on it
+        document.getElementById("defaultOpen").click();
+    </script>
+
+</body>
+
+</html>

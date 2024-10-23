@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Swup Example</title>
+  </head>
+  <style>
+    html.is-changing .transition-fade {
+      view-transition-name: main;
+    }
+
+    ::view-transition-old(main) {
+      animation: fade 0.5s ease-in-out both;
+    }
+
+    ::view-transition-new(main) {
+      animation: fade 0.5s ease-in-out both reverse;
+    }
+
+    @keyframes fade {
+      from {
+        opacity: 1;
+      }
+      to {
+        opacity: 0;
+      }
+    }
+  </style>
+  <body>
+    <main id="swup" class="transition-fade">
+      <h1>Welcome</h1>
+      <p>Lorem ipsum dolor sit amet.</p>
+    </main>
+    <script type="module">
+      import Swup from 'https://unpkg.com/swup@4?module'
+      const swup = new Swup({ native: true })
+    </script>
+  </body>
+</html>

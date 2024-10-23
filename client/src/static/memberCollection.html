@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../assets/member.css">
+    <link rel="stylesheet" href="../assets/basic.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+<body class="w-bg">
+    <header id="navbar">
+        <div class="flex container ">
+            <a href="#">
+                <img class="logo" src="../assets/images/riverflow_logo.png" alt="logo">
+            </a>
+            <div class="flex header-right">
+                <ul class="headerLink flex">
+                    <li><a href="index.html">首頁</a></li>
+                    <li class="cultureListName dropdown">
+                        <a class="dropdownToggle" href="#">嘻哈文化<i class="bi bi-caret-down-fill"></i></a>                        
+                        <div id="dropdownMenu" class="">
+                            <ul class="cultureList flex">
+                                <li><a href="#" class="cultureOpt">DJ</a></li>
+                                <li><a href="#" class="cultureOpt">街舞</a></li>
+                                <li><a href="#" class="cultureOpt">饒舌</a></li>
+                                <li><a href="#" class="cultureOpt">塗鴉</a></li>
+                                <li><a href="#" class="cultureOpt">滑板</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="#">嘻哈專欄</a></li>
+                    <li><a href="eventPage1.html">into flow</a></li>
+                    <li><a href="#">商店</a></li>
+                </ul>
+                <div class="functionIcons flex">
+                    <a href="#" class="headerIcon">
+                        <i class="bi bi-ticket-perforated"></i>
+                    </a>
+                    <a href="#" class="headerIcon">
+                        <i class="bi bi-cart"></i>
+                    </a>
+                    <a href="login.html" class="headerIcon">
+                        <i class="bi bi-person"></i>
+                    </a>
+                    <div class="headerIcon mobOnly">
+                        <input id="menuBtn" class="menuBtn" type="checkbox">
+                        <label for="menuBtn" class="menuIcon">
+                            <span class="navigation"></span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mobMenu">
+            <ul class="headerLink mob flex">
+                <li><a href="#">首頁</a></li>
+                <li class="cultureListName dropdown dropdown_mob">
+                    <a class="dropdownToggle" href="#">嘻哈文化<i class="bi bi-caret-down-fill bi-caret-down-fill_mob"></i></a>
+                    <div id="dropdownMenu">
+                        <ul class="cultureList cultureList_mob flex">
+                            <li><a href="#" class="cultureOpt">DJ</a></li>
+                            <li><a href="#" class="cultureOpt">街舞</a></li>
+                            <li><a href="#" class="cultureOpt">饒舌</a></li>
+                            <li><a href="#" class="cultureOpt">塗鴉</a></li>
+                            <li><a href="#" class="cultureOpt">滑板</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="news.html">嘻哈專欄</a></li>
+                <li><a href="#">into flow</a></li>
+                <li><a href="#">商店</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <section class="Collection" >
+
+        <div class="nav-box" flex="1">
+            <div class="wrap">
+                <div class="member">
+                    <div>
+                        <img class="member-img" src="../assets/images/defaultphoto.jpg" alt="">
+                    </div>
+                    <div class="profile">
+                        <h3>Hey！小美</h3>
+                        <a href="member.html">個人資料</a>
+                    </div>
+                </div>
+                <div class="nav">
+                    <ul>
+                        <li><a href="memberOrderList.html"><i class="bi bi-clipboard"></i> 訂單查詢</a></li>
+                        <li><a href="memberTickets.html"><i class="bi bi-ticket-perforated"></i> 活動票券</a></li>
+                        <li><a href="memberCollection.html"><i class="bi bi-heart"></i> 我的最愛</a></li>
+
+                    </ul>
+
+                </div>
+            </div>
+
+        </div>
+        <div class="order-box" flex="2">
+            
+                <h3>我的最愛</h3>
+                <div class="btn-box">
+                    <button class="tablink" onclick="openPage('Collection', this,'3px solid var(--main)')" id="defaultOpen">商品</button>
+                  
+                </div>
+
+                <div id="Collection" class="tabcontent">
+                    <div class="order">
+                        
+                        <div class="Img-box">
+                            <img  src="../assets/images/memberCollection.png" alt="">
+                        </div>
+                        <div class="container">
+                            <div class="wrap">
+                               <h3>美式拼貼滑板</h3>
+                               <button class="closebtn"><i class="bi bi-x"></i></button>
+                            </div>
+                            <div class="wrap">
+                                <p class="multiline-ellipsis">這款滑板以美式街頭文化為靈感，將多元拼貼藝術融入設計之中，為滑板愛好者帶來一種獨特的視覺享受。滑板表面採用高品質的防滑砂紙，確保在滑行時穩定且安全。板身由耐用的加拿大楓木製成，提供出色的彈性和強度，適合各種技巧和風格的滑行。</p>
+                            </div>
+                            <div class="wrap">
+                                <span>金額  NT$3683</span>
+                                <button class="orderbtn">前往商品頁</button>
+                            </div>
+                        </div>
+                        
+                    </div>
+                   
+                    <!-- <div class="order">
+                        
+                        <div class="Img-box">
+                            <img src="../assets/images/memberCollection.png" alt="">
+                        </div>
+                        <div class="container">
+                            <div class="wrap">
+                               <h3>王以太 演說家 幸存者 專輯</h3>
+                               <button class="closebtn"><i class="bi bi-x"></i></button>
+                            </div>
+                            <div class="wrap">
+                                <p>演說家不用多說封神專輯 裡面的歌幾本都很頂，每天都還是會聽阿斯匹林，內涵CD+超長拉頁拼圖</p>
+                            </div>
+                            <div class="wrap">
+                                <span>金額  NT$880</span>
+                                <button class="orderbtn">前往商品頁</button>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    -->
+
+                </div>
+              
+
+
+              
+        </div>
+
+    </section>
+
+    <footer>
+        <div class="flex container">
+            <img class="logo" src="../assets/images/riverflow_logo_f.png" alt="logo" />
+            <div class="flex footer-right">
+                <div class="flex linkList">
+                    <a href="#" class="footerLink">關於我們</a>
+                    <a href="#" class="footerLink">聯絡我們</a>
+                    <a href="#" class="footerLink">條款與隱私</a>
+                    <a href="#" class="footerLink">FAQ</a>
+                </div>
+                <span class="copyright">Copyright © 2006-2024 RiverFlow</span>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function openPage(pageName,elmnt,border) {
+          var i, tabcontent, tablinks;
+          tabcontent = document.getElementsByClassName("tabcontent");
+          for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+          }
+          tablinks = document.getElementsByClassName("tablink");
+          for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].style.borderBottom = "3px solid var(--bk2)";
+          }
+          document.getElementById(pageName).style.display = "block";
+          elmnt.style.borderBottom = border;
+        }
+        
+        // Get the element with id="defaultOpen" and click on it
+        document.getElementById("defaultOpen").click();
+        </script>
+
+
+
+</body>
+
+</html>

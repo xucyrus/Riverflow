@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RiverFlow商城</title>
+    <link rel="stylesheet" href="../src/assets/reset.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <link rel="stylesheet" href="../assets/basic.css" />
+    <link rel="stylesheet" href="../assets/ProductDetail.css" />
+    <link rel="stylesheet" href="../assets/shop/lightbox.min.css" />
+  </head>
+
+  <body class="w-bg scrollCust">
+    <div class="container-f">
+
+      <header id="navbar">
+        <div class="flex container">
+          <a href="#">
+            <img class="logo" src="../assets/images/riverflow_logo.png" alt="logo" />
+          </a>
+          <div class="flex header-right">
+            <ul class="headerLink flex">
+              <li><a href="index.html">首頁</a></li>
+              <li class="cultureListName dropdown">
+                <a class="dropdownToggle" href="#">嘻哈文化<i class="bi bi-caret-down-fill"></i></a>
+                <div id="dropdownMenu" class="">
+                  <ul class="cultureList flex">
+                    <li><a href="./DJ.html" class="cultureOpt">DJ</a></li>
+                    <li><a href="#" class="cultureOpt">街舞</a></li>
+                    <li><a href="#" class="cultureOpt">饒舌</a></li>
+                    <li><a href="#" class="cultureOpt">塗鴉</a></li>
+                    <li><a href="./skate.html" class="cultureOpt">滑板</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li><a href="news.html">嘻哈專欄</a></li>
+              <li><a href="eventPage1.html">into flow</a></li>
+              <li><a href="./ProductAll.html">商店</a></li>
+            </ul>
+            <div class="functionIcons flex">
+              <a href="#" class="headerIcon">
+                <i class="bi bi-ticket-perforated"></i>
+              </a>
+              <a href="./cart.html" class="headerIcon">
+                <i class="bi bi-cart"></i>
+              </a>
+              <a href="login.html" class="headerIcon">
+                <i class="bi bi-person"></i>
+              </a>
+              <div class="headerIcon mobOnly">
+                <input id="menuBtn" class="menuBtn" type="checkbox" />
+                <label for="menuBtn" class="menuIcon">
+                  <span class="navigation"></span>
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="mobMenu">
+          <ul class="headerLink mob flex">
+            <li><a href="#">首頁</a></li>
+            <li class="cultureListName dropdown dropdown_mob">
+              <a class="dropdownToggle" href="#">嘻哈文化<i class="bi bi-caret-down-fill bi-caret-down-fill_mob"></i></a>
+              <div id="dropdownMenu">
+                <ul class="cultureList cultureList_mob flex">
+                  <li><a href="#" class="cultureOpt">DJ</a></li>
+                  <li><a href="#" class="cultureOpt">街舞</a></li>
+                  <li><a href="#" class="cultureOpt">饒舌</a></li>
+                  <li><a href="#" class="cultureOpt">塗鴉</a></li>
+                  <li><a href="#" class="cultureOpt">滑板</a></li>
+                </ul>
+              </div>
+            </li>
+            <li><a href="#">嘻哈專欄</a></li>
+            <li><a href="#">into flow</a></li>
+            <li><a href="#">商店</a></li>
+          </ul>
+        </div>
+      </header>
+      <!-- 上面圖片及商品介紹容器 -->
+      <div class="wrap">
+        <!-- 燈箱效果製作 -->
+        <aside class="product-images">
+          <!-- 燈箱大照片 -->
+          <div class="product-images-big">
+            <a
+              class="#"
+              href="../assets/images/shop/截圖 2024-08-07 下午3.28.11.png"
+              data-lightbox="example-set"
+              data-title="美式拼貼滑板"
+              ><img
+                class="example-image"
+                src="../assets/images/shop/截圖 2024-08-07 下午3.28.11.png"
+                alt="skate1"
+            /></a>
+            <!-- 我的最愛標籤 -->
+            <a href="#" class="favorite"><i class="fa-regular fa-heart"></i></a>
+          </div>
+          <!-- 燈箱小照片 -->
+          <div class="product-image-small">
+            <a
+              class="#"
+              href="https://cdn.store-assets.com/s/1250387/i/74027074.jpeg?width=1024&format=webp"
+              data-lightbox="example-set"
+              data-title="美式拼貼滑板"
+              ><img
+                class="example-image"
+                src="https://cdn.store-assets.com/s/1250387/i/74027074.jpeg?width=1024&format=webp"
+                alt="skate2"
+            /></a>
+            <a
+              class="#"
+              href="https://cdn.store-assets.com/s/1250387/i/74027072.jpeg?width=1024&format=webp"
+              data-lightbox="example-set"
+              data-title="美式拼貼滑板"
+              ><img
+                class="example-image"
+                src="https://cdn.store-assets.com/s/1250387/i/74027072.jpeg?width=1024&format=webp"
+                alt="skate3"
+            /></a>
+            <a
+              class="#"
+              href="https://cdn.store-assets.com/s/1250387/i/74027073.jpeg?width=1024&format=webp"
+              data-lightbox="example-set"
+              data-title="美式拼貼滑板"
+              ><img
+                class="example-image"
+                src="https://cdn.store-assets.com/s/1250387/i/74027073.jpeg?width=1024&format=webp"
+                alt="skate4"
+            /></a>
+    
+          </div>
+        </aside>
+
+        <main class="product-info">
+          <h1>王以太聯名短袖T恤</h1>
+          <div class="labels">
+            <span class="label normal">饒舌</span>
+            <span class="label new">新品</span>
+          </div>
+          <!-- price-rating容器 -->
+          <div class="price-rating">
+            <div class="price"><span>NT$1,480</span></div>
+            <div class="rating"><i class="fa-solid fa-star"></i><span>4.3/5</span></div>
+          </div>
+
+          <div class="details">
+            <!-- 說明 -->
+            <div class="details-item">
+              <i class="fa-regular fa-comment"></i>
+              <div class="details-text">
+                <span>說明</span>
+                <p>這款T恤融合了王以太獨特的設計風格與高品質材質，完美展現了音樂與街頭時尚的碰撞，這款T恤都能讓你時尚又舒適。</p>
+              </div>
+            </div>
+
+            <!-- 適用-->
+            <div class="details-item">
+              <i class="fa-solid fa-street-view"></i>
+              <div class="details-text">
+                <span>適用</span>
+                <p>饒舌音樂粉絲愛好者、街頭文化愛好者</p>
+              </div>
+            </div>
+
+            <!-- 材質 -->
+            <div class="details-item">
+              <i class="fa-brands fa-think-peaks"></i>
+              <div class="details-text">
+                <span>材質</span>
+                <p>100% 純棉，透氣舒適，柔軟耐用</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 尺寸選擇 -->
+          <div class="size">
+            <h3>尺寸</h3>
+            <button class="size-option">黑/S</button>
+            <button class="size-option">黑/M</button>
+            <button class="size-option">黑/L</button>
+            <button class="size-option">深綠/S</button>
+            <button class="size-option">深綠/M</button>
+            <button class="size-option">深綠/L</button>
+          </div>
+
+          <!-- 數量及加入購物車 -->
+          <div class="quantity">
+            <!-- 加減區域 -->
+            <div class="add-minus">
+              <button id="minus"><i class="fa-solid fa-minus"></i></button>
+              <input type="number" id="quantity-input" value="1" readonly />
+              <button id="plus"><i class="fa-solid fa-plus"></i></button>
+            </div>
+            <!-- 購物車按鈕 -->
+            <button class="add-to-cart"><span id="price" data-price="1480">$1480 | </span>加入購物車</button>
+          </div>
+          <div class="order-info">
+            <ul>
+              <li><i class="fa-regular fa-circle-check"></i> NT$999 以上訂單免運費</li>
+              <li><i class="fa-regular fa-circle-check"></i> 12:00 pm 前訂購可當天發貨</li>
+              <li><i class="fa-regular fa-circle-check"></i> 7 天無理由退換貨</li>
+            </ul>
+          </div>
+        </main>
+      </div>
+
+      <!-- 下方 更多選擇項目 -->
+      <div class="recommendations container">
+        <h2>你可能會喜歡</h2>
+
+        <!-- 商品容器 -->
+         <div class="product-item-container">
+           <!-- 商品 -->  
+          <div class="product-item">
+            <div class="product-img"> 
+               <img
+              src="https://images.goodsmile.info/cgm/images/product/20220502/12665/98719/large/d870c31d5f264155ac6e3e359b7d34bc.jpg"
+              alt="滑板編號1"
+            />
+             <!-- 收到我的最愛 -->
+             <a href="#" class="favorite"><i class="fa-regular fa-heart"></i></a>
+          </div>
+            <!-- 卡片下面的標籤 -->
+            <div class="labels">
+              <span class="label skate">滑板</span>
+              <span class="label new">新品</span>
+            </div>
+            <div class="product-info">
+              <h4>TsL滑板</h4>
+              <div class="product-text">
+                <p>NT$3683</p>
+             <button class="add-to-cart">查看更多</button>
+              </div>
+            </div>
+          </div>
+             <!-- 商品 -->  
+          <div class="product-item">
+            <div class="product-img"> 
+               <img
+              src="https://shoplineimg.com/59b2d9e49a76f018310010d2/5d299190d0467a0038ae06eb/800x.webp?source_format=jpg"
+              alt="RAP編號5"
+            />
+             <!-- 收到我的最愛 -->
+             <a href="#" class="favorite"><i class="fa-regular fa-heart"></i></a>
+          </div>
+            <!-- 卡片下面的標籤 -->
+            <div class="labels">
+              <span class="label normal">饒舌</span>
+              <!-- <span class="label new">新品</span> -->
+            </div>
+            <div class="product-info">
+              <h4>6ix9ine原裝CD專輯</h4>
+              <div class="product-text">
+                <p>NT$550</p>
+             <button class="add-to-cart">查看更多</button>
+              </div>
+            </div>
+          </div>
+               <!-- 商品 -->  
+               <div class="product-item">
+                <div class="product-img"> 
+                   <img
+                  src="https://shoplineimg.com/59b2d9e49a76f018310010d2/5e908f90c0e941001e48bc23/800x.webp?source_format=jpg"
+                  alt="DJ"
+                />
+                 <!-- 收到我的最愛 -->
+                 <a href="#" class="favorite"><i class="fa-regular fa-heart"></i></a>
+              </div>
+                <!-- 卡片下面的標籤 -->
+                <div class="labels">
+                  <span class="label normal">DJ</span>
+                  <!-- <span class="label new">新品</span> -->
+                </div>
+                <div class="product-info">
+                  <h4>復古手提箱造型藍芽</h4>
+                  <div class="product-text">
+                    <p>NT$4980</p>
+                 <button class="add-to-cart">查看更多</button>
+                  </div>
+                </div>
+              </div>
+                   <!-- 商品 -->  
+          <div class="product-item">
+            <div class="product-img"> 
+               <img
+              src="https://shoplineimg.com/59b2d9e49a76f018310010d2/5ecf805b323c4a00273a9717/800x.webp?source_format=png"
+              alt="滑板編號2"
+            />
+             <!-- 收到我的最愛 -->
+             <a href="#" class="favorite"><i class="fa-regular fa-heart"></i></a>
+          </div>
+            <!-- 卡片下面的標籤 -->
+            <div class="labels">
+              <span class="label skate">滑板</span>
+
+            </div>
+            <div class="product-info">
+              <h4> Raw經典煙紙品牌滑板</h4>
+              <div class="product-text">
+                <p>NT$2880</p>
+             <button class="add-to-cart">查看更多</button>
+              </div>
+            </div>
+          </div>
+         </div>
+         
+     
+         
+       
+    <!-- 彈跳視窗 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="../assets/shop/lightbox-plus-jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script>
+    $(function () {      
+  // ----- 燈箱效果 -----
+  lightbox.option({
+    resizeDuration: 200,
+    wrapAround: true,
+  
+  });
+
+  // ----- 我的最愛標籤 -----
+  $('.favorite').on('click', function(event) {
+    event.preventDefault();
+    $(this).find('i').toggleClass('selected');
+    // 在這更新數據庫
+  });
+
+  //----- 尺寸選擇 -----
+  // 保存選中的尺寸
+  let selectedSize = ''; 
+  $('.size-option').on('click', function() {
+    // 點到新的就移除
+    $('.size-option').removeClass('selected');
+    // 添加
+    $(this).addClass('selected');
+    selectedSize = $(this).text();
+    // console.log("選中的項目是: " + selectedSize);
+  });
+
+  //----- 數量選擇 -----
+  // 減
+  $('#minus').click(function(event) {
+    event.preventDefault();
+    let currentValue = parseInt($('#quantity-input').val());
+    if (currentValue > 1) {
+      $('#quantity-input').val(currentValue - 1);
+      updateTotalPrice();
+    }
+  });
+
+  // 加
+  $('#plus').click(function(event) {
+    event.preventDefault();
+    let currentValue = parseInt($('#quantity-input').val());
+    $('#quantity-input').val(currentValue + 1);
+    // 價錢更新
+    updateTotalPrice();
+  });
+
+  // 更新價錢
+  function updateTotalPrice() {
+    let quantity = parseInt($('#quantity-input').val());
+    let unitPrice = parseInt($('#price').data('price'));
+    let totalPrice = unitPrice * quantity;
+    $('#price').text(`$${totalPrice} | `);
+  }
+
+  //----- 加入購物車 -----
+  $('.add-to-cart').click(function() {
+    let quantity = $('#quantity-input').val();
+    if (selectedSize === '') {
+      Swal.fire({
+  icon: "error",
+  title: "請選擇尺寸規格",
+  confirmButtonColor:'red'
+});
+      return;
+    }
+    // 檢查有沒有成功加入
+    // console.log("加入購物車的項目: " + selectedSize);
+    // console.log("加入購物車的數量: " + quantity);
+    const Toast = Swal.mixin({
+  toast: true,
+  position: "top-end",
+  showConfirmButton: false,
+  timer: 3000,
+  timerProgressBar: true,
+  didOpen: (toast) => {
+    toast.onmouseenter = Swal.stopTimer;
+    toast.onmouseleave = Swal.resumeTimer;
+  }
+});
+Toast.fire({
+  icon: "success",
+  title: "已成功加入購物車"
+});
+
+  
+    // 處理動態更新
+    // 這裡添加處理，記住我要把數據發送到伺服器顯示在購物車中
+    
+  });
+
+});
+
+    </script>
+  </body>
+</html>

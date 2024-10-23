@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../assets/login.css">
+    <link rel="stylesheet" href="../assets/basic.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<body class="w-bg">
+    <header id="navbar">
+        <div class="flex container ">
+            <a href="#">
+                <img class="logo" src="../assets/images/riverflow_logo.png" alt="logo">
+            </a>
+            <div class="flex header-right">
+                <ul class="headerLink flex">
+                    <li><a href="#">首頁</a></li>
+                    <li class="cultureListName dropdown">
+                        <a class="dropdownToggle" href="#">嘻哈文化<i class="bi bi-caret-down-fill"></i></a>                        
+                        <div id="dropdownMenu" class="">
+                            <ul class="cultureList flex">
+                                <li><a href="#" class="cultureOpt">DJ</a></li>
+                                <li><a href="#" class="cultureOpt">街舞</a></li>
+                                <li><a href="#" class="cultureOpt">饒舌</a></li>
+                                <li><a href="#" class="cultureOpt">塗鴉</a></li>
+                                <li><a href="#" class="cultureOpt">滑板</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="#">嘻哈專欄</a></li>
+                    <li><a href="#">into flow</a></li>
+                    <li><a href="#">商店</a></li>
+                </ul>
+                <div class="functionIcons flex">
+                    <a href="#" class="headerIcon">
+                        <i class="bi bi-ticket-perforated"></i>
+                    </a>
+                    <a href="#" class="headerIcon">
+                        <i class="bi bi-cart"></i>
+                    </a>
+                    <a href="login.html" class="headerIcon">
+                        <i class="bi bi-person"></i>
+                    </a>
+                    <div class="headerIcon mobOnly">
+                        <input id="menuBtn" class="menuBtn" type="checkbox">
+                        <label for="menuBtn" class="menuIcon">
+                            <span class="navigation"></span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mobMenu">
+            <ul class="headerLink mob flex">
+                <li><a href="#">首頁</a></li>
+                <li class="cultureListName dropdown dropdown_mob">
+                    <a class="dropdownToggle" href="#">嘻哈文化<i class="bi bi-caret-down-fill bi-caret-down-fill_mob"></i></a>
+                    <div id="dropdownMenu">
+                        <ul class="cultureList cultureList_mob flex">
+                            <li><a href="#" class="cultureOpt">DJ</a></li>
+                            <li><a href="#" class="cultureOpt">街舞</a></li>
+                            <li><a href="#" class="cultureOpt">饒舌</a></li>
+                            <li><a href="#" class="cultureOpt">塗鴉</a></li>
+                            <li><a href="#" class="cultureOpt">滑板</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="#">嘻哈專欄</a></li>
+                <li><a href="#">into flow</a></li>
+                <li><a href="#">商店</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <section class="register">
+        <div class="form">
+            <h4>註冊新帳號</h4>
+            <div class="input-text">
+                <label>姓</label>
+                <input type="text" name="" id="fistName" placeholder="王" required>
+                <label>名</label>
+                <input type="text" name="" id="lastName" placeholder="小明" required>
+            </div>
+            <span class="tips" id="nameTips"></span> <br />
+
+            <div class="input-text">
+                <label>帳號</label>
+                <input type="text" id="email" name="email" placeholder="Enter email"
+                    pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$" required /><br />
+            </div>
+            <span class="tips" id="emailTips"></span> <br />
+
+            <div class="input-text input-password">
+                <label>密碼</label>
+                <input type="password" name="password" id="password" placeholder="Enter password"
+                    pattern="^(?=.*[a-zA-Z])(?=.*[0-9]).{6,}$" required />
+                <div><i id="showBtn" class="bi bi-eye-slash-fill"></i></div>
+            </div>
+            <span class="tips" id="passwordTips">含英數至少六個字元</span> <br />
+
+            <div class="input-text input-password">
+                <label style=" width: 70px;">確認密碼</label>
+                <input type="password" name="" id="checkPassword" placeholder="Enter password"/>
+                <div><i id="checkBtn" class="bi bi-eye-slash-fill"></i></div>
+            </div>
+            <span class="tips" id="checkpassTips"></span> <br>
+
+            <input type="button" class="btn" id="btnSent" value="Login" >
+            <label class="input-checkbox">
+                <input type="checkbox"><span>我已詳閱並同意</span><button onclick="openBtn()">隱私權政策</button>
+            </label>
+            <span>
+                沒有River Flow帳號嗎？
+                <a href="login.html">前往登入</a>
+            </span>
+        </div>
+
+
+        <!-- 隱私權 彈跳視窗 -->
+        <div class="privacy" id="privacy">
+            <div class="privacy-wrap">
+                <div class="privacy-header">
+                    <h3>服務條款與隱私權</h3>
+                    <button class="closebtn" onclick="cancelBtn()"><i class="bi bi-x"></i></button>
+                </div>
+                <div class="privacy-body scrollCust">
+                    <div class="privacy-container">
+                        <h3>RIVERFLOW 服務條款</h3>
+                        <p>歡迎您使用 RIVERFLOW 的服務。本服務條款（以下簡稱「條款」）規範您使用我們提供的網站、活動及商品銷售服務。請您仔細閱讀以下條款，以確保您了解並接受所有條款內容。</p>
+                        <br>
+                        <h4>1. 接受條款</h4>
+                        <ul>
+                            <li>當您使用或訪問 RIVERFLOW 的網站和服務時，即表示您同意遵守本條款。如果您不同意本條款的任何部分，請勿使用本網站或服務。</li>
+                        </ul>
+
+                        <h4>2. 服務內容</h4>
+                        <ul>
+                            <li>RIVERFLOW 提供有關嘻哈文化的資訊、活動報名以及相關商品的銷售。我們保留隨時更改、暫停或終止服務的權利，恕不另行通知。</li>
+                        </ul>
+
+                        <h4>3. 用戶責任</h4>
+                        <ul>
+                            <li>您同意在使用本網站和服務時，不從事任何非法、侵權或違反公共道德的行為。</li>
+                            <li>您需確保您提供的所有資料均為準確且最新的。如資料有任何變動，請及時更新。</li>
+                        </ul>
+
+                        <h4>4. 知識產權</h4>
+                        <ul>
+                            <li>本網站上的所有內容，包括但不限於文字、圖片、標誌、設計，均受著作權及其他相關法律保護，未經授權，禁止以任何形式使用。</li>
+                        </ul>
+
+                        <h4>5. 責任限制</h4>
+                        <ul>
+                            <li>RIVERFLOW 不對由於使用或無法使用本服務而導致的任何直接、間接、偶然或特別損害負責。即使我們已被告知該等損害發生的可能性。</li>
+                        </ul>
+
+                        <h4>6. 條款修改</h4>
+                        <ul>
+                            <li>RIVERFLOW 保留隨時修改本條款的權利。任何修改將會在網站上公佈並自公佈日起生效。請定期查看本條款以了解最新資訊。</li>
+                        </ul>
+                        <br>
+                        <hr><br>
+
+                        <h3>RIVERFLOW 隱私權政策</h3>
+                        <p>我們重視您的隱私，並致力於保護您的個人資訊。以下是我們的隱私權政策，請仔細閱讀。</p>
+                        <br>
+                        <h4>1. 資料收集</h4>
+                        <ul>
+                            <li>我們會在您註冊、訂購商品或參加活動時收集您的個人資料，如姓名、聯絡方式及支付資訊。</li>
+                        </ul>
+
+                        <h4>2. 資料使用</h4>
+                        <ul>
+                            <li>我們使用您的個人資料以提供您所需的服務、處理訂單、聯絡您並改善我們的服務。我們不會將您的資料出售給第三方。</li>
+                        </ul>
+
+                        <h4>3. 資料安全</h4>
+                        <ul>
+                            <li>我們採取合理的技術和組織措施保護您的個人資料，防止其遭受未經授權的訪問、使用或披露。</li>
+                        </ul>
+
+                        <h4>4. 資料分享</h4>
+                        <ul>
+                            <li>除非得到您的同意或法律要求，我們不會將您的個人資料分享給第三方。我們可能會與信任的合作夥伴分享資料以協助我們運營服務，但僅限於為您提供服務所必需的範圍內。</li>
+                        </ul>
+
+                        <h4>5. 隱私權政策修改</h4>
+                        <ul>
+                            <li>我們可能會不時更新本政策。任何更改將於網站上公告，並自公告日起生效。建議您定期查看以了解我們的最新隱私政策。</li>
+                        </ul>
+                        <br>
+                        <em>如果您對於本服務條款或隱私權政策有任何疑問，請隨時聯絡我們。</em>
+                    </div>
+
+                </div>
+
+                <div class="privacy-footer">
+                    <button class="btn" onclick="cancelBtn()">同意</button>
+                </div>
+            </div>
+
+        </div>
+
+
+
+
+
+    </section>
+    <footer>
+        <div class="flex container">
+            <img class="logo" src="../assets/images/riverflow_logo_f.png" alt="logo" />
+            <div class="flex footer-right">
+                <div class="flex linkList">
+                    <a href="#" class="footerLink">關於我們</a>
+                    <a href="#" class="footerLink">聯絡我們</a>
+                    <a href="#" class="footerLink">條款與隱私</a>
+                    <a href="#" class="footerLink">FAQ</a>
+                </div>
+                <span class="copyright">Copyright © 2006-2024 RiverFlow</span>
+            </div>
+        </div>
+    </footer>
+
+
+    <script>
+
+        showBtn.onclick = function () {
+            var x = $('#showBtn').hasClass('bi-eye-slash-fill');
+            if (x) {
+                $('#showBtn').removeClass('bi-eye-slash-fill').addClass('bi-eye-fill')
+                $('#password').attr("type", "text").css('width', '80%');
+            } else {
+                $('#showBtn').removeClass('bi-eye-fill').addClass('bi-eye-slash-fill')
+                $('#password').attr("type", "password");
+            }
+        }
+
+        checkBtn.onclick = function () {
+            var x = $('#checkBtn').hasClass('bi-eye-slash-fill');
+            if (x) {
+                $('#checkBtn').removeClass('bi-eye-slash-fill').addClass('bi-eye-fill')
+                $('#checkPassword').attr("type", "text").css('width', '80%');
+            } else {
+                $('#checkBtn').removeClass('bi-eye-fill').addClass('bi-eye-slash-fill')
+                $('#checkPassword').attr("type", "password");
+            }
+        }
+
+        const privacy = document.getElementById('privacy');
+        
+        function openBtn() {
+            privacy.style.visibility = 'visible';
+        }
+
+        function cancelBtn() {
+            privacy.style.visibility = 'hidden';
+        }
+
+
+        // email輸入
+        email.addEventListener('input', function () {
+            if (email.validity.patternMismatch) {
+                emailTips.innerHTML = `<i class="bi bi-asterisk"></i> 請輸入email，並確認是否包含[@]，符合email規則`;
+            }else {
+                emailTips.innerHTML = ``
+            }
+        });
+        // 密碼輸入
+        password.addEventListener('input', function () {
+            if (password.validity.patternMismatch) {
+                passwordTips.innerHTML = `<i class="bi bi-asterisk"></i> 請輸入正確的密碼格式:含英數至少六個字元`;
+            } else if (password.validity.valueMissing) {
+                passwordTips.innerHTML = `<i class="bi bi-asterisk"></i> 請輸入密碼`;
+            } else {
+                passwordTips.innerHTML = ``
+            }
+        });
+        // 密碼確認
+        checkPassword.addEventListener('input', function () {
+            if (checkPassword.value !== password.value) {
+                checkpassTips.innerHTML = `<i class="bi bi-asterisk"></i> 密碼不吻合`;
+            } else {
+                checkpassTips.innerHTML = `密碼吻合`;
+            }
+        });
+
+
+        btnSent.onclick = function () {
+
+            //名字的驗證
+            if (fistName.validity.valueMissing) {
+                nameTips.innerHTML = `<i class="bi bi-asterisk"></i> 請輸入姓氏`;
+                
+            } else if (lastName.validity.valueMissing) {
+                nameTips.innerHTML = `<i class="bi bi-asterisk"></i> 請輸入名字`;
+               
+            } else {
+                nameTips.innerText = ''
+            }
+            //email的驗證
+            if (email.validity.patternMismatch) {
+                emailTips.innerHTML = `<i class="bi bi-asterisk"></i> 不符合email規則，請確認是否包含[@]`;
+            } else if (email.validity.valueMissing) {
+                emailTips.innerHTML = `<i class="bi bi-asterisk"></i> 請輸入email`;
+               
+            } else {
+                emailTips.innerHTML = ``
+            }
+
+
+            // 密碼的驗證
+            if (password.validity.patternMismatch) {
+                passwordTips.innerHTML = `<i class="bi bi-asterisk"></i> 請輸入正確的密碼格式:含英數至少六個字元`;
+            } else if (password.validity.valueMissing) {
+                passwordTips.innerHTML = `<i class="bi bi-asterisk"></i> 請輸入正確的密碼格式:含英數至少六個字元`;
+            }
+            else {
+                passwordTips.innerHTML = ``
+
+            }
+
+            location.href='index.html'
+
+           
+        }
+    </script>
+
+</body>
+
+</html>

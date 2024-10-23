@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../assets/basic.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="../assets/event/eventPage1.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <style>
+    </style>
+
+</head>
+
+<body class="w-bg scrollCust">
+    <div class="wrap container">
+        <div class="header"><img src="../../src/assets/images/indexImg/nav.jpg" alt=""></div>
+
+        <!-- 輪播圖 -->
+        <div class="carousel">
+            <!-- Slider main container -->
+            <div class="swiper">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide"><a href="../static/eventPage2.html"><img
+                                src="../assets/images/events/event-yitai.jpg"
+                                alt=""></a></div>
+                    <div class="swiper-slide"><a href="#"><img
+                                src="../assets/images/events/event-gali.jpg"
+                                alt=""></a></div>
+                    <div class="swiper-slide"><a href="#"><img
+                                src="../assets/images/events/event-LUNARFACE.jpg"
+                                alt=""></a></div>
+                    <div class="swiper-slide"><a href="#"><img
+                                src="../assets/images/events/event-yeemao.png"
+                                alt=""></a></div>
+                </div>
+                <!-- If we need pagination -->
+                <div class="swiper-pagination"></div>
+
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+
+                <!-- 如果需要捲動軸 -->
+                <!-- <div class="swiper-scrollbar"></div> -->
+            </div>
+        </div>
+
+        <div class="event">
+            <!-- 活動篩選導覽 -->
+            <div class="eventFilter">
+                <div>
+                    <input type="text" name="" id="" class="" placeholder="搜尋活動">
+                </div>
+                <div class="titleSelect">
+                    <div><a href="#" dataFilter="all">全部</a></div>
+                    <div><a href="#" dataFilter="DJ">刷碟 Disc Jockey</a></div>
+                    <div><a href="#" dataFilter="streetdance">街舞 Street Dance</a></div>
+                    <div><a href="#" dataFilter="rap">饒舌 Rap</a></div>
+                    <div><a href="#" dataFilter="graffiti">塗鴉 Graffiti</a></div>
+                    <div><a href="#" dataFilter="skate">滑板 Skate</a></div>
+                </div>
+            </div>
+            <!-- 活動卡片列表 -->
+            <div class="eventList">
+                <div class="eventProduct">
+                    <div class="eventCard" dataCategory="rap">
+                        <a href="../static/eventPage2.html">
+                            <img src="../assets/images/events/event-yitai.jpg"
+                                alt="圖片">
+                            <p>王以太 《Love Me Later》 台北站</p>
+                            <p>2024-09-12 至 2024-09-14</p>
+                            
+                        </a>
+                    </div>
+                    <div class="eventCard" dataCategory="streetdance">
+                        <a href="">
+                            <img src="../assets/images/events/event-gali.jpg"
+                                alt="圖片">
+                            <p>GALI 《STRIPELIVE》IN TAIPEI</p>
+                            <p>2024-09-14 至 2024-09-14</p>
+                        </a>
+                    </div>
+                    <div class="eventCard" dataCategory="streetdance">
+                        <a href="">
+                            <img src="../assets/images/events/event-LUNARFACE.jpg"
+                                alt="圖片">
+                            <p>趙翊帆 《LUNARFACE公測巡演》</p>
+                            <p>2024-08-30 至 2024-08-31</p>
+                        </a>
+                    </div>
+                    <div class="eventCard" dataCategory="rap">
+                        <a href="">
+                            <img src="../assets/images/events/event-yeemao.png"
+                                alt="圖片">
+                            <p>夜貓組 《啊是在Halloween？》</p>
+                            <p>2024/10/30 至 2023/10/31</p>
+                        </a>
+                    </div>
+                    <div class="eventCard" dataCategory="rap">
+                        <a href="">
+                            <img src="https://img.redbull.com/images/c_fill,g_auto,w_550,h_428/q_auto,f_auto/redbullcom/2023/12/26/d2dwugrazmfwjonyk7vh/redbullorbit"
+                                alt="圖片">
+                            <p>Orbit 《NBA全明星陣容》</p>
+                            <p>2024-09-19 至 2024-09-20</p>
+                        </a>
+                    </div>
+                    
+                    
+
+
+                </div>
+                <div class="eventListBtn">
+                    <button>查看更多活動</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        // 輪播圖
+        const swiper = new Swiper('.swiper', {
+            // Optional parameters
+            autoplay: {
+                delay: 3000
+            },
+            direction: 'horizontal',
+            loop: true,
+            slidesPerView: 1.5,
+            effect: 'coverflow',
+            centeredSlides: true,
+            coverflowEffect: {
+                depth: 200,
+                rotate: 0,
+                stretch: 0,
+                slideShadows: true,
+            },
+            // 如果需要分頁
+            // pagination: {
+            //     el: '.swiper-pagination',
+            // },
+
+            // Navigation arrows
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+
+            // 如果需要捲動軸
+            // scrollbar: {
+            //     el: '.swiper-scrollbar',
+            // },
+        });
+
+        $(document).ready(function(){
+
+            //  商品篩選功能
+            $(".titleSelect div a").on("click",function(e){
+                e.preventDefault();
+                var filterValue = $(this).attr('dataFilter');
+                
+                if(filterValue == "all"){
+                    $(".eventCard").show();
+                }else{
+                    $(".eventCard").hide();
+                    $('.eventCard[dataCategory="'+ filterValue +'"]').show();
+                }
+
+                // console.log("OK");
+            })
+        })
+    </script>
+</body>
+
+</html>

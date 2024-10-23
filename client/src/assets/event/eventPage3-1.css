@@ -1,0 +1,223 @@
+@import url("../basic.css");
+
+
+* {
+    margin: 0;
+    padding: 0;
+  }
+.wrap{
+    max-width: 90%;
+    margin: auto;
+    padding: 0 20px;
+}
+
+.eventName {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 2fr;
+}
+
+.eventImg {
+
+    border-radius: 10px;
+    flex: 1;
+}
+
+.eventImg img {
+    border: 0.75px solid var(--main);
+    border-radius: 10px;
+}
+
+.eventTitle {
+    flex: 1;
+    margin-left: 3em;
+}
+
+.eventTitle h1 {
+    display: inline-block;
+    white-space: nowrap;
+    margin-top: 1rem;
+}
+.eventTitle p{
+    font-size: 1.2rem;
+    margin-top: 1rem;
+  }
+
+/* 中間的線 */
+.middleLine {
+    border-bottom: 0.75px solid var(--main);
+    margin: 1.8rem 0rem;
+}
+
+/* 購買順序 */
+.order {
+    display: flex;
+    margin-bottom: 1.8rem;
+    justify-content: space-around;
+}
+
+.ticketOrder {
+    display: flex;
+}
+
+.ticketOrder div:nth-child(1) {
+    display: flex;
+    border: 1px solid var(--main);
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    margin-right: 1rem;
+    color: var(--main);
+    font-size: 20px;
+}
+
+.ticketOrder span {
+    padding-bottom: 3px;
+    font-size: 1.2rem;
+}
+
+.ticketOrder div:nth-child(2) {
+    display: flex;
+    color: var(--main);
+    align-items: center;
+}
+
+.ticketOrder:nth-child(1) .ticketOrder1 {
+    background-color: var(--main);
+    color: black;
+}
+
+/* 選擇票種數量 */
+.ticketChoose {
+    border: 0.75px solid var(--main);
+    border-radius: 10px;
+    background-color: var(--bk2);
+    padding-bottom: 1rem;
+}
+
+.ticketText {
+    text-align: center;
+    margin-top: 1.3rem;
+    margin-bottom: 1.3rem;
+}
+
+.ticketText h3 {
+    color: var(--bk1);
+    background-color: var(--main);
+    border-radius: 10px;
+    padding: 1rem 0rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    font-size: 1.3rem;
+}
+
+.ticketMan,
+.ticketSpec {
+    /* 數量 */
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    text-align: center;
+    margin: 1.5rem 0rem;
+    align-items: center;
+}
+.ticketMan p,
+.ticketMan span,
+.ticketSpec p{
+    font-size: 24px;
+}
+.ticketMan>div span:nth-child(2),
+.ticketMan>div span:nth-child(3){
+    font-size: 16px;
+    color: red;
+    font-weight: bold;
+}
+
+.ticketNumber {
+    display: flex;
+}
+
+.ticketNumber button {
+    background: none;
+    /* display: inline-flex; */
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    color: var(--gr1);
+    font-size: 1.2rem;
+
+}
+.ticketNumber p{
+    margin: 0rem 0.8rem;
+}
+
+.ticketNumber button:hover {
+    color: var(--main);
+}
+
+.ticketMiddle>p {
+    border-bottom: 0.75px solid var(--main);
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+.ticketSpec {
+    margin-bottom: 1rem;
+}
+
+/* 下一步按鍵 */
+
+
+.ticketBtn a {
+    border: 0.75px solid var(--main);
+    border-radius: 10px;
+    color: var(--bk1);
+    background-color: var(--main);
+    padding: 0.8rem 6rem;
+    margin-right: 2rem;
+
+}
+
+.link-disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* 可選：為禁用狀態添加視覺反饋 */
+.link-disabled:hover {
+    text-decoration: none;
+    color: #999;
+    /* 保持顏色不變 */
+}
+
+@media screen and (min-width: 1440px) {
+    .wrap {
+        max-width: 1300px;
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .eventName {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .eventName {
+        display: block;
+    }
+
+    .eventImg {
+        max-width: 100%;
+        padding: 1rem;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .wrap {
+        min-width: 560px;
+        height: auto;
+    }
+}

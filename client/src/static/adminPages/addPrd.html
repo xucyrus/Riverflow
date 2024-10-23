@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../../assets/basic.css">
+    <link rel="stylesheet" href="../../assets/adminPage.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.13.3/jquery-ui.js"></script>
+    <title>新增商品</title>
+</head>
+
+<body>
+    <div class="admin-page">
+        <div class="sideBar">
+            <div class="greeting flex">
+                <div><span>管理帳號</span>，你好！</div>
+                <button class="btn">登出</button>
+            </div>
+            <div class="sideMenu">
+                <ul>
+                    <li class="sideMenuOpt">
+                        <label for="" class="menuTitle flex">
+                            <i class="fa-solid fa-bag-shopping"></i>商品管理
+                        </label>
+                        <ul class="secMenu">
+                            <li>
+                                <a href="prdList.html" class="menuPage thisPage">商品列表</a>
+                            </li>
+                            <li>
+                                <a href="prdOrder.html" class="menuPage">商品訂單</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="sideMenuOpt">
+                        <label for="" class="menuTitle flex">
+                            <i class="fa-solid fa-newspaper"></i></i>專欄管理
+                        </label>
+                        <ul class="secMenu">
+                            <li>
+                                <a href="blogList.html" class="menuPage">文章列表</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="sideMenuOpt">
+                        <label for="" class="menuTitle flex">
+                            <i class="fa-solid fa-calendar-days"></i>活動管理
+                        </label>
+                        <ul class="secMenu">
+                            <li>
+                                <a href="eventList.html" class="menuPage">活動列表</a>
+                            </li>
+                            <li>
+                                <a href="eventOrder.html" class="menuPage">活動訂單</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="main">
+            <div class="pageTitle">
+                新增商品
+            </div>
+            <form action="" id="prdForm">
+                <div class="tabs">
+                    <ul class="tabBtnList">
+                        <li><a href="#infoDesc" id="defaultOpen" class="tabBtn active">商品基本資訊</a></li>
+                        <li><a href="#infoSpec" class="tabBtn">商品規格</a></li>
+                        <li><a href="#prdDiscount" class="tabBtn">商品優惠</a></li>
+                        <!-- <button class="tabBtn" href="#infoDesc" id="defaultOpen"></button>
+                    <button class="tabBtn" href="#infoSpec">商品規格</button> -->
+                    </ul>
+
+                    <!-- tabContent 商品資訊-->
+                    <div id="infoDesc" class="tabContent">
+                        <div class="infoItem">
+                            <label for="prdName" class="editTitle">商品名稱：</label>
+                            <input id="prdName" name="prdName" type="text" required>
+                            <span class="required">※此欄位為必填</span>
+                        </div>
+                        <div class="infoItem">
+                            <label class="editTitle">商品圖片：</label>
+                            <div class="picItem">
+                                <label for="prdPic" class="custUpload"><i class="fa-solid fa-upload"></i> 上傳圖片</label>
+                                <input id="prdPic" name="prdPic" type="file" required accept="image/png, image/jpeg" />
+                                <span id="fileChosen">未選擇任何檔案</span>
+                            </div>
+                        </div>
+                        <div class="infoItem">
+                            <label for="prdSort" class="editTitle">商品分類：</label>
+                            <select name="sort" id="prdSort">
+                                <option value="dj">刷碟 Disc Jockey</option>
+                                <option value="graffiti">塗鴉 Graffiti</option>
+                                <option value="rap">饒舌 Rap</option>
+                                <option value="streetDance">街舞 Street Dance</option>
+                                <option value="skate">滑板 Skate</option>
+                                <option value="new">新上市 New</option>
+                                <option value="discount">優惠 Discount</option>
+                            </select>
+                        </div>
+                        <div class="infoItem">
+                            <label for="prdPrice" class="editTitle">商品票價：</label>
+                            <div class="itemPrice">
+                                <span class="priceMark event">NT$</span>
+                                <input id="prdPrice" type="number" min="0" required>
+                            </div>
+                        </div>
+                        <div class="infoItem itemList">
+                            <span class="editTitle">商品特性：</span>
+                            <div class="descInfo">
+                                <div class="descItem">
+                                    <label for="prdDesc" class="editTitle">說明：</label>
+                                    <input id="prdDesc" name="prdDesc" type="text" required>
+                                </div>
+                                <div class="descItem">
+                                    <label for="prdSpec1" class="editTitle">適用：</label>
+                                    <input id="prdSpec1" name="prdSpec1" type="text" required>
+                                </div>
+                                <div class="descItem">
+                                    <label for="prdSpec2" class="editTitle">材質：</label>
+                                    <input id="prdSpec2" name="prdSpec2" type="text" required>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- tabContent 商品規格-->
+                    <div id="infoSpec" class="tabContent">
+                        <div class="specEdit">
+                            <span class="editTitle">規格選項：</span>
+                            <div class="specInfo">
+                                <div class="specItem" spec-id="1">
+                                    <label for="prdSpec1">規格1名稱：</label>
+                                    <input id="prdSpec1" name="prdSpec1" class="specTitle" type="text" required>
+                                    <button class="addItem"><i class="bi bi-plus-circle"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                        <div>
+                            <table class="specSum">
+                                <thead>
+                                    <tr>
+                                        <td>規格</td>
+                                        <td>庫存</td>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="specItemInfo" spec-id="1">
+                                        <td><span id="specName1" class="itemTitle"></span></td>
+                                        <td><input type="number" name="specStock1" id="specStock1" min="0" step="1"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!-- tabContent 商品優惠-->
+                    <div id="prdDiscount" class="tabContent">
+                        <div class="infoItem">
+                            <span>商品優惠：</span>
+                            <input type="checkbox" name="disCheck" id="disCheck" class="prdDisCheck">
+                            <label for="disCheck" class="checkmark"></label>
+                        </div>
+                        <div class="ifHasDis hidden">
+                            <div class="infoItem itemflexList">
+                                <div>
+                                    <label for="discountStart" class="editTitle">優惠開始時間：</label>
+                                    <input id="discountStart" type="datetime-local" name="discountStart">
+                                </div>
+                                <div>
+                                    <label for="discountEnd" class="editTitle">優惠結束時間：</label>
+                                    <input id="discountEnd" type="datetime-local" name="discountEnd">
+                                </div>
+                            </div>
+                            <div class="infoItem">
+                                <label for="discountRate" class="editTitle">優惠方式：</label>
+                                <input id="discountRate" name="discountRate" class="discountWay" type="number" min="0" max="1" step="0.01"
+                                     placeholder="輸入0～1之間的數字">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="btnList flex">
+                    <a><button class="btn" onclick="history.back()"><i class="fa-solid fa-angle-left"></i> 返回</button></a>
+                    <button class="btn" type="submit"><i class="fa-solid fa-floppy-disk"></i> 儲存</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script>
+        $('.tabs').tabs();
+        $('.tabBtn').on('click', function () {
+            // console.log(this)
+            $('.tabBtn').removeClass('active')
+            $(this).addClass('active')
+        })
+
+        // 圖片上傳
+        $('#prdPic').on('change', function () {
+            // console.log($(this).prop('files'))
+            $('#fileChosen').text($(this).prop('files')[0].name)
+        })
+
+        // 規格輸入
+        // $('.specTitle').on('input', function () {
+        //     // console.log($(this).val())
+        //     $('#specName1').text($(this).val())
+        // })
+        $(document).on('input', '.specTitle', function () {
+            $itemId = $(this).parent('.specItem').attr('spec-id')
+            $(`#specName${$itemId}`).text($(this).val())
+        })
+
+
+        // 規格新增
+        $(document).on('click', '.addItem', function () {
+            $itemId = $('.specItem').length
+            // console.log($(this).parents('.specInfo'))
+            $(this).parents('.specInfo').append(`
+                <div class="specItem" spec-id="${$itemId + 1}">
+                    <label for="prdSpec${$itemId + 1}">規格${$itemId + 1}名稱：</label>
+                    <input id="prdSpec${$itemId + 1}" class="specTitle" type="text" required>
+                    <button class="addItem"><i class="bi bi-plus-circle"></i></button>
+                    <button class="delItem"><i class="bi bi-dash-circle"></i></button>
+                </div>
+            `)
+
+            // $specNum = $('.specItemInfo').length
+            $('.specSum tbody').append(`
+                <tr class="specItemInfo" spec-id="${$itemId + 1}">
+                    <td><span id="specName${$itemId + 1}" class="itemTitle"></span></td>
+                    <td><input type="number" name="specStock${$itemId + 1}" id="specStock${$itemId + 1}" min="0" step="1"></td>
+                </tr>
+            `)
+        })
+        // 規格刪除
+        $(document).on('click', '.delItem', function () {
+            // console.log($(this).parent('.specItem').attr('spec-id'))
+            $itemId = $(this).parent('.specItem').attr('spec-id')
+            // console.log($itemId)
+            $(this).parent('.specItem').remove()
+            $(`.specItemInfo[spec-id="${$itemId}"]`).remove()
+        })
+
+        // 優惠勾選切換
+        $('#disCheck').on('change', function() {
+            $('.ifHasDis').toggleClass('hidden')
+        })
+
+        // 表單測試
+        document.getElementById('prdForm').addEventListener('submit', function (event) {
+            event.preventDefault(); // 防止表單提交
+            const formData = new FormData(event.target);
+
+            // 將表單資料列印到 console
+            formData.forEach((value, key) => {
+                console.log(`${key}: ${value}`);
+            });
+        });
+    </script>
+</body>
+
+</html>

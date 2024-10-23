@@ -1,0 +1,258 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+
+
+.framWrap {
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .pageAdjust {
+    margin: 0 8rem;
+  }
+
+  .header {
+    margin-top: 5px;
+    margin: 0 auto;
+  }
+
+  .headerImage {
+    margin-bottom: 1.8rem;
+    border: 0.75px solid var(--main);
+    border-radius: 10px;
+
+  }
+
+  .headerImage img {
+    border-radius: 10px;
+    object-fit: cover;
+    aspect-ratio: 2.8/1.3;
+  }
+
+  /* 活動詳細頁面-標題 */
+  .detailEventTitle {
+    background-color: var(--bk2);
+    border: 0.75px solid var(--main);
+    border-radius: 10px;
+  }
+
+  .detailEventTitle h1 {
+    border-bottom: 0.75px solid var(--main);
+    margin: 1.5rem;
+    padding: 0.5rem;
+    padding-bottom: 2rem;
+  }
+
+  .detailEventTitle p {
+    margin: 1.8rem;
+    line-height: 1.7rem;
+  }
+
+  /* 活動詳細頁面-選單 */
+  .eventBar {
+    background-color: var(--bk2);
+    display: flex;
+    text-align: center;
+    border: 0.75px solid var(--main);
+    margin: 1.8rem 0rem;
+    position: sticky;
+    top: 0;
+  }
+
+  .eventBar div {
+    width: 100%;
+    /* flex: 1; */
+    /* text-align: center; */
+    /* padding: 0px 30px; */
+  }
+
+  .eventBar a {
+    display: block;
+    color: white;
+    padding: 15% 0%;
+  }
+
+  .eventBar a:hover {
+    background-color: var(--bk1);
+    box-shadow: inset 0 -4px 0 0 var(--side);
+  }
+
+  .eventBar a.active {
+    background-color: var(--bk1);
+    box-shadow: inset 0 -4px 0 0 var(--side);
+  }
+
+  /* 選單-立即購買 */
+  .buyNow {
+    background-color: var(--bk2);
+    border: 0.75px solid var(--main);
+    border-radius: 10px;
+    text-align: center;
+    padding: 0rem 2rem;
+    margin-bottom: 1.8rem;
+    scroll-margin-top: 5rem;
+  }
+
+  .buyNow p {
+    border-bottom: 0.75px solid var(--main);
+    padding: 1rem;
+  }
+
+  .buyTitle,
+  .buyItem {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr;
+    align-items: center;
+    
+  }
+
+  .buyTitle {
+    padding: 1rem 0rem;
+    margin-bottom: 2rem;
+    border-bottom: 0.75px solid var(--main);
+  }
+
+  .buyItem {
+    margin-bottom: 1.5rem;
+  }
+
+  .buyNowBtn {
+    background-color: var(--main);
+    color: var(--bk1);
+    border-radius: 30px;
+    border: 0;
+    padding: 10px 35px;
+    cursor: pointer;
+  }
+
+  .buyNowBtn:hover {
+    background-color: var(--main2);
+  }
+
+  /* 選單-活動介紹 */
+  .eventIntroduce {
+    background-color: var(--bk2);
+    border: 0.75px solid var(--main);
+    border-radius: 10px;
+    padding: 0rem 4rem;
+    margin-bottom: 1.8rem;
+    scroll-margin-top: 5rem;
+  }
+  .eventIntroduce p{
+    line-height: 1.7rem;
+  }
+
+  .eventIntroduce p:nth-child(1) {
+    text-align: center;
+    border-bottom: 0.75px solid var(--main);
+    padding: 1rem;
+  }
+    /* 文字編輯器 */
+  .introduceImage {
+    text-align: center;
+  }
+  /* .introduceImage +p .image img {
+    width: 100%; 
+    height: auto; 
+   
+  } */
+  /* 文字編輯器 */
+  
+
+  .eventIntroduce img {
+    width: 95%;
+    margin: 1rem 0rem;
+  }
+  .eventIntroduce p:last-child{
+    margin-bottom: 2.5rem;
+  }
+
+  /* 選單-注意事項、購買提醒、取票方式、退票規定 */
+  .eventCaution,
+  .eventRemind,
+  .eventTicket,
+  .eventRefund {
+    border: 0.75px solid var(--main);
+    border-radius: 10px;
+    background-color: var(--bk2);
+    padding: 0rem 4rem;
+    margin-bottom: 1.8rem;
+    scroll-margin-top: 5rem;
+  }
+
+  .eventCautionTitle,
+  .remindTitle,
+  .ticketTitle,
+  .refundTitle {
+    text-align: center;
+    border-bottom: 0.75px solid var(--main);
+    padding: 1rem;
+  }
+
+  .eventCautionTitle+ol,
+  .remindTitle+ol,
+  .ticketTitle+ol,
+  .refundTitle+ol{
+    margin-top: 1rem;
+    margin-bottom: 2.5rem;
+    line-height: 3;
+  }
+  .eventCautionTitle+ol p,
+  .remindTitle+ol p,
+  .ticketTitle+ol p,
+  .refundTitle+ol p{
+    line-height: 1.6;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    /* 啟用平滑滾動 */
+  }
+
+  @media screen and (min-width: 1200px) {
+    .framWrap {
+      max-width: 1100px;
+      height: auto;
+    }
+  }
+
+  @media screen and (max-width: 960px) {
+    .buyNow>div {
+      font-size: 20px;
+      line-height: 2rem;
+    }
+
+    .buyTitle,
+    .buyItem {
+      display: inline-block;
+    }
+
+    .buyTitle {
+      border: 0;
+      margin-right: 2rem;
+    }
+
+    .buyTitle>div:last-child {
+      display: none;
+    }
+
+    .buyItem {
+      text-align: left;
+    }
+
+    .buyNowBtn {
+      float: right;
+      width: 70%;
+      margin-top: 1rem;
+    }
+  }
+
+  @media screen and (max-width: 576px){
+    .framWrap {
+      min-width: 560px;
+      height: auto;
+    }
+  }

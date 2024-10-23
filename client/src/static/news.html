@@ -1,0 +1,1205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RiverFlow</title>
+    <link rel="stylesheet" href="../assets/news.css">
+    <link rel="stylesheet" href="../assets/basic.css">
+    <link rel="stylesheet" href="../assets/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="icon" href="../assets/images/riverflow_logo_f.png">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #navbar {
+            position: fixed;
+            top: 0;
+        }
+    </style>
+</head>
+
+<body class="w-bg scrollCust">
+    <header id="navbar">
+        <div class="flex container ">
+            <a href="#">
+                <img class="logo" src="../assets/images/riverflow_logo.png" alt="logo">
+            </a>
+            <div class="flex header-right">
+                <ul class="headerLink flex">
+                    <li><a href="index.html">首頁</a></li>
+                    <li class="cultureListName dropdown">
+                        <a class="dropdownToggle" href="#">嘻哈文化<i class="bi bi-caret-down-fill"></i></a>
+                        <div id="dropdownMenu" class="">
+                            <ul class="cultureList flex">
+                                <li><a href="#" class="cultureOpt">DJ</a></li>
+                                <li><a href="#" class="cultureOpt">街舞</a></li>
+                                <li><a href="#" class="cultureOpt">饒舌</a></li>
+                                <li><a href="#" class="cultureOpt">塗鴉</a></li>
+                                <li><a href="#" class="cultureOpt">滑板</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="news.html">嘻哈專欄</a></li>
+                    <li><a href="#">into flow</a></li>
+                    <li><a href="#">商店</a></li>
+                </ul>
+                <div class="functionIcons flex">
+                    <a href="memberTickets.html" class="headerIcon">
+                        <i class="bi bi-ticket-perforated"></i>
+                    </a>
+                    <a href="#" class="headerIcon">
+                        <i class="bi bi-cart"></i>
+                    </a>
+                    <a href="login.html" class="headerIcon">
+                        <i class="bi bi-person"></i>
+                    </a>
+                    <div class="headerIcon mobOnly">
+                        <input id="menuBtn" class="menuBtn" type="checkbox">
+                        <label for="menuBtn" class="menuIcon">
+                            <span class="navigation"></span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mobMenu">
+            <ul class="headerLink mob flex">
+                <li><a href="index.html">首頁</a></li>
+                <li class="cultureListName dropdown dropdown_mob">
+                    <a class="dropdownToggle" href="#">嘻哈文化<i
+                            class="bi bi-caret-down-fill bi-caret-down-fill_mob"></i></a>
+                    <div id="dropdownMenu">
+                        <ul class="cultureList cultureList_mob flex">
+                            <li><a href="#" class="cultureOpt">DJ</a></li>
+                            <li><a href="#" class="cultureOpt">街舞</a></li>
+                            <li><a href="#" class="cultureOpt">饒舌</a></li>
+                            <li><a href="#" class="cultureOpt">塗鴉</a></li>
+                            <li><a href="#" class="cultureOpt">滑板</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="news.html">嘻哈專欄</a></li>
+                <li><a href="#">into flow</a></li>
+                <li><a href="#">商店</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <section class="news">
+
+        <div class="nav-box">
+            <div class="tab">
+                <button class="tablinks" onclick="openCity(event, 'All')" id="defaultOpen">
+                    <h3>全部類別</h3>
+                </button>
+                <button class="tablinks" onclick="openCity(event, 'DJ')">
+                    <h3><i class="bi bi-disc-fill"></i> DJ <span>| Disc Jockey</span></h3>
+                </button>
+                <button class="tablinks" onclick="openCity(event, 'Breaking')">
+                    <h3><i class="fa-solid fa-people-pulling"></i> 街舞 <span>| Breaking</span></h3>
+                </button>
+                <button class="tablinks" onclick="openCity(event, 'Rapping')">
+                    <h3><i class="fa-solid fa-microphone-lines"></i> 饒舌 <span>| Rapping</span></h3>
+                </button>
+                <button class="tablinks" onclick="openCity(event, 'Graffiti')">
+                    <h3><i class="fa-solid fa-spray-can-sparkles"></i> 塗鴉 <span>| Graffiti</span></h3>
+                </button>
+                <button class="tablinks" onclick="openCity(event, 'Skate')">
+                    <h3><i class="bi bi-bandaid-fill"></i> 滑板 <span>| Skate</span></h3>
+                </button>
+
+            </div>
+        </div>
+        <div class="content-box">
+            <div id="All" class="tabcontent">
+                <div class="content">
+                    <div class="content-left">
+
+                        <a class="card-box" href="news_article.html">
+                            <img class="decorate-left" src="../assets/images/decor01.png" alt="">
+                            <div class="newsCard-green">
+
+
+                                <div class="img-box">
+                                    <img src="../assets/images/newsimg3.png" alt="">
+                                </div>
+                                <div class="item">
+                                    <div class="wrap">
+                                        <p>
+                                            <span>/// </span><span>饒舌</span>
+                                        </p><br><br>
+                                        <span>2024.</span>
+                                        <span>08.05</span>
+
+                                    </div>
+                                    <div class="wrap">
+                                        <h4 class="multiline-ellipsis ">來自成都集團CDC的大陸饒舌歌手王以太</h4>
+                                        <p class="multiline-ellipsis ">在2018年《中國新說唱》中取得全國前六強的好成績</p>
+                                    </div>
+                                    <div class="wrap">
+                                        <div class="morebtn"><i class="bi bi-arrow-right"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <a class="card-box" href="">
+                            <div class="newsCard-gray">
+                                <div class="img-box">
+                                    <img src="../assets/images/newsbanner.jpg" alt="">
+                                </div>
+
+                                <div class="item">
+                                    <div class="wrap">
+                                        <p>
+                                            <span>/// </span><span>饒舌</span>
+                                        </p><br><br>
+                                        <span>2024.</span>
+                                        <span>07.20</span>
+
+                                    </div>
+                                    <div class="wrap">
+                                        <h4 class="multiline-ellipsis ">台灣嘻哈的強勢分支- 台灣TRAP 台灣嘻哈的強勢分支- 台灣TRAP</h4>
+                                        <p class="multiline-ellipsis ">當陷阱音樂從美國告示牌排行榜上一路延燒至台灣</p>
+                                    </div>
+                                    <div class="wrap">
+                                        <div class="morebtn"><i class="bi bi-arrow-right"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <a class="card-box" href="">
+                            <div class="newsCard-green">
+                                <div class="img-box">
+                                    <img src="../assets/images/skate.jpg" alt="">
+                                </div>
+
+                                <div class="item">
+                                    <div class="wrap">
+                                        <p>
+                                            <span>/// </span><span>滑板</span>
+                                        </p><br><br>
+                                        <span>2024.</span>
+                                        <span>07.28</span>
+
+                                    </div>
+                                    <div class="wrap">
+                                        <h4 class="multiline-ellipsis ">滑板故事誌：Madars Apse的一期一會之發明屬於自己滑板招式的烏干達 DIY 滑板團
+                                        </h4>
+                                        <p class="multiline-ellipsis ">滑板故事誌造訪了烏干達滑板人 Gose
+                                            Gerald，他運用網路社群媒體和募資平台籌資建蓋了一座滑板公園，同時也開啟且持續在世界各地掀起 DIY 板場浪潮的當代滑板場景！</p>
+                                    </div>
+                                    <div class="wrap">
+                                        <div class="morebtn"><i class="bi bi-arrow-right"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="content-right">
+
+                        <a href="">
+                            <div class="newsCard-gray">
+                                <div class="img-box">
+                                    <img src="../assets/images/breaking.jpg" alt="">
+                                </div>
+                                <div class="item">
+                                    <div class="wrap">
+                                        <p>
+                                            <span>/// </span><span>街舞</span>
+                                        </p><br><br>
+                                        <span>2024</span>
+                                        <span>07.28</span>
+
+                                    </div>
+                                    <div class="wrap">
+                                        <h4 class="multiline-ellipsis ">Dance Your Style 2024 台灣大賽</h4>
+                                        <p class="multiline-ellipsis ">Dance Your Style
+                                            是以一個全新的尬舞概念，重點將大家聚在一起慶祝跳舞、音樂和表演，以及重現街舞風格所象徵的社交和派對氛圍。</p>
+                                    </div>
+                                    <div class="wrap">
+                                        <div class="morebtn"><i class="bi bi-arrow-right"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="">
+                            <img class="decorate-right" src="../assets/images/decor05.png" alt="">
+                            <div class="newsCard-green">
+                                <div class="img-box">
+                                    <img src="../assets/images/DJ.webp" alt="">
+                                </div>
+                                <div class="item">
+                                    <div class="wrap">
+                                        <p>
+                                            <span>/// </span><span>DJ</span>
+                                        </p><br><br>
+                                        <span>2024</span>
+                                        <span>07.15</span>
+
+                                    </div>
+                                    <div class="wrap">
+                                        <h4 class="multiline-ellipsis ">持續進化的堅實底氣—DJ T-Time</h4>
+                                        <p class="multiline-ellipsis ">
+                                            在台灣從事DJ這個行業看似風光，卻也是困難重重。花費無數時間和金錢熟稔唱盤技藝，過程之中還得抓住僧多粥少的演出機會。</p>
+                                    </div>
+                                    <div class="wrap">
+                                        <div class="morebtn"><i class="bi bi-arrow-right"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="">
+                            <div class="newsCard-gray">
+                                <div class="img-box">
+                                    <img src="../assets/images/塗鴉 用的圖.jpg" alt="">
+                                </div>
+
+                                <div class="item">
+                                    <div class="wrap">
+                                        <p>
+                                            <span>/// </span><span>塗鴉</span>
+                                        </p><br><br>
+                                        <span>2024.</span>
+                                        <span>07.12</span>
+
+                                    </div>
+                                    <div class="wrap">
+                                        <h4 class="multiline-ellipsis ">塗鴉人為何都不露臉？不同字體代表什麼含意？解密 8 個你可能不知道的「街頭塗鴉冷知識」！
+                                        </h4>
+                                        <p class="multiline-ellipsis ">
+                                            在台灣，不論是在路邊的鐵捲門、公廁、交通工具上，都隨處可見街頭塗鴉的蹤跡。但你是不是好奇，街頭塗鴉到底從哪裡來？</p>
+                                    </div>
+                                    <div class="wrap">
+                                        <div class="morebtn"><i class="bi bi-arrow-right"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                </div>
+                <div class="btn-box">
+                    <button class="btn"><i class="bi bi-arrow-left-circle"></i></button>
+                    <button class="btn">1</button>
+                    <button class="btn">2</button>
+                    <button class="btn">3</button>
+                    <button class="btn"><i class="bi bi-arrow-right-circle"></i></button>
+                </div>
+            </div>
+            <div id="DJ" class="tabcontent">
+                <div class="content">
+                    <div class="content-left">
+
+                        <a href="">
+                            <img class="decorate-left" src="../assets/images/decor01.png" alt="">
+                            <div class="newsCard-green">
+                                <div class="img-box">
+                                    <img src="../assets/images/DJ.webp" alt="">
+                                </div>
+                                <div class="item">
+                                    <div class="wrap">
+                                        <p>
+                                            <span>/// </span><span>DJ</span>
+                                        </p><br><br>
+                                        <span>2024</span>
+                                        <span>07.15</span>
+
+                                    </div>
+                                    <div class="wrap">
+                                        <h4 class="multiline-ellipsis ">持續進化的堅實底氣—DJ T-Time</h4>
+                                        <p class="multiline-ellipsis ">
+                                            在台灣從事DJ這個行業看似風光，卻也是困難重重。花費無數時間和金錢熟稔唱盤技藝，過程之中還得抓住僧多粥少的演出機會。</p>
+                                    </div>
+                                    <div class="wrap">
+                                        <div class="morebtn"><i class="bi bi-arrow-right"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="">
+                            <div class="newsCard-gray">
+                                <div class="img-box">
+                                    <img src="../assets/images/newsimg5.webp" alt="">
+                                </div>
+                                <div class="item">
+                                    <div class="wrap">
+                                        <p>
+                                            <span>/// </span><span>DJ</span>
+                                        </p><br><br>
+                                        <span>2024</span>
+                                        <span>07.15</span>
+
+                                    </div>
+                                    <div class="wrap">
+                                        <h4 class="multiline-ellipsis ">什麼?! 超強世界冠軍 DJ 齊聚台北! Red Bull 3style 台灣決賽觀戰守則
+                                        </h4>
+                                        <p class="multiline-ellipsis ">
+                                            在台灣從事DJ這個行業看似風光，卻也是困難重重。花費無數時間和金錢熟稔唱盤技藝，過程之中還得抓住僧多粥少的演出機會。</p>
+                                    </div>
+                                    <div class="wrap">
+                                        <div class="morebtn"><i class="bi bi-arrow-right"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="">
+                            <div class="newsCard-green">
+                                <div class="img-box">
+                                    <img src="../assets/images/newsimg7.avif" alt="">
+                                </div>
+                                <div class="item">
+                                    <div class="wrap">
+                                        <p>
+                                            <span>/// </span><span>DJ</span>
+                                        </p><br><br>
+                                        <span>2024</span>
+                                        <span>07.15</span>
+
+                                    </div>
+                                    <div class="wrap">
+                                        <h4 class="multiline-ellipsis ">持續進化的堅實底氣—DJ T-Time</h4>
+                                        <p class="multiline-ellipsis ">
+                                            在台灣從事DJ這個行業看似風光，卻也是困難重重。花費無數時間和金錢熟稔唱盤技藝，過程之中還得抓住僧多粥少的演出機會。</p>
+                                    </div>
+                                    <div class="wrap">
+                                        <div class="morebtn"><i class="bi bi-arrow-right"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="content-right">
+
+                        <a href="">
+                            <div class="newsCard-gray">
+                                <div class="img-box">
+                                    <img src="../assets/images/newsimg4.jpg" alt="">
+                                </div>
+                                <div class="item">
+                                    <div class="wrap">
+                                        <p>
+                                            <span>/// </span><span>DJ</span>
+                                        </p><br><br>
+                                        <span>2024</span>
+                                        <span>07.10</span>
+
+                                    </div>
+                                    <div class="wrap">
+                                        <h4 class="multiline-ellipsis ">嘻哈當道，台灣DJ 冠軍RayRay 翻轉你對嘻哈的想法</h4>
+                                        <p class="multiline-ellipsis ">
+                                            在台灣從事DJ這個行業看似風光，卻也是困難重重。花費無數時間和金錢熟稔唱盤技藝，過程之中還得抓住僧多粥少的演出機會。</p>
+                                    </div>
+                                    <div class="wrap">
+                                        <div class="morebtn"><i class="bi bi-arrow-right"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="">
+                            <img class="decorate-right" src="../assets/images/decor05.png" alt="">
+                            <div class="newsCard-green">
+                                <div class="img-box">
+                                    <img src="../assets/images/DJ/DJ-KSlay-from-mambo-to-hip-hop-1150x766.jpg" alt="">
+                                </div>
+                                <div class="item">
+                                    <div class="wrap">
+                                        <p>
+                                            <span>/// </span><span>DJ</span>
+                                        </p><br><br>
+                                        <span>2024</span>
+                                        <span>07.10</span>
+
+                                    </div>
+                                    <div class="wrap">
+                                        <h4 class="multiline-ellipsis ">持續進化的堅實底氣—DJ T-Time</h4>
+                                        <p class="multiline-ellipsis ">
+                                            在台灣從事DJ這個行業看似風光，卻也是困難重重。花費無數時間和金錢熟稔唱盤技藝，過程之中還得抓住僧多粥少的演出機會。</p>
+                                    </div>
+                                    <div class="wrap">
+                                        <div class="morebtn"><i class="bi bi-arrow-right"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="">
+                            <div class="newsCard-gray">
+                                <div class="img-box">
+                                    <img src="../assets/images/newsimg6.avif" alt="">
+                                </div>
+
+                                <div class="item">
+                                    <div class="wrap">
+                                        <p>
+                                            <span>/// </span><span>DJ</span>
+                                        </p><br><br>
+                                        <span>2024.</span>
+                                        <span>07.28</span>
+
+                                    </div>
+                                    <div class="wrap">
+                                        <h4 class="multiline-ellipsis ">台灣決選DJ專訪：王者之爭－DinPei vs. Mr. Skin</h4>
+                                        <p class="multiline-ellipsis ">當陷阱音樂從美國告示牌排行榜上一路延燒至台灣</p>
+                                    </div>
+                                    <div class="wrap">
+                                        <div class="morebtn"><i class="bi bi-arrow-right"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                </div>
+                <div class="btn-box">
+                    <button class="btn"><i class="bi bi-arrow-left-circle"></i></button>
+                    <button class="btn">1</button>
+                    <button class="btn">2</button>
+                    <button class="btn">3</button>
+                    <button class="btn"><i class="bi bi-arrow-right-circle"></i></button>
+                </div>
+            </div>
+            <div id="Breaking" class="tabcontent">
+                <div class="content">
+                    <div class="content-left">
+
+                        <a href="">
+                            <img class="decorate-left" src="../assets/images/decor01.png" alt="">
+                            <div class="newsCard-green">
+                                <div class="img-box">
+                                    <img src="../assets/images/breaking.jpg" alt="">
+                                </div>
+                                <div class="item">
+                                    <div class="wrap">
+                                        <p>
+                                            <span>/// </span><span>街舞</span>
+                                        </p><br><br>
+                                        <span>2024</span>
+                                        <span>07.15</span>
+
+                                    </div>
+                                    <div class="wrap">
+                                        <h4 class="multiline-ellipsis ">什麼?! 超強世界冠軍 DJ 齊聚台北! Red Bull 3style 台灣決賽觀戰守則
+                                        </h4>
+                                        <p class="multiline-ellipsis ">
+                                            在台灣從事DJ這個行業看似風光，卻也是困難重重。花費無數時間和金錢熟稔唱盤技藝，過程之中還得抓住僧多粥少的演出機會。</p>
+                                    </div>
+                                    <div class="wrap">
+                                        <div class="morebtn"><i class="bi bi-arrow-right"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="">
+                            <div class="newsCard-gray">
+                                <div class="img-box">
+                                    <img src="../assets/images/StreetDance/image 9.png" alt="">
+                                </div>
+                                <div class="item">
+                                    <div class="wrap">
+                                        <p>
+                                            <span>/// </span><span>DJ</span>
+                                        </p><br><br>
+                                        <span>2024</span>
+                                        <span>07.15</span>
+
+                                    </div>
+                                    <div class="wrap">
+                                        <h4 class="multiline-ellipsis ">什麼?! 超強世界冠軍 DJ 齊聚台北! Red Bull 3style 台灣決賽觀戰守則
+                                        </h4>
+                                        <p class="multiline-ellipsis ">
+                                            在台灣從事DJ這個行業看似風光，卻也是困難重重。花費無數時間和金錢熟稔唱盤技藝，過程之中還得抓住僧多粥少的演出機會。</p>
+                                    </div>
+                                    <div class="wrap">
+                                        <div class="morebtn"><i class="bi bi-arrow-right"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="">
+                            <div class="newsCard-green">
+                                <div class="img-box">
+                                    <img src="../assets/images/newsimg7.avif" alt="">
+                                </div>
+                                <div class="item">
+                                    <div class="wrap">
+                                        <p>
+                                            <span>/// </span><span>DJ</span>
+                                        </p><br><br>
+                                        <span>2024</span>
+                                        <span>07.15</span>
+
+                                    </div>
+                                    <div class="wrap">
+                                        <h4 class="multiline-ellipsis ">持續進化的堅實底氣—DJ T-Time</h4>
+                                        <p class="multiline-ellipsis ">
+                                            在台灣從事DJ這個行業看似風光，卻也是困難重重。花費無數時間和金錢熟稔唱盤技藝，過程之中還得抓住僧多粥少的演出機會。</p>
+                                    </div>
+                                    <div class="wrap">
+                                        <div class="morebtn"><i class="bi bi-arrow-right"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="content-right">
+
+                        <a href="">
+                            <div class="newsCard-gray">
+                                <div class="img-box">
+                                    <img src="../assets/images/07鮭9.jpg" alt="">
+                                </div>
+                                <div class="item">
+                                    <div class="wrap">
+                                        <p>
+                                            <span>/// </span><span>街舞</span>
+                                        </p><br><br>
+                                        <span>2024</span>
+                                        <span>07.15</span>
+
+                                    </div>
+                                    <div class="wrap">
+                                        <h4 class="multiline-ellipsis ">什麼?! 超強世界冠軍 DJ 齊聚台北! Red Bull 3style 台灣決賽觀戰守則
+                                        </h4>
+                                        <p class="multiline-ellipsis ">
+                                            在台灣從事DJ這個行業看似風光，卻也是困難重重。花費無數時間和金錢熟稔唱盤技藝，過程之中還得抓住僧多粥少的演出機會。</p>
+                                    </div>
+                                    <div class="wrap">
+                                        <div class="morebtn"><i class="bi bi-arrow-right"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="">
+                            <img class="decorate-right" src="../assets/images/decor05.png" alt="">
+                            <div class="newsCard-green">
+                                <div class="img-box">
+                                    <img src="../assets/images/StreetDance/image 8.png" alt="">
+                                </div>
+                                <div class="item">
+                                    <div class="wrap">
+                                        <p>
+                                            <span>/// </span><span>DJ</span>
+                                        </p><br><br>
+                                        <span>2024</span>
+                                        <span>07.10</span>
+
+                                    </div>
+                                    <div class="wrap">
+                                        <h4 class="multiline-ellipsis ">持續進化的堅實底氣—DJ T-Time</h4>
+                                        <p class="multiline-ellipsis ">
+                                            在台灣從事DJ這個行業看似風光，卻也是困難重重。花費無數時間和金錢熟稔唱盤技藝，過程之中還得抓住僧多粥少的演出機會。</p>
+                                    </div>
+                                    <div class="wrap">
+                                        <div class="morebtn"><i class="bi bi-arrow-right"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="">
+                            <div class="newsCard-gray">
+                                <div class="img-box">
+                                    <img src="../assets/images/newsimg6.avif" alt="">
+                                </div>
+
+                                <div class="item">
+                                    <div class="wrap">
+                                        <p>
+                                            <span>/// </span><span>街舞</span>
+                                        </p><br><br>
+                                        <span>2024.</span>
+                                        <span>07.28</span>
+
+                                    </div>
+                                    <div class="wrap">
+                                        <h4 class="multiline-ellipsis ">台灣決選DJ專訪：王者之爭－DinPei vs. Mr. Skin</h4>
+                                        <p class="multiline-ellipsis ">當陷阱音樂從美國告示牌排行榜上一路延燒至台灣</p>
+                                    </div>
+                                    <div class="wrap">
+                                        <div class="morebtn"><i class="bi bi-arrow-right"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                </div>
+                <div class="btn-box">
+                    <button class="btn"><i class="bi bi-arrow-left-circle"></i></button>
+                    <button class="btn">1</button>
+                    <button class="btn">2</button>
+                    <button class="btn">3</button>
+                    <button class="btn"><i class="bi bi-arrow-right-circle"></i></button>
+                </div>
+            </div>
+            <div id="Rapping" class="tabcontent">
+                <div class="content">
+                    <div class="content-left">
+
+                        <a href="">
+                            <img class="decorate-left" src="../assets/images/decor01.png" alt="">
+                            <div class="newsCard-green">
+                                <div class="img-box">
+                                    <img src="../assets/images/newsbanner.jpg" alt="">
+                                </div>
+                                <div class="item">
+                                    <div class="wrap">
+                                        <p>
+                                            <span>/// </span><span>饒舌</span>
+                                        </p><br><br>
+                                        <span>2024</span>
+                                        <span>07.28</span>
+
+                                    </div>
+                                    <div class="wrap">
+                                        <h4 class="multiline-ellipsis ">台灣嘻哈的強勢分支- 台灣TRAP 台灣嘻哈的強勢分支- 台灣TRAP</h4>
+                                        <p class="multiline-ellipsis ">當陷阱音樂從美國告示牌排行榜上一路延燒至台灣</p>
+                                    </div>
+                                    <div class="wrap">
+                                        <div class="morebtn"><i class="bi bi-arrow-right"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="">
+                            <div class="newsCard-gray">
+                                <div class="img-box">
+                                    <img src="../assets/images/newsimg5.webp" alt="">
+                                </div>
+                                <div class="item">
+                                    <div class="wrap">
+                                        <p>
+                                            <span>/// </span><span>DJ</span>
+                                        </p><br><br>
+                                        <span>2024</span>
+                                        <span>07.15</span>
+
+                                    </div>
+                                    <div class="wrap">
+                                        <h4 class="multiline-ellipsis ">什麼?! 超強世界冠軍 DJ 齊聚台北! Red Bull 3style 台灣決賽觀戰守則
+                                        </h4>
+                                        <p class="multiline-ellipsis ">
+                                            在台灣從事DJ這個行業看似風光，卻也是困難重重。花費無數時間和金錢熟稔唱盤技藝，過程之中還得抓住僧多粥少的演出機會。</p>
+                                    </div>
+                                    <div class="wrap">
+                                        <div class="morebtn"><i class="bi bi-arrow-right"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="">
+                            <div class="newsCard-green">
+                                <div class="img-box">
+                                    <img src="../assets/images/newsimg7.avif" alt="">
+                                </div>
+                                <div class="item">
+                                    <div class="wrap">
+                                        <p>
+                                            <span>/// </span><span>DJ</span>
+                                        </p><br><br>
+                                        <span>2024</span>
+                                        <span>07.15</span>
+
+                                    </div>
+                                    <div class="wrap">
+                                        <h4 class="multiline-ellipsis ">持續進化的堅實底氣—DJ T-Time</h4>
+                                        <p class="multiline-ellipsis ">
+                                            在台灣從事DJ這個行業看似風光，卻也是困難重重。花費無數時間和金錢熟稔唱盤技藝，過程之中還得抓住僧多粥少的演出機會。</p>
+                                    </div>
+                                    <div class="wrap">
+                                        <div class="morebtn"><i class="bi bi-arrow-right"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="content-right">
+
+                        <a href="">
+                            <div class="newsCard-gray">
+                                <div class="img-box">
+                                    <img src="../assets/images/newsimg4.jpg" alt="">
+                                </div>
+                                <div class="item">
+                                    <div class="wrap">
+                                        <p>
+                                            <span>/// </span><span>DJ</span>
+                                        </p><br><br>
+                                        <span>2024</span>
+                                        <span>07.10</span>
+
+                                    </div>
+                                    <div class="wrap">
+                                        <h4 class="multiline-ellipsis ">嘻哈當道，台灣DJ 冠軍RayRay 翻轉你對嘻哈的想法</h4>
+                                        <p class="multiline-ellipsis ">
+                                            在台灣從事DJ這個行業看似風光，卻也是困難重重。花費無數時間和金錢熟稔唱盤技藝，過程之中還得抓住僧多粥少的演出機會。</p>
+                                    </div>
+                                    <div class="wrap">
+                                        <div class="morebtn"><i class="bi bi-arrow-right"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="">
+                            <img class="decorate-right" src="../assets/images/decor05.png" alt="">
+                            <div class="newsCard-green">
+                                <div class="img-box">
+                                    <img src="../assets/images/DJ/DJ-KSlay-from-mambo-to-hip-hop-1150x766.jpg" alt="">
+                                </div>
+                                <div class="item">
+                                    <div class="wrap">
+                                        <p>
+                                            <span>/// </span><span>DJ</span>
+                                        </p><br><br>
+                                        <span>2024</span>
+                                        <span>07.10</span>
+
+                                    </div>
+                                    <div class="wrap">
+                                        <h4 class="multiline-ellipsis ">持續進化的堅實底氣—DJ T-Time</h4>
+                                        <p class="multiline-ellipsis ">
+                                            在台灣從事DJ這個行業看似風光，卻也是困難重重。花費無數時間和金錢熟稔唱盤技藝，過程之中還得抓住僧多粥少的演出機會。</p>
+                                    </div>
+                                    <div class="wrap">
+                                        <div class="morebtn"><i class="bi bi-arrow-right"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="">
+                            <div class="newsCard-gray">
+                                <div class="img-box">
+                                    <img src="../assets/images/newsimg6.avif" alt="">
+                                </div>
+
+                                <div class="item">
+                                    <div class="wrap">
+                                        <p>
+                                            <span>/// </span><span>DJ</span>
+                                        </p><br><br>
+                                        <span>2024.</span>
+                                        <span>07.28</span>
+
+                                    </div>
+                                    <div class="wrap">
+                                        <h4 class="multiline-ellipsis ">台灣決選DJ專訪：王者之爭－DinPei vs. Mr. Skin</h4>
+                                        <p class="multiline-ellipsis ">當陷阱音樂從美國告示牌排行榜上一路延燒至台灣</p>
+                                    </div>
+                                    <div class="wrap">
+                                        <div class="morebtn"><i class="bi bi-arrow-right"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                </div>
+                <div class="btn-box">
+                    <button class="btn"><i class="bi bi-arrow-left-circle"></i></button>
+                    <button class="btn">1</button>
+                    <button class="btn">2</button>
+                    <button class="btn">3</button>
+                    <button class="btn"><i class="bi bi-arrow-right-circle"></i></button>
+                </div>
+            </div>
+            <div id="Graffiti" class="tabcontent">
+                <div class="content">
+                    <div class="content-left">
+
+                        <a href="">
+                            <img class="decorate-left" src="../assets/images/decor01.png" alt="">
+                            <div class="newsCard-green">
+                                <div class="img-box">
+                                    <img src="../assets/images/DJ.webp" alt="">
+                                </div>
+                                <div class="item">
+                                    <div class="wrap">
+                                        <p>
+                                            <span>/// </span><span>DJ</span>
+                                        </p><br><br>
+                                        <span>2024</span>
+                                        <span>07.15</span>
+
+                                    </div>
+                                    <div class="wrap">
+                                        <h4 class="multiline-ellipsis ">持續進化的堅實底氣—DJ T-Time</h4>
+                                        <p class="multiline-ellipsis ">
+                                            在台灣從事DJ這個行業看似風光，卻也是困難重重。花費無數時間和金錢熟稔唱盤技藝，過程之中還得抓住僧多粥少的演出機會。</p>
+                                    </div>
+                                    <div class="wrap">
+                                        <div class="morebtn"><i class="bi bi-arrow-right"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="">
+                            <div class="newsCard-gray">
+                                <div class="img-box">
+                                    <img src="../assets/images/newsimg5.webp" alt="">
+                                </div>
+                                <div class="item">
+                                    <div class="wrap">
+                                        <p>
+                                            <span>/// </span><span>DJ</span>
+                                        </p><br><br>
+                                        <span>2024</span>
+                                        <span>07.15</span>
+
+                                    </div>
+                                    <div class="wrap">
+                                        <h4 class="multiline-ellipsis ">什麼?! 超強世界冠軍 DJ 齊聚台北! Red Bull 3style 台灣決賽觀戰守則
+                                        </h4>
+                                        <p class="multiline-ellipsis ">
+                                            在台灣從事DJ這個行業看似風光，卻也是困難重重。花費無數時間和金錢熟稔唱盤技藝，過程之中還得抓住僧多粥少的演出機會。</p>
+                                    </div>
+                                    <div class="wrap">
+                                        <div class="morebtn"><i class="bi bi-arrow-right"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="">
+                            <div class="newsCard-green">
+                                <div class="img-box">
+                                    <img src="../assets/images/newsimg7.avif" alt="">
+                                </div>
+                                <div class="item">
+                                    <div class="wrap">
+                                        <p>
+                                            <span>/// </span><span>DJ</span>
+                                        </p><br><br>
+                                        <span>2024</span>
+                                        <span>07.15</span>
+
+                                    </div>
+                                    <div class="wrap">
+                                        <h4 class="multiline-ellipsis ">持續進化的堅實底氣—DJ T-Time</h4>
+                                        <p class="multiline-ellipsis ">
+                                            在台灣從事DJ這個行業看似風光，卻也是困難重重。花費無數時間和金錢熟稔唱盤技藝，過程之中還得抓住僧多粥少的演出機會。</p>
+                                    </div>
+                                    <div class="wrap">
+                                        <div class="morebtn"><i class="bi bi-arrow-right"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="content-right">
+
+                        <a href="">
+                            <div class="newsCard-gray">
+                                <div class="img-box">
+                                    <img src="../assets/images/newsimg4.jpg" alt="">
+                                </div>
+                                <div class="item">
+                                    <div class="wrap">
+                                        <p>
+                                            <span>/// </span><span>DJ</span>
+                                        </p><br><br>
+                                        <span>2024</span>
+                                        <span>07.10</span>
+
+                                    </div>
+                                    <div class="wrap">
+                                        <h4 class="multiline-ellipsis ">嘻哈當道，台灣DJ 冠軍RayRay 翻轉你對嘻哈的想法</h4>
+                                        <p class="multiline-ellipsis ">
+                                            在台灣從事DJ這個行業看似風光，卻也是困難重重。花費無數時間和金錢熟稔唱盤技藝，過程之中還得抓住僧多粥少的演出機會。</p>
+                                    </div>
+                                    <div class="wrap">
+                                        <div class="morebtn"><i class="bi bi-arrow-right"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="">
+                            <img class="decorate-right" src="../assets/images/decor05.png" alt="">
+                            <div class="newsCard-green">
+                                <div class="img-box">
+                                    <img src="../assets/images/DJ/DJ-KSlay-from-mambo-to-hip-hop-1150x766.jpg" alt="">
+                                </div>
+                                <div class="item">
+                                    <div class="wrap">
+                                        <p>
+                                            <span>/// </span><span>DJ</span>
+                                        </p><br><br>
+                                        <span>2024</span>
+                                        <span>07.10</span>
+
+                                    </div>
+                                    <div class="wrap">
+                                        <h4 class="multiline-ellipsis ">持續進化的堅實底氣—DJ T-Time</h4>
+                                        <p class="multiline-ellipsis ">
+                                            在台灣從事DJ這個行業看似風光，卻也是困難重重。花費無數時間和金錢熟稔唱盤技藝，過程之中還得抓住僧多粥少的演出機會。</p>
+                                    </div>
+                                    <div class="wrap">
+                                        <div class="morebtn"><i class="bi bi-arrow-right"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="">
+                            <div class="newsCard-gray">
+                                <div class="img-box">
+                                    <img src="../assets/images/newsimg6.avif" alt="">
+                                </div>
+
+                                <div class="item">
+                                    <div class="wrap">
+                                        <p>
+                                            <span>/// </span><span>DJ</span>
+                                        </p><br><br>
+                                        <span>2024.</span>
+                                        <span>07.28</span>
+
+                                    </div>
+                                    <div class="wrap">
+                                        <h4 class="multiline-ellipsis ">台灣決選DJ專訪：王者之爭－DinPei vs. Mr. Skin</h4>
+                                        <p class="multiline-ellipsis ">當陷阱音樂從美國告示牌排行榜上一路延燒至台灣</p>
+                                    </div>
+                                    <div class="wrap">
+                                        <div class="morebtn"><i class="bi bi-arrow-right"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                </div>
+                <div class="btn-box">
+                    <button class="btn"><i class="bi bi-arrow-left-circle"></i></button>
+                    <button class="btn">1</button>
+                    <button class="btn">2</button>
+                    <button class="btn">3</button>
+                    <button class="btn"><i class="bi bi-arrow-right-circle"></i></button>
+                </div>
+            </div>
+            <div id="Skate" class="tabcontent">
+                <div class="content">
+                    <div class="content-left">
+
+                        <a href="">
+                            <img class="decorate-left" src="../assets/images/decor01.png" alt="">
+                            <div class="newsCard-green">
+                                <div class="img-box">
+                                    <img src="../assets/images/DJ.webp" alt="">
+                                </div>
+                                <div class="item">
+                                    <div class="wrap">
+                                        <p>
+                                            <span>/// </span><span>DJ</span>
+                                        </p><br><br>
+                                        <span>2024</span>
+                                        <span>07.15</span>
+
+                                    </div>
+                                    <div class="wrap">
+                                        <h4 class="multiline-ellipsis ">持續進化的堅實底氣—DJ T-Time</h4>
+                                        <p class="multiline-ellipsis ">
+                                            在台灣從事DJ這個行業看似風光，卻也是困難重重。花費無數時間和金錢熟稔唱盤技藝，過程之中還得抓住僧多粥少的演出機會。</p>
+                                    </div>
+                                    <div class="wrap">
+                                        <div class="morebtn"><i class="bi bi-arrow-right"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="">
+                            <div class="newsCard-gray">
+                                <div class="img-box">
+                                    <img src="../assets/images/newsimg5.webp" alt="">
+                                </div>
+                                <div class="item">
+                                    <div class="wrap">
+                                        <p>
+                                            <span>/// </span><span>DJ</span>
+                                        </p><br><br>
+                                        <span>2024</span>
+                                        <span>07.15</span>
+
+                                    </div>
+                                    <div class="wrap">
+                                        <h4 class="multiline-ellipsis ">什麼?! 超強世界冠軍 DJ 齊聚台北! Red Bull 3style 台灣決賽觀戰守則
+                                        </h4>
+                                        <p class="multiline-ellipsis ">
+                                            在台灣從事DJ這個行業看似風光，卻也是困難重重。花費無數時間和金錢熟稔唱盤技藝，過程之中還得抓住僧多粥少的演出機會。</p>
+                                    </div>
+                                    <div class="wrap">
+                                        <div class="morebtn"><i class="bi bi-arrow-right"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="">
+                            <div class="newsCard-green">
+                                <div class="img-box">
+                                    <img src="../assets/images/newsimg7.avif" alt="">
+                                </div>
+                                <div class="item">
+                                    <div class="wrap">
+                                        <p>
+                                            <span>/// </span><span>DJ</span>
+                                        </p><br><br>
+                                        <span>2024</span>
+                                        <span>07.15</span>
+
+                                    </div>
+                                    <div class="wrap">
+                                        <h4 class="multiline-ellipsis ">持續進化的堅實底氣—DJ T-Time</h4>
+                                        <p class="multiline-ellipsis ">
+                                            在台灣從事DJ這個行業看似風光，卻也是困難重重。花費無數時間和金錢熟稔唱盤技藝，過程之中還得抓住僧多粥少的演出機會。</p>
+                                    </div>
+                                    <div class="wrap">
+                                        <div class="morebtn"><i class="bi bi-arrow-right"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="content-right">
+
+                        <a href="">
+                            <div class="newsCard-gray">
+                                <div class="img-box">
+                                    <img src="../assets/images/newsimg4.jpg" alt="">
+                                </div>
+                                <div class="item">
+                                    <div class="wrap">
+                                        <p>
+                                            <span>/// </span><span>DJ</span>
+                                        </p><br><br>
+                                        <span>2024</span>
+                                        <span>07.10</span>
+
+                                    </div>
+                                    <div class="wrap">
+                                        <h4 class="multiline-ellipsis ">嘻哈當道，台灣DJ 冠軍RayRay 翻轉你對嘻哈的想法</h4>
+                                        <p class="multiline-ellipsis ">
+                                            在台灣從事DJ這個行業看似風光，卻也是困難重重。花費無數時間和金錢熟稔唱盤技藝，過程之中還得抓住僧多粥少的演出機會。</p>
+                                    </div>
+                                    <div class="wrap">
+                                        <div class="morebtn"><i class="bi bi-arrow-right"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="">
+                            <img class="decorate-right" src="../assets/images/decor05.png" alt="">
+                            <div class="newsCard-green">
+                                <div class="img-box">
+                                    <img src="../assets/images/DJ/DJ-KSlay-from-mambo-to-hip-hop-1150x766.jpg" alt="">
+                                </div>
+                                <div class="item">
+                                    <div class="wrap">
+                                        <p>
+                                            <span>/// </span><span>DJ</span>
+                                        </p><br><br>
+                                        <span>2024</span>
+                                        <span>07.10</span>
+
+                                    </div>
+                                    <div class="wrap">
+                                        <h4 class="multiline-ellipsis ">持續進化的堅實底氣—DJ T-Time</h4>
+                                        <p class="multiline-ellipsis ">
+                                            在台灣從事DJ這個行業看似風光，卻也是困難重重。花費無數時間和金錢熟稔唱盤技藝，過程之中還得抓住僧多粥少的演出機會。</p>
+                                    </div>
+                                    <div class="wrap">
+                                        <div class="morebtn"><i class="bi bi-arrow-right"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="">
+                            <div class="newsCard-gray">
+                                <div class="img-box">
+                                    <img src="../assets/images/newsimg6.avif" alt="">
+                                </div>
+
+                                <div class="item">
+                                    <div class="wrap">
+                                        <p>
+                                            <span>/// </span><span>DJ</span>
+                                        </p><br><br>
+                                        <span>2024.</span>
+                                        <span>07.28</span>
+
+                                    </div>
+                                    <div class="wrap">
+                                        <h4 class="multiline-ellipsis ">台灣決選DJ專訪：王者之爭－DinPei vs. Mr. Skin</h4>
+                                        <p class="multiline-ellipsis ">當陷阱音樂從美國告示牌排行榜上一路延燒至台灣</p>
+                                    </div>
+                                    <div class="wrap">
+                                        <div class="morebtn"><i class="bi bi-arrow-right"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                </div>
+                <div class="btn-box">
+                    <button class="btn"><i class="bi bi-arrow-left-circle"></i></button>
+                    <button class="btn">1</button>
+                    <button class="btn">2</button>
+                    <button class="btn">3</button>
+                    <button class="btn"><i class="bi bi-arrow-right-circle"></i></button>
+                </div>
+            </div>
+
+
+
+        </div>
+
+
+
+    </section>
+
+    <footer>
+        <div class="flex container">
+            <img class="logo" src="../assets/images/riverflow_logo_f.png" alt="logo" />
+            <div class="flex footer-right">
+                <div class="flex linkList">
+                    <a href="#" class="footerLink">關於我們</a>
+                    <a href="#" class="footerLink">聯絡我們</a>
+                    <a href="#" class="footerLink">條款與隱私</a>
+                    <a href="#" class="footerLink">FAQ</a>
+                </div>
+                <span class="copyright">Copyright © 2006-2024 RiverFlow</span>
+            </div>
+        </div>
+    </footer>
+
+
+    <script>
+        function openCity(evt, cityName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(cityName).style.display = "block";
+            evt.currentTarget.className += "active";
+        }
+
+        // Get the element with id="defaultOpen" and click on it
+        document.getElementById("defaultOpen").click();
+    </script>
+
+
+
+</body>
+
+</html>

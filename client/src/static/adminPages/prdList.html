@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="../../assets/basic.css">
+    <link rel="stylesheet" href="../../assets/adminPage.css">
+    <script
+        src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+        crossorigin="anonymous"></script>
+    <title>商品管理</title>
+</head>
+
+<body>
+    <div class="admin-page">
+        <div class="sideBar">
+            <div class="greeting flex">
+                <div><span>管理帳號</span>，你好！</div>
+                <button class="btn">登出</button>
+            </div>
+            <div class="sideMenu">
+                <ul>
+                    <li class="sideMenuOpt">
+                        <label for="" class="menuTitle flex">
+                            <i class="fa-solid fa-bag-shopping"></i>商品管理
+                        </label>
+                        <ul class="secMenu">
+                            <li>
+                                <a href="prdList.html" class="menuPage thisPage">商品列表</a>
+                            </li>
+                            <li>
+                                <a href="prdOrder.html" class="menuPage">商品訂單</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="sideMenuOpt">
+                        <label for="" class="menuTitle flex">
+                            <i class="fa-solid fa-newspaper"></i></i>專欄管理
+                        </label>
+                        <ul class="secMenu">
+                            <li>
+                                <a href="blogList.html" class="menuPage">文章列表</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="sideMenuOpt">
+                        <label for="" class="menuTitle flex">
+                            <i class="fa-solid fa-calendar-days"></i>活動管理
+                        </label>
+                        <ul class="secMenu">
+                            <li>
+                                <a href="eventList.html" class="menuPage">活動列表</a>
+                            </li>
+                            <li>
+                                <a href="eventOrder.html" class="menuPage">活動訂單</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="main">
+            <div class="pageTitle">
+                商品列表
+            </div>
+            <div class="flex">
+                <a href="addPrd.html" class="divided"><button class="btn">新增商品</button></a>
+                <div class="flex">
+                    <input type="text" name="" id="pdtSearch" class="search" placeholder="商品搜尋">
+                    <input type="submit" value="搜尋">
+                </div>
+            </div>
+            <table page="1" itemShowing="5" class="listTable">
+                <thead>
+                    <tr>
+                        <td>圖片</td>
+                        <td>分類</td>
+                        <td>商品編號</td>
+                        <td>商品名稱</td>
+                        <td>價格</td>
+                        <td>總庫存</td>
+                        <td>狀態</td>
+                        <td>操作</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr prdId="01" class="item">
+                        <td><img src="../../assets/images/eventPrd02.jpg" alt="" class="prdImgPre"></td>
+                        <td class="prdSort">
+                            <div class="sort">饒舌</div><br>
+                            <div class="sort">新品</div>
+                        </td>
+                        <td class="prdId">2407081029</td>
+                        <td class="prdName">王以太聯名短袖T恤</td>
+                        <td class="prdPrice"><span>$</span>1480</td>
+                        <td class="prdStock">60</td>
+                        <td class="Status" status="Available">上架</td>
+                        <td class="itemOpt">
+                            <div class="flex">
+                                <a href="addPrd.html"><button id="btnEdit" class="btn itemOpr inline-flex"><i class="fa-solid fa-pen"></i>編輯</button></a>
+                                <a href="#"><button id="btnView" class="btn itemOpr inline-flex"><i class="fa-solid fa-eye"></i>檢視</button></a>
+                            </div>
+                            <div class="flex">
+                                <button class="btn btnSta itemOpr inline-flex"><i class="fa-solid fa-arrow-down"></i>下架</button>
+                                <button class="btn itemOpr inline-flex"><i class="fa-solid fa-trash"></i>刪除</button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="item">
+                        <td><img src="../../assets/images/memberCollection.png" alt="" class="prdImgPre"></td>
+                        <td class="prdSort">
+                            <div class="sort">饒舌</div><br>
+                        </td>
+                        <td class="prdId">2407081028</td>
+                        <td class="prdName">王以太 演說家 幸存者 專輯</td>
+                        <td class="prdPrice"><span>$</span>880</td>
+                        <td class="prdStock">105</td>
+                        <td class="Status" status="Available">上架</td>
+                        <td class="itemOpt">
+                            <div class="flex">
+                                <a href="addPrd.html"><button id="btnEdit" class="btn itemOpr inline-flex"><i class="fa-solid fa-pen"></i>編輯</button></a>
+                                <a href="#"><button id="btnView" class="btn itemOpr inline-flex"><i class="fa-solid fa-eye"></i>檢視</button></a>
+                            </div>
+                            <div class="flex">
+                                <button class="btn btnSta itemOpr inline-flex"><i class="fa-solid fa-arrow-down"></i>下架</button>
+                                <button class="btn itemOpr inline-flex"><i class="fa-solid fa-trash"></i>刪除</button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="item">
+                        <td><img src="../../assets/images/eventPrd01.jpg" alt="" class="prdImgPre"></td>
+                        <td class="prdSort">
+                            <div class="sort">饒舌</div><br>
+                            <div class="sort">新品</div>
+                        </td>
+                        <td class="prdId">2407081027</td>
+                        <td class="prdName">王以太聯名夾棉外套</td>
+                        <td class="prdPrice"><span>$</span>2580</td>
+                        <td class="prdStock">60</td>
+                        <td class="Status" status="Available">上架</td>
+                        <td class="itemOpt">
+                            <div class="flex">
+                                <a href="#"><button id="btnEdit" class="btn itemOpr inline-flex"><i class="fa-solid fa-pen"></i>編輯</button></a>
+                                <a href="#"><button id="btnView" class="btn itemOpr inline-flex"><i class="fa-solid fa-eye"></i>檢視</button></a>
+                            </div>
+                            <div class="flex">
+                                <button class="btn btnSta itemOpr inline-flex"><i class="fa-solid fa-arrow-down"></i>下架</button>
+                                <button class="btn itemOpr inline-flex"><i class="fa-solid fa-trash"></i>刪除</button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="item">
+                        <td><img src="https://images.goodsmile.info/cgm/images/product/20220502/12665/98719/large/d870c31d5f264155ac6e3e359b7d34bc.jpg" alt="" class="prdImgPre"></td>
+                        <td class="prdSort">
+                            <div class="sort">滑板</div><br>
+                            <div class="sort">新品</div>
+                        </td>
+                        <td class="prdId">2407081026</td>
+                        <td class="prdName">美式拼貼滑板</td>
+                        <td class="prdPrice"><span>$</span>3683</td>
+                        <td class="prdStock">24</td>
+                        <td class="Status" status="Available">下架</td>
+                        <td class="itemOpt">
+                            <div class="flex">
+                                <a href="#"><button id="btnEdit" class="btn itemOpr inline-flex"><i class="fa-solid fa-pen"></i>編輯</button></a>
+                                <a href="#"><button id="btnView" class="btn itemOpr inline-flex"><i class="fa-solid fa-eye"></i>檢視</button></a>
+                            </div>
+                            <div class="flex">
+                                <button class="btn btnSta itemOpr inline-flex"><i class="fa-solid fa-arrow-down"></i>下架</button>
+                                <button class="btn itemOpr inline-flex"><i class="fa-solid fa-trash"></i>刪除</button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="item">
+                        <td><img src="https://cdn2.ettoday.net/images/7509/e7509491.jpg" alt="" class="prdImgPre"></td>
+                        <td class="prdSort">
+                            <div class="sort">DJ</div><br>
+                            <div class="sort">優惠</div>
+                        </td>
+                        <td class="prdId">2407081025</td>
+                        <td class="prdName">DJ Soda夜店狂歡</td>
+                        <td class="prdPrice"><span>$</span>1899</td>
+                        <td class="prdStock">10</td>
+                        <td class="Status" status="Available">下架</td>
+                        <td class="itemOpt">
+                            <div class="flex">
+                                <a href="#"><button id="btnEdit" class="btn itemOpr inline-flex"><i class="fa-solid fa-pen"></i>編輯</button></a>
+                                <a href="#"><button id="btnView" class="btn itemOpr inline-flex"><i class="fa-solid fa-eye"></i>檢視</button></a>
+                            </div>
+                            <div class="flex">
+                                <button class="btn btnSta itemOpr inline-flex"><i class="fa-solid fa-arrow-down"></i>下架</button>
+                                <button class="btn itemOpr inline-flex"><i class="fa-solid fa-trash"></i>刪除</button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="item">
+                        <td><img src="https://i.pinimg.com/564x/a6/e7/eb/a6e7ebd5010ca995d3ae6eba145ad6e6.jpg" alt="" class="prdImgPre"></td>
+                        <td class="prdSort">
+                            <div class="sort">塗鴉</div><br>
+                            <!-- <div class="sort">新品</div> -->
+                        </td>
+                        <td class="prdId">2407081024</td>
+                        <td class="prdName">Lexel噴漆</td>
+                        <td class="prdPrice"><span>$</span>363</td>
+                        <td class="prdStock">15</td>
+                        <td class="Status" status="Discontinued">下架</td>
+                        <td class="itemOpt">
+                            <div class="flex">
+                                <a href="#"><button id="btnEdit" class="btn itemOpr inline-flex"><i class="fa-solid fa-pen"></i>編輯</button></a>
+                                <a href="#"><button id="btnView" class="btn itemOpr inline-flex"><i class="fa-solid fa-eye"></i>檢視</button></a>
+                            </div>
+                            <div class="flex">
+                                <button class="btn btnSta itemOpr inline-flex"><i class="fa-solid fa-arrow-down"></i>上架</button>
+                                <button class="btn itemOpr inline-flex"><i class="fa-solid fa-trash"></i>刪除</button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="item">
+                        <td><img src="https://i.pinimg.com/564x/2f/e0/b4/2fe0b40030f71606eed42d826fa850cd.jpg" alt="" class="prdImgPre"></td>
+                        <td class="prdSort">
+                            <div class="sort">塗鴉</div><br>
+                            <div class="sort">新品</div>
+                        </td>
+                        <td class="prdId">2407081023</td>
+                        <td class="prdName">雷神噴漆</td>
+                        <td class="prdPrice"><span>$</span>599</td>
+                        <td class="prdStock">38</td>
+                        <td class="Status" status="Available">下架</td>
+                        <td class="itemOpt">
+                            <div class="flex">
+                                <a href="#"><button id="btnEdit" class="btn itemOpr inline-flex"><i class="fa-solid fa-pen"></i>編輯</button></a>
+                                <a href="#"><button id="btnView" class="btn itemOpr inline-flex"><i class="fa-solid fa-eye"></i>檢視</button></a>
+                            </div>
+                            <div class="flex">
+                                <button class="btn btnSta itemOpr inline-flex"><i class="fa-solid fa-arrow-down"></i>下架</button>
+                                <button class="btn itemOpr inline-flex"><i class="fa-solid fa-trash"></i>刪除</button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="item">
+                        <td><img src="https://i.pinimg.com/564x/e0/c5/eb/e0c5eb508528548a8ee104fe60579f77.jpg" alt="" class="prdImgPre"></td>
+                        <td class="prdSort">
+                            <div class="sort">饒舌</div><br>
+                            <!-- <div class="sort">新品</div> -->
+                        </td>
+                        <td class="prdId">2407081022</td>
+                        <td class="prdName">RapperLai</td>
+                        <td class="prdPrice"><span>$</span>1299</td>
+                        <td class="prdStock">10</td>
+                        <td class="Status" status="Available">下架</td>
+                        <td class="itemOpt">
+                            <div class="flex">
+                                <a href="#"><button id="btnEdit" class="btn itemOpr inline-flex"><i class="fa-solid fa-pen"></i>編輯</button></a>
+                                <a href="#"><button id="btnView" class="btn itemOpr inline-flex"><i class="fa-solid fa-eye"></i>檢視</button></a>
+                            </div>
+                            <div class="flex">
+                                <button class="btn btnSta itemOpr inline-flex"><i class="fa-solid fa-arrow-down"></i>下架</button>
+                                <button class="btn itemOpr inline-flex"><i class="fa-solid fa-trash"></i>刪除</button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="item">
+                        <td><img src="https://i.pinimg.com/564x/7e/75/24/7e75244c7427c041237f60c1e18308a6.jpg" alt="" class="prdImgPre"></td>
+                        <td class="prdSort">
+                            <div class="sort">滑板</div><br>
+                            <div class="sort">新品</div>
+                        </td>
+                        <td class="prdId">2407081021</td>
+                        <td class="prdName">台大街舞Battle盃</td>
+                        <td class="prdPrice"><span>$</span>200</td>
+                        <td class="prdStock">0</td>
+                        <td class="Status" status="Out_of_Stock">售完</td>
+                        <td class="itemOpt">
+                            <div class="flex">
+                                <a href="#"><button id="btnEdit" class="btn itemOpr inline-flex"><i class="fa-solid fa-pen"></i>編輯</button></a>
+                                <a href="#"><button id="btnView" class="btn itemOpr inline-flex"><i class="fa-solid fa-eye"></i>檢視</button></a>
+                            </div>
+                            <div class="flex">
+                                <button class="btn btnSta itemOpr inline-flex"><i class="fa-solid fa-arrow-down"></i>下架</button>
+                                <button class="btn itemOpr inline-flex"><i class="fa-solid fa-trash"></i>刪除</button>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script>
+
+        $('.Status').each(function(index, elem) {
+            $elem = $(elem)
+            // console.log($elem.attr('status'))
+            switch ($elem.attr('status')) {
+                case 'Available':
+                    console.log('ok')
+                    $elem.html('上架')
+                    $elem.css('color', 'var(--side)')
+                    break;
+                case 'Discontinued':
+                    $elem.text('下架')
+                    $(this).css('color', 'var(--err)')
+                    break;
+                case 'Out_of_Stock':
+                    $elem.text('售完')
+                    $(this).css('color', 'var(--cancel)')
+                    break;
+            }
+        })
+
+        $('.prdStock').each(function(index, elem) {
+            if(elem.innerText == 0) {
+                $(this).css('color', 'red')
+            }
+        })
+
+    </script>
+</body>
+
+</html>

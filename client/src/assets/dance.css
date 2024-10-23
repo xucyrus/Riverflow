@@ -1,0 +1,578 @@
+@import url('basic.css');
+@import url('https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css');
+@import url('../assets//dance-2.css');
+@font-face {
+  font-family: 'beauty_dreamregular';
+  src: url('https://example.com/path-to-your-font/beauty_dream-webfont.woff2') format('woff2'),
+    url('https://example.com/path-to-your-font/beauty_dream-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.danceAll {
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: 'Lato', sans-serif;
+    overflow-x: hidden;
+  }
+  .banner {
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+   
+  }
+
+  .banner img{
+    object-fit: cover;
+  }
+  .banner .ml4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    font-weight: 900;
+    font-size: 15em;
+    font-family: 'Kanit', sans-serif;
+  }
+  .banner .ml4 .letters {
+    position: absolute;
+    margin: auto;
+    left: 0;
+    top: 0em;
+    right: 0;
+    opacity: 0;
+    z-index: -1000;
+  }
+  .banner .letters {
+    overflow: hidden;
+  }
+  .banner .letters img {
+    height: 100vh;
+    width: 100vw;
+    opacity: 0.8;
+  }
+
+  .banner .letters p {
+    position: absolute;
+    top: 20%;
+    left: 5%;
+    color: #baf13a;
+  }
+  .banner .letters:nth-of-type(2) p {
+    position: absolute;
+    top: 20%;
+    right: -50%;
+    color: #baf13a;
+  }
+
+  .Dance-container {
+    z-index: 10;
+    width: 100vw;
+    height: 100vh;
+    background-color: #1d1d1d;
+  }
+
+  .container-text-1 {
+    margin: 0 auto;
+    text-align: center;
+    width: 44ch;
+    position: absolute;
+    left: 35%;
+    bottom: -60%;
+  }
+  .container-text-1 h2 {
+    color: #baf13a;
+    font-size: 3rem;
+    white-space: nowrap;
+  }
+  .container-text-1 p {
+    padding-top: 20px;
+    font-size: 1.3rem;
+  }
+
+  .container-text-2 {
+    margin: 0 auto;
+    text-align: center;
+    width: 44ch;
+    position: absolute;
+    left: 35%;
+    bottom: -135%;
+  }
+  .container-text-2 h2 {
+    color: #baf13a;
+    font-size: 3rem;
+    white-space: nowrap;
+  }
+  .container-text-2 p {
+    font-size: 1.3rem;
+    padding-top: 20px;
+  }
+
+  .container-text-3 {
+    margin: 0 auto;
+    text-align: center;
+    width: 44ch;
+    position: absolute;
+    left: 35%;
+    bottom: -205%;
+  }
+  .container-text-3 h2 {
+    color: #baf13a;
+
+    font-size: 3rem;
+    white-space: nowrap;
+  }
+  .container-text-3 p {
+    font-size: 1.3rem;
+    padding-top: 25px;
+  }
+
+  .container-text-4 {
+    margin: 0 auto;
+    text-align: center;
+    width: 44ch;
+    position: absolute;
+    left: 35%;
+    bottom: -280%;
+  }
+  .container-text-4 h2 {
+    color: #baf13a;
+    padding-top: 20px;
+    font-size: 3rem;
+    white-space: nowrap;
+  }
+  .container-text-4 p {
+    font-size: 1.3rem;
+    padding-top: 20px;
+  }
+
+  .container-text-5 {
+    margin: 0 auto;
+    text-align: center;
+    width: 44ch;
+    position: absolute;
+    left: 35%;
+    bottom: -355%;
+  }
+  .container-text-5 h2 {
+    color: #baf13a;
+    font-size: 3rem;
+    white-space: nowrap;
+  }
+  .container-text-5 p {
+    font-size: 1.3rem;
+    padding-top: 20px;
+  }
+
+  .container-text-6 {
+    margin: 0 auto;
+    text-align: center;
+    width: 44ch;
+    position: absolute;
+    left: 35%;
+    bottom: -430%;
+  }
+  .container-text-6 h2 {
+    white-space: nowrap;
+    color: #baf13a;
+    font-size: 3rem;
+  }
+  .container-text-6 p {
+    font-size: 1.3rem;
+    padding-top: 20px;
+  }
+
+  footer {
+    width: 100%;
+    position: absolute;
+    bottom: -80%;
+    left: 0;
+  } /*# sourceMappingURL=dance.css.map */
+
+  /* 原街舞頁CSS */
+  .w-bg {
+    background-repeat: unset;
+    background-size: 100%;
+  }
+
+  .btmDance {
+    margin-top: 3000px;
+  }
+  .maintitle {
+    font-size: 80px;
+    color: #baf13a;
+    font-family: 'Noto Sans TC', sans-serif;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 10vh;
+  }
+
+  .title {
+    color: #98d900;
+    font-family: 'Noto Sans TC', sans-serif;
+    font-weight: bold;
+    width: 100%;
+    padding: 20px;
+    /* border: 1px solid white; */
+    margin-bottom: 10vh;
+    justify-content: center;
+    text-align: center;
+    font-size: 60px;
+  }
+
+  /* section {
+  margin-top: 20vh;
+} */
+
+  .orgin {
+    background-color: rgba(187, 182, 182, 60%);
+    width: auto;
+    height: auto;
+    color: white;
+    text-align: start;
+    font-size: 30px;
+    padding: 50px;
+    margin: 20px;
+    margin-top: 50px;
+    /* text-indent: 50px; */
+    line-height: 1.2;
+  }
+
+  .orgintitle {
+    color: white;
+    text-align: start;
+    font-size: 40px;
+    font-family: 'Nunito Sans', sans-serif;
+    font-optical-sizing: auto;
+    margin-bottom: 80px;
+    margin-top: 5vh;
+  }
+
+  .orginText {
+    font-family: 'Nunito Sans', sans-serif;
+    font-optical-sizing: auto;
+    color: white;
+    font-size: 25px;
+    font-weight: normal;
+  }
+
+  .content {
+    font-family: 'Nunito Sans', sans-serif;
+    font-optical-sizing: auto;
+    color: white;
+    font-size: 20px;
+    font-weight: normal;
+    padding: 10vh;
+    line-height: 1.5;
+  }
+
+  .tabcontent {
+    button {
+      font-family: 'Nunito Sans', sans-serif;
+      font-optical-sizing: auto;
+      color: black;
+      background-color: white;
+      font-size: 25px;
+      font-weight: bold;
+      border: none;
+      outline: none;
+      float: right;
+      width: 200px;
+      height: 80px;
+    }
+  }
+
+  .pic1,
+  .pic2,
+  .pic3,
+  .pic4 {
+    width: 500px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+  }
+
+  .pic1 {
+    transform: rotate(-5deg);
+    margin-left: 50px;
+    z-index: 0;
+  }
+
+  .pic2 {
+    transform: rotate(7deg);
+    margin-left: 30vh;
+    margin-top: -10vh;
+    z-index: 1;
+  }
+
+  .pic3 {
+    margin-left: 5vh;
+    margin-top: -10vh;
+    z-index: 0;
+  }
+
+  .pic4 {
+    transform: rotate(-9deg);
+    margin-left: 30vh;
+    margin-top: -10vh;
+    z-index: 1;
+  }
+
+  .col-auto {
+    flex: 0 0 auto;
+    width: auto;
+  }
+
+  .col-1 {
+    flex: 0 0 auto;
+    width: 8.33333333%;
+  }
+
+  .col-2 {
+    flex: 0 0 auto;
+    width: 16.66666667%;
+  }
+
+  .col-3 {
+    flex: 0 0 auto;
+    width: 25%;
+  }
+
+  .col-4 {
+    flex: 0 0 auto;
+    width: 33.33333333%;
+  }
+
+  .col-5 {
+    flex: 0 0 auto;
+    width: 41.66666667%;
+  }
+
+  .col-6 {
+    flex: 0 0 auto;
+    width: 50%;
+  }
+
+  .col-7 {
+    flex: 0 0 auto;
+    width: 58.33333333%;
+  }
+
+  .col-8 {
+    flex: 0 0 auto;
+    width: 66.66666667%;
+  }
+
+  .col-9 {
+    flex: 0 0 auto;
+    width: 75%;
+  }
+
+  .col-10 {
+    flex: 0 0 auto;
+    width: 83.33333333%;
+  }
+
+  .col-11 {
+    flex: 0 0 auto;
+    width: 91.66666667%;
+  }
+
+  .col-12 {
+    flex: 0 0 auto;
+    width: 100%;
+  }
+
+  .row {
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: calc(-1 * var(--bs-gutter-y));
+    margin-right: calc(-0.5 * var(--bs-gutter-x));
+    margin-left: calc(-0.5 * var(--bs-gutter-x));
+  }
+
+  .row > * {
+    flex-shrink: 0;
+    width: 100%;
+    max-width: 100%;
+    padding-right: calc(var(--bs-gutter-x) * 0.5);
+    padding-left: calc(var(--bs-gutter-x) * 0.5);
+    margin-top: var(--bs-gutter-y);
+  }
+
+  .col {
+    flex: 1 0 0%;
+  }
+
+  .img1 .img2 {
+    margin-left: -100px;
+  }
+
+  .img3 {
+    margin-left: -100px;
+  }
+
+  .img4 {
+    margin-left: -280px;
+    margin-right: 0px;
+  }
+
+  .m-auto {
+    margin: auto;
+  }
+
+  .w-auto {
+    width: auto;
+  }
+
+  .row {
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    display: flex;
+    margin-top: calc(-1 * var(--bs-gutter-y));
+    margin-right: calc(-0.5 * var(--bs-gutter-x));
+    margin-left: calc(-0.5 * var(--bs-gutter-x));
+  }
+
+  /* Style the tab */
+  .tab {
+    float: left;
+    border: 3px solid #98d900;
+    border-right: none;
+    background-color: #1d1d1d;
+    width: 20%;
+    height: 50vh;
+    border-radius: 25px 0px 0px 25px;
+  }
+
+  /* Style the buttons inside the tab */
+  .tab button {
+    display: block;
+    background-color: inherit;
+    color: #baf13a;
+    /* padding: 22px 16px; */
+    width: 100%;
+    border: none;
+    outline: none;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 17px;
+    height: 25%;
+    text-wrap: wrap;
+  }
+
+  /* Change background color of buttons on hover */
+  .tab button:hover {
+    background-color: #baf13a;
+    color: black;
+  }
+
+  /* Create an active/current "tab button" class */
+  .tab button.active {
+    background-color: #baf13a;
+    color: black;
+  }
+
+  /* Style the tab content */
+  .tabcontent {
+    border: 3px solid #98d900;
+    width: 80%;
+    height: 90vh;
+    background-color: #1d1d1d;
+  }
+
+  .tabcontent button {
+    padding-left: 30px;
+    display: block;
+    background-color: inherit;
+    color: #ffffff;
+    /* padding: 22px 16px; */
+    width: 100%;
+    border: none;
+    outline: none;
+    text-align: start;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 17px;
+    height: 11%;
+    /* border: 1px solid #98D900; */
+  }
+
+  .tabcontent button:hover {
+    background-color: #baf13a;
+    color: black;
+  }
+
+  .tabcontent button.active {
+    background-color: #baf13a;
+    color: black;
+  }
+}
+
+
+/*  banner 文字*/
+@media (max-width:430px) {
+ .danceAll .banner .ml4 {
+    font-size: 6em;
+  }
+
+  /* 下面照片調整 */
+ 
+  .danceAll .Dance-container{
+   padding-left: 150px;
+  }
+
+  .danceAll .container-3 img{
+    display: none;
+  }
+
+ .danceAll .container-text-1 {
+    left: 10%;
+    bottom: -60%;
+    width: 40vh;
+  }
+  .danceAll .container-text-2{
+    left: 10%;
+    width: 40vh;
+    bottom: -130%;
+  }
+  .danceAll .container-text-3{
+    left: 10%;
+    width: 40vh;
+    bottom: -205%;
+  }
+  .danceAll .container-text-4{
+    left: 10%;
+    width: 40vh;
+    bottom: -278%;
+  }
+  .danceAll .container-text-5{
+    left: 10%;
+    width: 40vh;
+    bottom: -358%;
+  }
+  .danceAll .container-text-6{
+    left: 10%;
+    width: 40vh;
+    bottom: -433%;
+  }
+  .danceAll .image img{
+    opacity: 0.7;
+  }
+  .danceAll .font h2{
+   font-size: 1.5rem;
+  }
+  .danceAll .font p{
+    font-size: 1rem;
+   }
+   .danceAll .btmDance{
+    display: none
+   }
+}

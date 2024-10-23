@@ -1,0 +1,49 @@
+/* reset.module.css */
+.reset * {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+.reset article,
+.reset aside,
+.reset details,
+.reset figcaption,
+.reset figure,
+.reset footer,
+.reset header,
+.reset hgroup,
+.reset menu,
+.reset nav,
+.reset section {
+  display: block;
+}
+
+.reset body {
+  line-height: 1;
+}
+
+.reset ol,
+.reset ul {
+  list-style: none;
+}
+
+.reset blockquote,
+.reset q {
+  quotes: none;
+}
+
+.reset blockquote:before,
+.reset blockquote:after,
+.reset q:before,
+.reset q:after {
+  content: '';
+  content: none;
+}
+
+.reset table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}

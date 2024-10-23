@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../assets/login.css">
+    <link rel="stylesheet" href="../assets/basic.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+ 
+
+<body class="w-bg scrollCust loginPage">
+    <header id="navbar">
+        <div class="flex container ">
+            <a href="#">
+                <img class="logo" src="../assets/images/riverflow_logo.png" alt="logo">
+            </a>
+            <div class="flex header-right">
+                <ul class="headerLink flex">
+                    <li><a href="#">首頁</a></li>
+                    <li class="cultureListName dropdown">
+                        <a class="dropdownToggle" href="#">嘻哈文化<i class="bi bi-caret-down-fill"></i></a>                        
+                        <div id="dropdownMenu" class="">
+                            <ul class="cultureList flex">
+                                <li><a href="#" class="cultureOpt">DJ</a></li>
+                                <li><a href="#" class="cultureOpt">街舞</a></li>
+                                <li><a href="#" class="cultureOpt">饒舌</a></li>
+                                <li><a href="#" class="cultureOpt">塗鴉</a></li>
+                                <li><a href="#" class="cultureOpt">滑板</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="#">嘻哈專欄</a></li>
+                    <li><a href="#">into flow</a></li>
+                    <li><a href="#">商店</a></li>
+                </ul>
+                <div class="functionIcons flex">
+                    <a href="#" class="headerIcon">
+                        <i class="bi bi-ticket-perforated"></i>
+                    </a>
+                    <a href="#" class="headerIcon">
+                        <i class="bi bi-cart"></i>
+                    </a>
+                    <a href="login.html" class="headerIcon">
+                        <i class="bi bi-person"></i>
+                    </a>
+                    <div class="headerIcon mobOnly">
+                        <input id="menuBtn" class="menuBtn" type="checkbox">
+                        <label for="menuBtn" class="menuIcon">
+                            <span class="navigation"></span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mobMenu">
+            <ul class="headerLink mob flex">
+                <li><a href="#">首頁</a></li>
+                <li class="cultureListName dropdown dropdown_mob">
+                    <a class="dropdownToggle" href="#">嘻哈文化<i class="bi bi-caret-down-fill bi-caret-down-fill_mob"></i></a>
+                    <div id="dropdownMenu">
+                        <ul class="cultureList cultureList_mob flex">
+                            <li><a href="#" class="cultureOpt">DJ</a></li>
+                            <li><a href="#" class="cultureOpt">街舞</a></li>
+                            <li><a href="#" class="cultureOpt">饒舌</a></li>
+                            <li><a href="#" class="cultureOpt">塗鴉</a></li>
+                            <li><a href="#" class="cultureOpt">滑板</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="#">嘻哈專欄</a></li>
+                <li><a href="#">into flow</a></li>
+                <li><a href="#">商店</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <section class="login" >
+        <div class="form" >
+            <h4>會員登入</h4>
+            <div class="input-text">
+                <label>帳號</label>
+                <input type="text" id="email" name="email" placeholder="Enter email"
+                    pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$" required /><br />
+            </div>
+            <span class="tips" id="emailTips"></span> <br />
+
+            <div class="input-text">
+                <label>密碼</label>
+                <input type="password" name="password" id="password" placeholder="Enter password"
+                    pattern="^(?=.*[a-zA-Z])(?=.*[0-9]).{6,}$" required />
+                <div><i id="showBtn" class="bi bi-eye-slash-fill"></i></div>
+            </div>
+            <a href="password.html">忘記密碼？</a>
+            <input type="button" class="btn" id="btnSent" value="Login" onclick="location.href='member.html'" >
+            <span>
+                沒有River Flow帳號嗎？
+                <a href="register.html">前往註冊</a>
+               
+            </span>
+        </div>
+
+         <!-- 無法登入 彈跳視窗 -->
+
+         <div class="nolongin" id="nolongin">
+            <div class="nolongin-wrap">
+                <h4>無法登入</h4>
+                <p>請確認輸入的資料及大小寫是否正確。若不是OPENTIX會員請前往註冊。</p>
+                <button class="btn">確認</button>
+            </div>
+
+        </div>
+    </section>
+    <footer>
+        <div class="flex container">
+            <img class="logo" src="../assets/images/riverflow_logo_f.png" alt="logo" />
+            <div class="flex footer-right">
+                <div class="flex linkList">
+                    <a href="#" class="footerLink">關於我們</a>
+                    <a href="#" class="footerLink">聯絡我們</a>
+                    <a href="#" class="footerLink">條款與隱私</a>
+                    <a href="#" class="footerLink">FAQ</a>
+                </div>
+                <span class="copyright">Copyright © 2006-2024 RiverFlow</span>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        showBtn.onclick=function(){
+            var x = $('#showBtn').hasClass('bi-eye-slash-fill');
+            if(x){
+                $('#showBtn').removeClass('bi-eye-slash-fill').addClass('bi-eye-fill')
+                $('#password').attr("type", "text").css('width','80%');
+            }else{
+                $('#showBtn').removeClass('bi-eye-fill').addClass('bi-eye-slash-fill')
+                $('#password').attr("type", "password");
+            }
+        }
+
+        // email輸入
+        email.addEventListener('input', function () {
+            if (email.validity.patternMismatch) {
+                emailTips.innerHTML = `<i class="bi bi-asterisk"></i> 不符合email規則，請確認是否包含[@]`;
+            }else {
+                emailTips.innerHTML = ``
+            }
+        });
+
+        
+    </script>
+
+</body>
+
+</html>

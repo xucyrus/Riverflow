@@ -1,0 +1,50 @@
+{
+  "name": "riverflow",
+  "version": "1.0.0",
+  "description": "大專結訓作品",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zhier1114/RiverFlow.git"
+  },
+  "bugs": {
+    "url": "https://github.com/zhier1114/RiverFlow/issues"
+  },
+  "homepage": "https://github.com/zhier1114/RiverFlow#readme",
+  "dependencies": {
+    "@ckeditor/ckeditor5-build-classic": "^43.0.0",
+    "@ckeditor/ckeditor5-react": "^9.0.0",
+    "aos": "^2.3.4",
+    "axios": "^1.7.3",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.20.2",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "crypto": "^1.0.1",
+    "dotenv": "^16.4.5",
+    "ecpay_aio_nodejs": "^1.2.2",
+    "ejs": "^3.1.10",
+    "express": "^4.19.2",
+    "jsdom": "^24.1.1",
+    "jsonwebtoken": "^9.0.2",
+    "mongodb": "^6.8.0",
+    "mongoose": "^8.5.2",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.5-lts.1",
+    "mysql": "^2.18.1",
+    "nodemailer": "^6.9.14",
+    "nodemon": "^3.1.4",
+    "open": "^10.1.0",
+    "path": "^0.12.7",
+    "stripe": "^16.7.0",
+    "sweetalert2": "^11.12.4",
+    "sweetalert2-react-content": "^5.0.7",
+    "util": "^0.12.5"
+  },
+  "keywords": []
+}

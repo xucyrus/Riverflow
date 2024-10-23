@@ -1,0 +1,37 @@
+{
+  "name": "riverflow",
+  "version": "1.0.0",
+  "description": "大專協作作品",
+  "main": "index.js",
+  "scripts": {
+    "start": "concurrently \"npm run start:server\" \"npm run start:client\"",
+    "start:client": "cross-env PORT=3001 npm --prefix client start",
+    "start:server": "npm --prefix server start"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "cross-env": "^7.0.3"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^6.6.0",
+    "@fortawesome/fontawesome-svg-core": "^6.6.0",
+    "axios": "^1.7.3",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "font-awesome": "^4.7.0",
+    "gsap": "^3.12.5",
+    "jquery": "^3.7.1",
+    "jquery.marquee": "^1.6.0",
+    "lightbox2": "^2.11.4",
+    "multer": "^1.4.5-lts.1",
+    "parallax-js": "^3.1.0",
+    "react-router-dom": "^5.3.4",
+    "react-select": "^5.8.0",
+    "scrollmagic": "^2.0.8",
+    "simple-parallax-js": "^6.0.1",
+    "sweetalert2": "^11.12.4",
+    "swiper": "^11.1.9"
+  }
+}

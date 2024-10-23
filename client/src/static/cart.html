@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RiverFlow購物車</title>
+    <link rel="stylesheet" href="../assets/cart.css" />
+    <link rel="stylesheet" href="../assets/reset.css" />
+    <link rel="stylesheet" href="../assets/basic.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  </head>
+  <body class="w-bg scrollCust">
+    <div class="cart-wrap-f">
+      <div class="container-f">
+        <div class="cart-wrap">
+          <div class="container">
+            <div class="top">
+              <h3>River Flow | 購物車</h3>
+            </div>
+            <div class="cart-border">
+              <table class="cart-table">
+                <thead>
+                  <tr>
+                    <th class="shop-push">商品</th>
+                    <th>單價</th>
+                    <th>數量</th>
+                    <th>總金額</th>
+                    <th>刪除</th>
+                  </tr>
+                </thead>
+              </table>
+            </div>
+            <div class="cart-border-inner">
+              <table class="cart-table">
+                <tbody id="cart-items">
+                  <tr class="cart-item">
+                    <td>
+                      <div class="cart-item-left-content">
+                        <img
+                          src="https://cdn.store-assets.com/s/1250387/i/74027074.jpeg?width=1024&format=webp"
+                          alt="image"
+                        />
+                        <div class="cart-item-content">
+                          <h4>王以太聯名短袖</h4>
+                          <h5>深綠/L</h5>
+                        </div>
+                      </div>
+                    </td>
+
+                    <td class="price">NT$1480</td>
+                    <td>
+                      <div class="quantity-plus-minus">
+                        <a href="#" class="quantity-minus"><i class="fa-solid fa-circle-minus"></i></a>
+                        <p class="quantity">5</p>
+                        <a href="#" class="quantity-plus"><i class="fa-solid fa-circle-plus"></i></a>
+                      </div>
+                    </td>
+                    <td class="total">NT$1480</td>
+                    <td>
+                      <a href="#" class="delete"><i class="fa-regular fa-trash-can"></i></a>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="checkButton">
+              <p>已選購 <span id="item-count">0</span> 項商品</p>
+              <div class="rightCheckButton">
+                總金額: $<span id="total-amount">0</span>
+                <a href="./cartCheckOut.html">前往買單-></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        // 取得購物車商品的容器、商品總數元素和總金額元素
+        const $cartItemsContainer = $('#cart-items')
+        const $itemCount = $('#item-count')
+        const $totalAmount = $('#total-amount')
+
+        function updateCart($row, quantity) {
+          const price = parseInt($row.find('.price').text().replace('NT$', ''), 10)
+
+          $row.find('.total').text(`NT$${price * quantity}`)
+
+          updateTotals()
+        }
+
+        // 更新購物車中所有商品的總金額和總數量
+        function updateTotals() {
+          let newTotalItems = 0
+          let newTotalPrice = 0
+
+          $cartItemsContainer.find('.cart-item').each(function () {
+            const quantity = parseInt($(this).find('.quantity').text(), 10)
+            const total = parseInt($(this).find('.total').text().replace('NT$', ''), 10)
+
+            newTotalItems += quantity // 累加商品量
+            newTotalPrice += total // 累加商品錢
+          })
+
+          // 更新商品總數總金額
+          $itemCount.text(newTotalItems)
+          $totalAmount.text(newTotalPrice)
+        }
+
+        // 當用戶點擊加號、減號或刪除按鈕時，更新購物車內容
+        $cartItemsContainer.on('click', '.quantity-minus, .quantity-plus, .delete', function (event) {
+          event.preventDefault()
+
+          const $target = $(event.target)
+          const $row = $target.closest('tr')
+          // 取得該行中顯示商品數量的元素
+          const $quantityElement = $row.find('.quantity')
+          // 將數量轉換為整數
+          let quantity = parseInt($quantityElement.text(), 10)
+
+          // 如果點擊了減號按鈕且數量大於1，則減少數量
+          if ($target.closest('.quantity-minus').length && quantity > 1) {
+            quantity -= 1
+            $quantityElement.text(quantity)
+            // 更新該商品的總金額
+            updateCart($row, quantity)
+          }
+          // 如果點擊了加號按鈕，則增加數量
+          else if ($target.closest('.quantity-plus').length) {
+            quantity += 1
+            $quantityElement.text(quantity)
+            // 更新該商品的總金額
+            updateCart($row, quantity)
+          }
+          // 如果點擊了刪除按鈕，則移除該行並更新總金額
+          else if ($target.closest('.delete').length) {
+            $row.remove()
+            // 更新購物車的總金額和總數量
+            updateTotals()
+          }
+        })
+
+        // 頁面加載時初始化所有商品的總金額和總數量
+        $cartItemsContainer.find('.cart-item').each(function () {
+          const $row = $(this)
+          const quantity = parseInt($row.find('.quantity').text(), 10)
+          updateCart($row, quantity)
+        })
+
+        updateTotals()
+      })
+    </script>
+  </body>
+</html>

@@ -1,0 +1,314 @@
+/* 第1、2個section + 動畫 */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;800&display=swap");
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+
+
+
+.outer {
+  display: grid;
+  /* place-items: center; */
+  /* min-height: 100vh; */
+  /* font-family: "Montserrat", sans-serif; */
+  /* color: rgb(248, 248, 248); */
+  /* overflow-x: hidden; */
+}
+
+.outer section {
+  min-height: 100vh;
+  width: 100vw;
+}
+
+.outer section:nth-of-type(1) {
+  background: rgb(248, 248, 248);
+}
+
+
+
+.outer .section__content:nth-child(1) {
+  min-height: 100vh;
+  width: 100vw;
+  display: grid;
+  place-items: center;
+  position: sticky;
+  top: 0;
+  overflow: hidden;
+  background-color: var(--bk1);
+  background-image: url('../assets/images/Graffiti/Vector.png');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+
+
+
+
+.outer section:nth-of-type(2) {
+  z-index: 2;
+  color: rgb(0, 0, 0);
+  min-height: 200vh;
+  background: rgb(0, 0, 0);
+}
+
+.outer section:nth-of-type(2) p {
+  --opacity: 1;
+  color: var(--main);
+  font-size: clamp(1.2rem, 2vw + 1rem, 2rem);
+  letter-spacing: 0;
+  font-weight: 400;
+  line-height: 1.2;
+  width: 40ch;
+  max-width: calc(100% - 4rem);
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  opacity: 0;
+}
+
+.outer section:nth-of-type(1) svg {
+  --opacity: 1;
+  font-weight: 700;
+  font-size: clamp(2rem, 10vw + 1rem, 10rem);
+  transform-origin: 50% 50%;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  opacity: 0.4;
+  translate: -50% -50%;
+  overflow: hidden;
+}
+
+.outer section:nth-of-type(3) {
+  z-index: 4;
+}
+
+.outer section:nth-of-type(1) .section__content {
+  overflow: visible;
+  transform-style: preserve-3d;
+  perspective: 70vh;
+}
+
+svg text {
+  font-size: clamp(2rem, 6vw + 1rem, 6rem);
+  font-weight: 600;
+}
+
+.outer section:nth-of-type(1) {
+  height: 250vh;
+}
+
+video {
+  position: fixed;
+  inset: 0;
+  object-fit: cover;
+  width: 100%;
+  height: 100vh;
+  filter: saturate(1) brightness(1);
+  opacity: 0;
+}
+
+@supports (animation-timeline: scroll()) {
+  .outer section {
+    view-timeline-name: --section;
+  }
+
+  .outer section:nth-of-type(1) svg {
+    animation: blow-out both ease-in, fade-in both ease-in;
+    animation-timeline: --section;
+    animation-range: exit-crossing 10% exit 0%, exit-crossing 10% exit-crossing 25%;
+  }
+
+  .outer section:nth-of-type(2) p {
+    animation: fade-in both linear, fade-out both linear;
+    animation-timeline: --section;
+    animation-range: entry 10% entry 35%, exit 0% exit 25%;
+  }
+
+  video {
+    animation: fade-in both linear, fade-out both linear;
+    animation-timeline: --section;
+    animation-range: entry 0% entry 25%, exit 10% exit 35%;
+  }
+
+  @keyframes fade-in {
+    to {
+      opacity: var(--opacity, 0.55);
+    }
+  }
+
+  @keyframes fade-out {
+    to {
+      opacity: 0.5;
+    }
+  }
+
+  @keyframes blow-out {
+
+    0%,
+    95% {
+      background: transparent;
+    }
+
+    to {
+      transform: translate3d(0.04ch, 0, 50vh);
+    }
+  }
+}
+
+/* 第三個section */
+/* 第一個內容 */
+/* .illustrate {
+            background: var(--bk1);
+            background-image: url('../riverflow/client/src/assets/images/background.png');
+            background-blend-mode: soft-light;
+            background-position: center center;
+            background-repeat: repeat-x, repeat-y;
+            background-size: 100% 80%;
+            display: flex;
+        } */
+
+.graffiti1 {
+  z-index: -1;
+}
+
+.graffitiContent {
+  display: flex;
+  padding: 0 5rem;
+  align-items: center;
+  margin-top: 2rem;
+  padding-top: 13rem;
+
+}
+
+
+.graffitiContent img {
+  margin-left: 3rem;
+  width: 30%;
+}
+
+.graffitiContent>div h4 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 40px;
+}
+
+.graffitiContent>div p {
+  font-size: 17px;
+}
+
+.graffitiContent p:last-child {
+  margin-top: 1rem;
+}
+
+/* 第二個內容 */
+.graffiti3 {
+  width: 20%;
+  position: relative;
+  left: 2rem;
+}
+
+.graffiti5 {
+  width: 25%;
+  position: relative;
+  left: 50%;
+  transform: rotate(12deg);
+}
+
+.graffitiContent2 {
+  display: flex;
+  padding: 0 5rem;
+  align-items: center;
+  margin-top: -6rem;
+}
+
+.graffitiContent2 img {
+  width: 40%;
+  margin-right: 3rem;
+}
+
+.graffitiContent2>div h4 {
+  font-size: 40px;
+  margin-bottom: 2rem;
+}
+
+.graffitiContent2 p {
+  margin-bottom: 1rem;
+  font-size: 17px;
+}
+
+/* 第三個內容 */
+.paste1 {
+  width: 20%;
+  position: relative;
+  left: 4rem;
+  top: 5rem;
+  z-index: -1;
+}
+
+.paste2 {
+  width: 25%;
+  position: relative;
+  right: 8rem;
+  top: 8rem;
+}
+
+.paste3 {
+  width: 35%;
+  position: relative;
+  left: 15%;
+}
+
+.paste4 {
+  width: 35%;
+  position: relative;
+  transform: rotate(-100deg);
+  left: 60%;
+  bottom: 30rem;
+  z-index: -1;
+}
+
+.graffitiContent3 {
+  display: flex;
+  padding: 0 5rem;
+  margin-top: -25rem;
+  align-items: center;
+}
+
+.graffitiContent3 img {
+  width: 40%;
+  margin-left: 3rem;
+}
+
+.graffitiContent3>div h4 {
+  font-size: 40px;
+  margin-bottom: 2rem;
+}
+
+.graffitiContent3>div p {
+  font-size: 17px;
+}
+
+.paste5 {
+  width: 15%;
+  position: relative;
+  bottom: 18rem;
+  left: 6%;
+  z-index: -1;
+}
+
+.paste6 {
+  width: 8%;
+  position: relative;
+  bottom: 10rem;
+  left: 10%;
+}
+
+.paste7 {
+  width: 5%;
+  position: relative;
+  bottom: 10rem;
+  left: 10%;
+}

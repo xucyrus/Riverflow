@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../assets/login.css">
+    <link rel="stylesheet" href="../assets/basic.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<body class="w-bg">
+    <header id="navbar">
+        <div class="flex container ">
+            <a href="#">
+                <img class="logo" src="../assets/images/riverflow_logo.png" alt="logo">
+            </a>
+            <div class="flex header-right">
+                <ul class="headerLink flex">
+                    <li><a href="#">首頁</a></li>
+                    <li class="cultureListName dropdown">
+                        <a class="dropdownToggle" href="#">嘻哈文化<i class="bi bi-caret-down-fill"></i></a>                        
+                        <div id="dropdownMenu" class="">
+                            <ul class="cultureList flex">
+                                <li><a href="#" class="cultureOpt">DJ</a></li>
+                                <li><a href="#" class="cultureOpt">街舞</a></li>
+                                <li><a href="#" class="cultureOpt">饒舌</a></li>
+                                <li><a href="#" class="cultureOpt">塗鴉</a></li>
+                                <li><a href="#" class="cultureOpt">滑板</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="#">嘻哈專欄</a></li>
+                    <li><a href="#">into flow</a></li>
+                    <li><a href="#">商店</a></li>
+                </ul>
+                <div class="functionIcons flex">
+                    <a href="#" class="headerIcon">
+                        <i class="bi bi-ticket-perforated"></i>
+                    </a>
+                    <a href="#" class="headerIcon">
+                        <i class="bi bi-cart"></i>
+                    </a>
+                    <a href="login.html" class="headerIcon">
+                        <i class="bi bi-person"></i>
+                    </a>
+                    <div class="headerIcon mobOnly">
+                        <input id="menuBtn" class="menuBtn" type="checkbox">
+                        <label for="menuBtn" class="menuIcon">
+                            <span class="navigation"></span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mobMenu">
+            <ul class="headerLink mob flex">
+                <li><a href="#">首頁</a></li>
+                <li class="cultureListName dropdown dropdown_mob">
+                    <a class="dropdownToggle" href="#">嘻哈文化<i class="bi bi-caret-down-fill bi-caret-down-fill_mob"></i></a>
+                    <div id="dropdownMenu">
+                        <ul class="cultureList cultureList_mob flex">
+                            <li><a href="#" class="cultureOpt">DJ</a></li>
+                            <li><a href="#" class="cultureOpt">街舞</a></li>
+                            <li><a href="#" class="cultureOpt">饒舌</a></li>
+                            <li><a href="#" class="cultureOpt">塗鴉</a></li>
+                            <li><a href="#" class="cultureOpt">滑板</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="#">嘻哈專欄</a></li>
+                <li><a href="#">into flow</a></li>
+                <li><a href="#">商店</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <section class="verify loginPage">
+        <form>
+            <h4>修改密碼</h4>
+            <div class="input-text input-password">
+                <label>新密碼</label>
+                <input type="password" name="newPassword" id="newPassword" placeholder="Enter password"
+                    pattern="^(?=.*[a-zA-Z])(?=.*[0-9]).{6,}$" required />
+                <div><i id="newBtn" class="bi bi-eye-slash-fill"></i></div>
+            </div>
+            <span class="tips" id="passwordTips">含英數至少六個字元</span> <br />
+
+            <div class="input-text input-password">
+                <label>確認密碼</label>
+                <input type="password" name="" id="checkPassword" placeholder="Enter password" />
+                <div><i id="checkBtn" class="bi bi-eye-slash-fill"></i></div>
+            </div>
+            <span class="tips" id="checkpassTips"></span> <br>
+
+            <input type="button" class="btn" onclick="location.href='login.html'" value="確認">
+
+        </form>
+    </section>
+    <footer>
+        <div class="flex container">
+            <img class="logo" src="../assets/images/riverflow_logo_f.png" alt="logo" />
+            <div class="flex footer-right">
+                <div class="flex linkList">
+                    <a href="#" class="footerLink">關於我們</a>
+                    <a href="#" class="footerLink">聯絡我們</a>
+                    <a href="#" class="footerLink">條款與隱私</a>
+                    <a href="#" class="footerLink">FAQ</a>
+                </div>
+                <span class="copyright">Copyright © 2006-2024 RiverFlow</span>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        newBtn.onclick = function () {
+            var x = $('#newBtn').hasClass('bi-eye-slash-fill');
+            if (x) {
+                $('#newBtn').removeClass('bi-eye-slash-fill').addClass('bi-eye-fill')
+                $('#newPassword').attr("type", "text").css('width', '80%');
+            } else {
+                $('#newBtn').removeClass('bi-eye-fill').addClass('bi-eye-slash-fill')
+                $('#newPassword').attr("type", "password");
+            }
+        }
+        checkBtn.onclick = function () {
+            var x = $('#checkBtn').hasClass('bi-eye-slash-fill');
+            if (x) {
+                $('#checkBtn').removeClass('bi-eye-slash-fill').addClass('bi-eye-fill')
+                $('#checkPassword').attr("type", "text").css('width', '80%');
+            } else {
+                $('#checkBtn').removeClass('bi-eye-fill').addClass('bi-eye-slash-fill')
+                $('#checkPassword').attr("type", "password");
+            }
+        }
+
+          // 密碼輸入
+          newPassword.addEventListener('input', function () {
+            if (newPassword.validity.patternMismatch) {
+                passwordTips.innerHTML = `<i class="bi bi-asterisk"></i> 請輸入正確的密碼格式:含英數至少六個字元`;
+            } else if (newPassword.validity.valueMissing) {
+                passwordTips.innerHTML = `<i class="bi bi-asterisk"></i> 請輸入密碼`;
+            } else {
+                passwordTips.innerHTML = ``
+            }
+        });
+        // 密碼確認
+        checkPassword.addEventListener('input', function () {
+            if (checkPassword.value !== newPassword.value) {
+                checkpassTips.innerHTML = `<i class="bi bi-asterisk"></i> 密碼不吻合`;
+            } else {
+                checkpassTips.innerHTML = `密碼吻合`;
+            }
+        });
+
+    </script>
+
+</body>
+
+</html>
