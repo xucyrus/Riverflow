@@ -3,7 +3,7 @@ RiverFlow是一個獨特的嘻哈網站平台，目的為展現和推廣嘻哈�
 
 ## 嘻哈文化介紹
 從首頁引導用戶進入嘻哈文化的世界，詳細介紹了嘻哈的元素：DJ、街舞、饒舌、塗鴉和滑板。
-<img src="https://i.ibb.co/rs1w77j/1022.gif" width=250>
+<img src="https://i.ibb.co/rs1w77j/1022.gif" width=500>
 
 # 資料夾結構
 
