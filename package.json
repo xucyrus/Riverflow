@@ -3,16 +3,20 @@
   "version": "1.0.0",
   "description": "大專協作作品",
   "main": "index.js",
+  "homepage": "https://xucyrus.github.io/Riverflow", 
   "scripts": {
     "start": "concurrently \"npm run start:server\" \"npm run start:client\"",
     "start:client": "cross-env PORT=3001 npm --prefix client start",
-    "start:server": "npm --prefix server start"
+    "start:server": "npm --prefix server start",
+    "predeploy": "npm run build", 
+    "deploy": "gh-pages -d build" 
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "concurrently": "^8.2.2",
-    "cross-env": "^7.0.3"
+    "cross-env": "^7.0.3",
+    "gh-pages": "^6.2.0"
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^6.6.0",
