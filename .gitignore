@@ -1,0 +1,13 @@
+# MacOS 資料夾資訊檔案
+*.DS_Store
+# npm 模組資料夾
+node_modules
+# 環境變數檔案
+*.env
+# 其他檔案
+*.xlsx
+# scss
+*.scss
+*.css.map
+# sql檔
+*.sql
