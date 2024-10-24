@@ -1,5 +1,5 @@
 import React from 'react'
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
+import { HashRouter, Routes, Route, Navigate } from 'react-router-dom'
 import Cookies from 'js-cookie'
 
 import AdminLogin from './pages/adminPages/adminLogin'
@@ -59,7 +59,7 @@ const ProtectedAdminRoute = ({ children }) => {
 
 export default function App() {
   return (
-    <BrowserRouter>
+    <HashRouter >
       <Routes>
         {/* 管理員路由 */}
         <Route path='/admin/login' element={<AdminLogin />} />
@@ -75,7 +75,7 @@ export default function App() {
         {/* 使用者介面路由 */}
         <Route path='/*' element={<UserInterface />} />
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   )
 }
 
