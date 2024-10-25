@@ -54,19 +54,19 @@ export default function Header() {
               <div id='dropdownMenu' class=''>
                 <ul class='cultureList flex'>
                   <li>
-                    <a href='/DJ' class='cultureOpt'>
+                    <Link to='/DJ' class='cultureOpt'>
                       DJ
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a href='/Dance' class='cultureOpt'>
+                    <Link to='/Dance' class='cultureOpt'>
                       街舞
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a href='/RAP' class='cultureOpt'>
+                    <Link to='/RAP' class='cultureOpt'>
                       饒舌
-                    </a>
+                    </Link>
                   </li>
                   <li>
                     <Link to='/Graffiti' class='cultureOpt'>

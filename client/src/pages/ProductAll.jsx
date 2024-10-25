@@ -434,24 +434,24 @@ const ProductAll = () => {
   const [error, setError] = useState(null) // 錯誤狀態
 
   // 獲取當前登入用戶資料
-  useEffect(() => { 
-    const fetchUserData = async () => { 
-      try { 
-        const response = await axios.get('http://localhost:3000/riverflow/user', { 
-          withCredentials: true // 保證請求帶上 Cookie
-        })
-        setUserData(response.data) // 設置用戶資料
-        setIsLoading(false) // 加載結束
-      } catch (error) {
-        console.error('用戶資料載入失敗', error)
-        localStorage.removeItem('token') // 如果獲取失敗則移除 token
-        setIsLoading(false)
-        setError('Failed to fetch user data. Please log in again.')
-      }
-    }
+  // useEffect(() => { 
+  //   const fetchUserData = async () => { 
+  //     try { 
+  //       const response = await axios.get('http://localhost:3000/riverflow/user', { 
+  //         withCredentials: true // 保證請求帶上 Cookie
+  //       })
+  //       setUserData(response.data) // 設置用戶資料
+  //       setIsLoading(false) // 加載結束
+  //     } catch (error) {
+  //       console.error('用戶資料載入失敗', error)
+  //       localStorage.removeItem('token') // 如果獲取失敗則移除 token
+  //       setIsLoading(false)
+  //       setError('Failed to fetch user data. Please log in again.')
+  //     }
+  //   }
 
-    fetchUserData() // 調用函數獲取資料
-  }, []) // 空依賴數組，意即僅在組件加載時運行
+  //   fetchUserData() // 調用函數獲取資料
+  // }, []) // 空依賴數組，意即僅在組件加載時運行
 
   // 獲取收藏的商品 ID
   useEffect(() => {
