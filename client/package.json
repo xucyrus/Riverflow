@@ -2,7 +2,7 @@
   "name": "client",
   "version": "1.0.0",
   "description": "",
-  "homepage": "https://xucyrus.github.io/Riverflow/", 
+  "homepage": "https://xucyrus.github.io/Riverflow", 
   "main": "index.js",
   "scripts": {
     "start": "react-scripts start",
