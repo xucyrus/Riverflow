@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Riverflow/static/css/main.c075f1dd.css",
-    "main.js": "/Riverflow/static/js/main.23998f5b.js",
+    "main.js": "/Riverflow/static/js/main.58aee8e8.js",
     "static/media/Postcard from Bulgaria _ Friends On Foreign Soil.mov": "/Riverflow/static/media/Postcard from Bulgaria _ Friends On Foreign Soil.adca02d5077f7e8f1703.mov",
     "static/media/introSection_bg.png": "/Riverflow/static/media/introSection_bg.b6ffe34bec7413b52104.png",
     "static/media/skateimg3.png": "/Riverflow/static/media/skateimg3.bb29c0170fe09a382c69.png",
@@ -101,10 +101,10 @@
     "static/media/decor01.png": "/Riverflow/static/media/decor01.465bd6e75c523680c328.png",
     "index.html": "/Riverflow/index.html",
     "main.c075f1dd.css.map": "/Riverflow/static/css/main.c075f1dd.css.map",
-    "main.23998f5b.js.map": "/Riverflow/static/js/main.23998f5b.js.map"
+    "main.58aee8e8.js.map": "/Riverflow/static/js/main.58aee8e8.js.map"
   },
   "entrypoints": [
     "static/css/main.c075f1dd.css",
-    "static/js/main.23998f5b.js"
+    "static/js/main.58aee8e8.js"
   ]
 }
